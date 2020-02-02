@@ -1,0 +1,367 @@
+{
+	"pages": [
+		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {}
+		},
+		{
+			"path": "pages/basics/layout",
+			"style": {}
+		},
+		{
+			"path": "pages/basics/background",
+			"style": {}
+		},
+		{
+			"path": "pages/basics/text",
+			"style": {}
+		},
+		{
+			"path": "pages/basics/icon",
+			"style": {}
+		},
+		{
+			"path": "pages/basics/button",
+			"style": {}
+		},
+		{
+			"path": "pages/basics/design",
+			"style": {}
+		},
+		{
+			"path": "pages/basics/tag",
+			"style": {}
+		},
+		{
+			"path": "pages/basics/avatar",
+			"style": {}
+		},
+		{
+			"path": "pages/basics/progress",
+			"style": {}
+		},
+		{
+			"path": "pages/basics/shadow",
+			"style": {}
+		},
+		{
+			"path": "pages/basics/loading",
+			"style": {}
+		},
+		{
+			"path": "pages/component/bar",
+			"style": {}
+		},
+		{
+			"path": "pages/component/nav",
+			"style": {}
+		},
+		{
+			"path": "pages/component/list",
+			"style": {}
+		},
+		{
+			"path": "pages/component/card",
+			"style": {}
+		},
+		{
+			"path": "pages/component/form",
+			"style": {}
+		},
+		{
+			"path": "pages/component/timeline",
+			"style": {}
+		},
+		{
+			"path": "pages/component/chat",
+			"style": {}
+		},
+		{
+			"path": "pages/component/swiper",
+			"style": {}
+		},
+		{
+			"path": "pages/component/modal",
+			"style": {}
+		},
+		{
+			"path": "pages/component/steps",
+			"style": {}
+		}, {
+			"path": "pages/plugin/indexes",
+			"style": {}
+		}, {
+			"path": "pages/plugin/animation",
+			"style": {}
+		}, {
+			"path": "pages/plugin/drawer",
+			"style": {}
+		}, {
+			"path": "pages/plugin/verticalnav",
+			"style": {}
+		}
+	    ,{
+            "path" : "pages/index/index_healthy/index_healthy",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_healthy/index_common",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_healthy/index_register",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_healthy/index_services",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_healthy/index_service_detail",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_volunteer/index_volunteer",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_volunteer/index_volService",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_volunteer/index_activities",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_volunteer/registered_volunteers",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_volunteer/index_points-Mall",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_volunteer/honor_List",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_shopping/index_shopping",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_shopping/index_business",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_shopping/shop_details",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_shopping/Brand_merchants",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_shopping/Business_map",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_longjing/index_longjing",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_longjing/index_Alliance",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_longjing/Work_dynamics",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_longjing/Listdetails",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_longjing/Grid_com_details",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_longjing/Grid_com_details2",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_longjing/Community style",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_longjing/Com_overview",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_longjing/Party_org_details",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_longjing/Current_news",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_longjing/Grid_par_building",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_longjing/Par_bui_position1",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_people/index_people",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_people/Financial_disclosure",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_people/Village_affairs",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_people/Party_affairs",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_people/People_livelihood",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_people/Three_affairs",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_people/Community_service",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_people/Community_announcement",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_people/Policy_release",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_people/Submit",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_people/Advice",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_people/Call_me",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_longjing/Party_bui_Video",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_play/index_play",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_play/index_story",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_longjing/Com_detail",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_people/Let_me_say",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_people/index_Guide",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/News",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/Personal-center/Personal-center",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/Personal-center/My-points",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/Personal-center/My-advice",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/Personal-center/About",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/Personal-center/Font-size",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/Personal-center/Set",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/Personal-center/Collection",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/Personal-center/Report",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/Personal-center/Participation",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/Personal-center/Participation1",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_people/My-advice",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/Personal-center/My-news",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/Personal-center/login",
+            "style" : {}
+        }
+    ],
+	"globalStyle": {
+		"mp-alipay": {
+			/* 支付宝小程序特有相关 */
+			"transparentTitle": "always",
+			"allowsBounceVertical": "NO"
+		},
+		"navigationBarBackgroundColor": "#0081ff",
+		"navigationBarTitleText": "龙井人家",
+		"navigationStyle": "custom",
+		"navigationBarTextStyle": "white"
+	},
+	"usingComponts": true,
+		"condition": { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [{
+				"name": "表单", //模式名称
+				"path": "pages/component/form", //启动页面
+				"query": "" //启动参数
+			}
+		]
+	}
+
+}
