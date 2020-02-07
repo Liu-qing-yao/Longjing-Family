@@ -5,15 +5,15 @@
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		
 		<view class="box top">
-			<view class="cu-bar bg-gray">
+			<!-- <view class="cu-bar bg-gray">
 				<view class="action">
 					<text class="cuIcon-close" ></text> 党建联盟-党组织简介
 				</view>
 				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
 					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
 				</view>
-			</view>
-			<view class="cu-bar bg-white search" style="border-top: #DDDDDD 1upx solid;">
+			</view> -->
+			<view class="cu-bar bg-white search solid-bottom" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index_longjing/index_Alliance')">
 					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
@@ -78,43 +78,15 @@
 				 		</view>
 				 	</view>
 				</view>
-				<view class="text-red margin-left" style="font-size: 35upx;padding: 12upx 0;">党建动态:</view>
-				<view class="padding-lr padding-bottom-xl">
-				 	<view class="txtmodle bg-white party_cont" style="height: 250upx;">
-						<view class="flex" style="border-bottom: #DDDDDD 1upx dashed;">
-							<view class="text-red">合江门街道召开“不忘初心，牢记使命”主题教育</view>
-							<view class="text-xs " style="padding-left: 25upx; line-height: 45upx; font-size: 22upx;">
-								<text class="">2019-12-12</text><br>
-							</view>
-						</view>
-						<view class="flex" style="border-bottom: #DDDDDD 1upx dashed;">
-							<view class="text-red">合江门街道召开“不忘初心，牢记使命”主题教育</view>
-							<view class="text-xs " style="padding-left: 25upx; line-height: 45upx; font-size: 22upx;">
-								<text class="">2019-12-12</text><br>
-							</view>
-						</view>
-						<view class="flex" style="border-bottom: #DDDDDD 1upx dashed;">
-							<view class="text-red">合江门街道召开“不忘初心，牢记使命”主题教育</view>
-							<view class="text-xs " style="padding-left: 25upx; line-height: 45upx; font-size: 22upx;">
-								<text class="">2019-12-12</text><br>
-							</view>
-						</view>
-						<view class="flex" style="border-bottom: #DDDDDD 1upx dashed;">
-							<view class="text-red">合江门街道召开“不忘初心，牢记使命”主题教育</view>
-							<view class="text-xs " style="padding-left: 25upx; line-height: 45upx; font-size: 22upx;">
-								<text class="">2019-12-12</text><br>
-							</view>
-						</view>
-				 	</view>
-				</view>
+				
 			</view>
 		</view>
 		
-		<view class="bg-white text-red " style="border: #DDDDDD 1upx solid;padding: 15upx 0; font-size: 34upx;">
+		<!-- <view class="bg-white text-red " style="border: #DDDDDD 1upx solid;padding: 15upx 0; font-size: 34upx;">
 			<view class="action text-right padding-lr">
 				<button class="cu-btn1 shadow bg-orange text-black" @tap="showModal" data-target="gridModal">更多</button>
 			</view>
-		</view>
+		</view> -->
 		
 		<view style="height: 96rpx;"></view>
 		<view class="cu-bar tabbar bg-white shadow foot">

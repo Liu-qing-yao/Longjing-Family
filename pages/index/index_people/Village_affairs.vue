@@ -4,20 +4,20 @@
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		<view class="box top">
-			<view class="cu-bar bg-gray">
+			<!-- <view class="cu-bar bg-gray">
 				<view class="action">
 					<text class="cuIcon-close"></text> 民呼我应-三务公开
 				</view>
 				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
 					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
 				</view>
-			</view>
-			<view class="cu-bar bg-white search" style="border-top: #DDDDDD 1upx solid;">
+			</view> -->
+			<view class="cu-bar bg-white search solid-bottom" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index_people/index_people')">
 					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red">
-					村(居)务公开
+					居务公开
 				</view>
 				<view class="action">
 					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
@@ -29,7 +29,7 @@
 				<text class=""></text> 党务公开
 			</view>
 			<view class="cu-item navfirst_1" :class="1==TabCur?'bg-red cur':'bg-orange'" @tap="goMore('/pages/index/index_people/Village_affairs')" data-id="1">
-				<text class=""></text> 村(居)务公开
+				<text class=""></text> 居务公开
 			</view>
 			<view class="cu-item navfirst_1" :class="2==TabCur?'bg-red cur':'bg-orange'" @tap="goMore('/pages/index/index_people/Financial_disclosure')" data-id="2">
 				<text class=""></text> 财务公开
@@ -247,6 +247,11 @@
 .mall_change{
 	border-left: #DDDDDD 1upx solid;
 	border-right: #DDDDDD 1upx solid;
-	padding: 10upx 29upx;
+	padding: 10upx 27upx;
+}
+.img-align *{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 28upx;
 }
 </style>

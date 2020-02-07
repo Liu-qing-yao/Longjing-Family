@@ -85,13 +85,13 @@
 				</view>
 			</view>
 		</view>
-		<view class="cu-bar bg-white solid-bottom line-gray">
+		<!-- <view class="cu-bar bg-white solid-bottom line-gray">
 			<view class="action">
 			</view>
 			<view class="action">
 				<button class="cu-btn shadow bg-orange text-black" @tap="showModal" data-target="gridModal">更多</button>
 			</view>
-		</view>
+		</view> -->
 		
 		<view style="height: 100upx;"></view>
 		<view class="cu-bar tabbar bg-white shadow foot">

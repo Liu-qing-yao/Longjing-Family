@@ -4,14 +4,14 @@
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		<view class="box top">
-			<view class="cu-bar bg-gray solid-bottom">
+			<!-- <view class="cu-bar bg-gray solid-bottom">
 				<view class="action ">
 					<text class="cuIcon-close"></text> 龙井人家-民呼我应
 				</view>
 				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
 					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
 				</view>
-			</view>
+			</view> -->
 			<view class="cu-bar bg-white search solid-bottom">
 				<view class="action" @tap="goMore('/pages/index/index_people/index_people')">
 					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
@@ -88,7 +88,7 @@
 								</view>			
 								<view class="flex padding-left">
 									<view class="text-black text-s padding-left">标题 </view>
-									<input style="padding: 5upx 0 0 15upx; font-size: 24upx;" placeholder="请输入你的提案主题" name="input"></input>
+									<input style="padding: 5upx 0 0 15upx; font-size: 24upx;" placeholder="请输入你的报事主题" name="input"></input>
 								</view>
 							</view>
 						</view>
@@ -111,7 +111,7 @@
 					<view>
 						<view class="bg-white padding">
 							<view class="padding-bottom" >
-								<view class="text-black padding-bottom-xs text-xl padding-left">提案内容</view>
+								<view class="text-black padding-bottom-xs text-xl padding-left">报事内容</view>
 								<textarea class="uni-input text-xs" style="font-size: 24upx;" maxlength="-1" :disabled="modalName!=null" @input="textareaAInput" placeholder="请详细描述你的建议内容,以便我们及时改进,谢谢"></textarea>
 							</view>
 							<view class="padding-top flex justify-between">

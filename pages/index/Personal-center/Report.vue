@@ -1,14 +1,14 @@
 <template>
 	<view>
 		<view class="box top">
-			<view class="cu-bar bg-gray">
+			<!-- <view class="cu-bar bg-gray">
 				<view class="action">
 					<text class="cuIcon-close"></text>我的-我的报事
 				</view>
 				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
 					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
 				</view>
-			</view>
+			</view> -->
 			<view class="cu-bar bg-white search solid-bottom" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action"  @tap="goMore('/pages/index/Personal-center/Personal-center')">
 					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
@@ -33,12 +33,12 @@
 		 					<view class="text-black text-s">阳光社区a栋居民养狗噪音扰民</view>
 		 					
 		 				</view>
-		 				<view class="margin-top-sm flex justify-between">
+		 				<view class="margin-top-sm flex justify-start">
 		 					<view class="text-gray text-xs" style="padding-left: 10upx; font-size: 24upx;">2019-12-23 19:00</view>
-		 					<view class="" style="font-size: 24upx; margin-right: 40upx;">
-		 						<image src="../../../static/input/形状599拷贝@3x.png" mode="" style="width: 30upx;height: 30upx; margin: 0 10upx;"></image>
+		 					<view class="img-align" style="margin-left: 200upx;">
+		 						<image src="../../../static/input/形状599拷贝@3x.png" mode="" style="width: 26upx;height: 26upx; margin: 0 8upx;"></image>
 		 						<text class="text-orange">未受理</text>
-		 						<image src="../../../static/input/形状9@3x.png" mode="" style="width: 30upx;height: 30upx; margin: 0 10upx 0 30upx;"></image>
+		 						<image src="../../../static/input/形状9@3x.png" mode="" style="width: 26upx;height: 28upx; margin: 0 8upx 0 30upx;"></image>
 		 						<text class="text-red">催办</text>
 		 					</view>
 		 				</view>
@@ -55,12 +55,12 @@
 		 				<view class="text-gray" style="padding: 15upx;">
 		 					<view class="text-black text-s">阳光社区a栋居民养狗噪音扰民</view>
 		 				</view>
-		 				<view class="margin-top-sm flex justify-between">
+		 				<view class="margin-top-sm flex justify-start">
 		 					<view class="text-gray text-xs" style="padding-left: 10upx; font-size: 24upx;">2019-12-23 19:00</view>
-		 					<view class="" style="font-size: 24upx; margin-right: 40upx;">
-		 						<image src="../../../static/input/形状599拷贝@3x.png" mode="" style="width: 30upx;height: 30upx; margin: 0 10upx;"></image>
+		 					<view class="img-align" style="margin-left: 200upx;">
+		 						<image src="../../../static/input/形状599拷贝@3x.png" mode="" style="width: 26upx;height: 26upx; margin: 0 8upx;"></image>
 		 						<text class="text-orange">未受理</text>
-		 						<image src="../../../static/input/形状9@3x.png" mode="" style="width: 30upx;height: 30upx; margin: 0 10upx 0 30upx;"></image>
+		 						<image src="../../../static/input/形状9@3x.png" mode="" style="width: 26upx;height: 28upx; margin: 0 8upx 0 30upx;"></image>
 		 						<text class="text-red">催办</text>
 		 					</view>
 		 				</view>
@@ -77,10 +77,10 @@
 						<view class="text-gray" style="padding: 15upx;">
 							<view class="text-black text-s">芜湖社区c栋楼灯损坏</view>
 						</view>
-						<view class="margin-top-sm flex justify-between">
-							<view class="text-gray text-xs" style="padding-left: 10upx;font-size: 24upx;">2019-12-23 19:00</view>
-							<view class="" style="font-size: 24upx; margin-right: 40upx;">
-								<image src="../../../static/input/形状616@3x.png" mode="" style="width: 40upx;height: 30upx; margin: 0 10upx;"></image>
+						<view class="margin-top-sm flex justify-start">
+							<view class="text-gray" style="padding-left: 10upx;font-size: 24upx;">2019-12-23 19:00</view>
+							<view class="img-align" style="margin-left: 200upx;">
+								<image src="../../../static/input/形状616@3x.png" mode="" style="width: 32upx;height: 28upx; margin: 0 8upx;"></image>
 								<text class="text-blue">正在办理</text>
 							</view>
 						</view>
@@ -97,13 +97,11 @@
 						<view class="text-gray" style="padding: 15upx;">
 							<view class="text-black text-s">芜湖社区c栋楼灯损坏</view>
 						</view>
-						<view class="margin-top-sm flex justify-between">
+						<view class="margin-top-sm flex justify-start">
 							<view class="text-gray text-xs" style="padding-left: 10upx;">2019-12-23 19:00</view>
-							<view class="" style="font-size: 24upx; margin-right: 40upx;">
-								<image src="../../../static/input/形状13拷贝2@3x.png" mode="" style="width: 30upx;height: 30upx; margin: 0 10upx;"></image>
-								<text class="text-gray">完结</text>
-								<image src="../../../static/input/评论拷贝4@3x.png" mode="" style="width: 40upx;height: 30upx; margin: 0 10upx 0 30upx;"></image>
-								<text class="text-orange">评价</text>
+							<view class="img-align" style="margin-left: 200upx;">
+								<image src="../../../static/input/形状13拷贝2@3x.png" mode="" style="width: 26upx;height: 26upx; margin: 0 8upx 0 0;"></image>
+								<text class="text-gray">已完结</text>
 							</view>
 						</view>
 					</view>
@@ -119,13 +117,11 @@
 						<view class="text-gray" style="padding: 15upx;">
 							<view class="text-black text-s">芜湖社区c栋楼灯损坏</view>
 						</view>
-						<view class="margin-top-sm flex justify-between">
+						<view class="margin-top-sm flex justify-start">
 							<view class="text-gray text-xs" style="padding-left: 10upx;">2019-12-23 19:00</view>
-							<view class="" style="font-size: 24upx; margin-right: 40upx;">
-								<image src="../../../static/input/形状13拷贝2@3x.png" mode="" style="width: 30upx;height: 30upx; margin: 0 10upx;"></image>
-								<text class="text-gray">完结</text>
-								<image src="../../../static/input/评论拷贝4@3x.png" mode="" style="width: 40upx;height: 30upx; margin: 0 10upx 0 30upx;"></image>
-								<text class="text-orange">评价</text>
+							<view class="img-align" style="margin-left: 200upx;">
+								<image src="../../../static/input/形状13拷贝2@3x.png" mode="" style="width: 26upx;height: 26upx; margin: 0 8upx 0 0;"></image>
+								<text class="text-gray">已完结</text>
 							</view>
 						</view>
 					</view>
@@ -141,13 +137,11 @@
 						<view class="text-gray" style="padding: 15upx;">
 							<view class="text-black text-s">芜湖社区c栋楼灯损坏</view>
 						</view>
-						<view class="margin-top-sm flex justify-between">
+						<view class="margin-top-sm flex justify-start">
 							<view class="text-gray text-xs" style="padding-left: 10upx;">2019-12-23 19:00</view>
-							<view class="" style="font-size: 24upx; margin-right: 40upx;">
-								<image src="../../../static/input/形状13拷贝2@3x.png" mode="" style="width: 30upx;height: 30upx; margin: 0 10upx;"></image>
-								<text class="text-gray">完结</text>
-								<image src="../../../static/input/评论拷贝4@3x.png" mode="" style="width: 40upx;height: 30upx; margin: 0 10upx 0 30upx;"></image>
-								<text class="text-orange">评价</text>
+							<view class="img-align" style="margin-left: 200upx;">
+								<image src="../../../static/input/形状13拷贝2@3x.png" mode="" style="width: 26upx;height: 26upx; margin: 0 8upx 0 0;"></image>
+								<text class="text-gray">已完结</text>
 							</view>
 						</view>
 					</view>
@@ -209,5 +203,9 @@
 </script>
 
 <style>
-	
+.img-align *{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 24upx;
+}	
 </style>

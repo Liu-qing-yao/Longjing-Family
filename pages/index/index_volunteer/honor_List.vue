@@ -4,14 +4,14 @@
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		<view class="box top">
-			<view class="cu-bar bg-gray">
+			<!-- <view class="cu-bar bg-gray">
 				<view class="action" >
 					<text class="cuIcon-close"></text> 益路有你-光荣榜
 				</view>
 				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
 					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
 				</view>
-			</view>
+			</view> -->
 			<view class="cu-bar bg-white search" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index_volunteer/index_volunteer')">
 					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
@@ -24,28 +24,28 @@
 				</view>
 			</view>
 		</view>
-		<view class="flex bg-white" style="border: #DDDDDD 1upx solid;">
-			<view class="bg-grey mall_change" >
-				<image src="../../../static/input/椭圆766拷贝.png" mode="" style="width: 28upx;height: 40upx;"></image>
-				请选择分类
+		<view class="flex bg-white solid-bottom solid-top" >
+			<view class="bg-gray mall_change img-align" >
+				<image src="../../../static/input/椭圆766拷贝.png" mode="" style="width: 26upx;height: 35upx; padding: 0; margin-right: 12upx;"></image>
+				<view>请选择分类</view>
 			</view>
-			<view class="mall_change" >
+			<view class="mall_change img-align" >
 				先选择街道
 			</view>
 			<view class="" style="margin: 16upx 16upx;">
 				<picker @change="PickerChange" :value="index_Street" :range="picker1">
-					<view class="picker">
-						<image src="../../../static/input/下.png" mode="" style="width: 30upx;height: 35upx;"></image>
+					<view class="picker img-align">
+						<image src="../../../static/input/下.png" mode="" style="width: 31upx;height: 36upx;"></image>
 					</view>
 				</picker>
 			</view>
-			<view class="mall_change" >
+			<view class="mall_change img-align" >
 				再选择社区
 			</view>
 			<view class="" style="margin: 16upx 16upx;">
 				<picker @change="PickerChange" :value="index_Community" :range="picker2">
-					<view class="picker">
-						<image src="../../../static/input/下.png" mode="" style="width: 30upx;height: 35upx;"></image>
+					<view class="picker img-align">
+						<image src="../../../static/input/下.png" mode="" style="width: 31upx;height: 36upx;"></image>
 					</view>
 				</picker>
 			</view>
@@ -123,11 +123,11 @@
 		</view>
 		
 		
-		<view class="cu-bar bg-white solid-bottom line-gray" style="border-top: #DDDDDD 1upx solid;">
+		<!-- <view class="cu-bar bg-white solid-bottom line-gray" style="border-top: #DDDDDD 1upx solid;">
 			<view class="text-black flex"  >
 				<button class="cu-btn shadow bg-orange text-black" @tap="showModal" data-target="gridModal" style="position: absolute;bottom: 10upx;right: 15upx;">更多</button>
 			</view>
-		</view>
+		</view> -->
 		<view style="height: 100upx;"></view>
 		<view class="cu-bar tabbar bg-white shadow foot">
 			<view class="action" @click="goMore('/pages/index/index')" data-cur="Home">
@@ -200,6 +200,11 @@
 .mall_change{
 	border-left: #DDDDDD 1upx solid;
 	border-right: #DDDDDD 1upx solid;
-	padding: 10upx 29upx;
+	padding: 10upx 27upx;
+}
+.img-align *{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 28upx;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<view class="box top">
-			<view class="cu-bar bg-gray flex justify-between">
+			<!-- <view class="cu-bar bg-gray flex justify-between">
 				<view class="action">
 					<text class="cuIcon-close"></text>我的
 				</view>
@@ -9,7 +9,7 @@
 					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
 					<view class="cu-tag round bg-red sm margin-lr-xs" style="position: absolute;top: 10upx;right: 13upx;">2</view>
 				</view>
-			</view>
+			</view> -->
 		</view>
 		<view class="header bg-white flex justify-between" v-bind:class="{'status':isH5Plus}">
 			<view class="userinfo ">
@@ -20,18 +20,16 @@
 				</view>
 			</view>
 			<view class="flex justify-end" >
-				<button class="bg-orange" @tap="goMore('/pages/index/Personal-center/login')" style="font-size: 20upx; width: 100upx; margin-right: 15upx;">注册</button>
-			    <button class="bg-orange" @tap="goMore('/pages/index/Personal-center/login')" style="font-size: 20upx; width: 100upx;">登录</button>
+				<button class="bg-orange log-bnt" @tap="goMore('/pages/index/Personal-center/login')" style="margin-right: 15upx;">注 册</button>
+			    <button class="bg-orange log-bnt" @tap="goMore('/pages/index/Personal-center/login')" >登 录</button>
 				</view>
 		</view> 
 		<view class="margin-top-sm">
-			<view class="flex justify-between bg-white solid-bottom " @tap="goMore('/pages/index/Personal-center/My-news')">
-				<view class="flex justify-left">
-					<view class=" padding-sm"><image src="../../../static/input/me0.png" style="width: 50upx; height: 50upx;" mode=""></image></view>
+			<view class="flex justify-between bg-white solids-bottom align-center" @tap="goMore('/pages/index/Personal-center/My-news')">
+				<view class="flex justify-left ">
+					<view class=" padding-sm"><image src="../../../static/input/me0.png" style="width: 45upx; height: 42upx;" mode=""></image></view>
 					<view class="padding-tb-sm">
-						<view class="text-grey">我的消息</view>
-						<view class="text-gray text-sm flex">
-						</view>
+						<view class="text-black" style="font-size: 30upx;">我的消息</view>
 					</view>
 				</view>
 				<view class="padding-sm flex justify-start">
@@ -39,81 +37,69 @@
 					<view class="text-grey text-xs"><image src="../../../static/input/形状6拷贝7@2x.png" style="width: 22upx; height: 30upx;" mode=""></image></view>	
 				</view>
 		    </view>
-			<view class="flex justify-between bg-white solid-bottom solid-top " @tap="goMore('/pages/index/Personal-center/Report')">
-				<view class="flex justify-left">
-					<view class=" padding-sm"><image src="../../../static/input/me1.png" style="width: 50upx; height: 50upx;" mode=""></image></view>
+			<view class="flex justify-between bg-white solids-bottom align-center" @tap="goMore('/pages/index/Personal-center/Report')">
+				<view class="flex justify-left align-center">
+					<view class=" padding-sm"><image src="../../../static/input/me1.png" style="width: 48upx; height: 45upx;" mode=""></image></view>
 					<view class="padding-tb-sm">
-						<view class="text-grey">我的报事</view>
-						<view class="text-gray text-sm flex">
-						</view>
+						<view class="text-black" style="font-size: 30upx;">我的报事</view>
 					</view>
 				</view>
-				<view class="padding-sm flex justify-start">
+				<view class="padding-sm">
 					<view class="text-grey text-xs"><image src="../../../static/input/形状6拷贝7@2x.png" style="width: 22upx; height: 30upx;" mode=""></image></view>	
 				</view>
 			</view>
-			<view class="flex justify-between bg-white solid-top " @tap="goMore('/pages/index/Personal-center/My-advice')">
-				<view class="flex justify-left">
-					<view class=" padding-sm"><image src="../../../static/input/me2.png" style="width: 50upx; height: 50upx;" mode=""></image></view>
+			<view class="flex justify-between bg-white solids-bottom align-center" @tap="goMore('/pages/index/Personal-center/My-advice')">
+				<view class="flex justify-left align-center">
+					<view class=" padding-sm"><image src="../../../static/input/me2.png" style="width: 45upx; height: 44upx;" mode=""></image></view>
 					<view class="padding-tb-sm">
-						<view class="text-grey">我的建言献策</view>
-						<view class="text-gray text-sm flex">
-						</view>
+						<view class="text-black" style="font-size: 30upx;">我的建言献策</view>
 					</view>
 				</view>
-				<view class="padding-sm flex justify-start">
+				<view class="padding-sm">
 					<view class="text-grey text-xs"><image src="../../../static/input/形状6拷贝7@2x.png" style="width: 22upx; height: 30upx;" mode=""></image></view>	
 				</view>
 			</view>
-			<view class="flex justify-between bg-white solid-top solid-bottom " @tap="goMore('/pages/index/Personal-center/Collection')">
-				<view class="flex justify-left">
-					<view class=" padding-sm"><image src="../../../static/input/me3.png" style="width: 50upx; height: 50upx;" mode=""></image></view>
+			<view class="flex justify-between bg-white solids-bottom align-center" @tap="goMore('/pages/index/Personal-center/Collection')">
+				<view class="flex justify-left align-center">
+					<view class=" padding-sm"><image src="../../../static/input/me3.png" style="width: 45upx; height: 45upx;" mode=""></image></view>
 					<view class="padding-tb-sm">
-						<view class="text-grey">我的收藏</view>
-						<view class="text-gray text-sm flex">
-						</view>
+						<view class="text-black" style="font-size: 30upx;">我的收藏</view>
 					</view>
 				</view>
-				<view class="padding-sm flex justify-start">
+				<view class="padding-sm">
 					<view class="text-grey text-xs"><image src="../../../static/input/形状6拷贝7@2x.png" style="width: 22upx; height: 30upx;" mode=""></image></view>	
 				</view>
 			</view>
-			<view class="flex justify-between bg-white solid-top solid-bottom " @tap="goMore('/pages/index/Personal-center/Participation')">
-				<view class="flex justify-left">
-					<view class=" padding-sm"><image src="../../../static/input/me4.png" style="width: 50upx; height: 50upx;" mode=""></image></view>
+			<view class="flex justify-between bg-white solids-bottom align-center" @tap="goMore('/pages/index/Personal-center/Participation')">
+				<view class="flex justify-left align-center">
+					<view class=" padding-sm"><image src="../../../static/input/me4.png" style="width: 46upx; height: 42upx;" mode=""></image></view>
 					<view class="padding-tb-sm">
-						<view class="text-grey">我的参与</view>
-						<view class="text-gray text-sm flex">
-						</view>
+						<view class="text-black" style="font-size: 30upx;">我的参与</view>
 					</view>
 				</view>
-				<view class="padding-sm flex justify-start">
+				<view class="padding-sm">
 					<view class="text-grey text-xs"><image src="../../../static/input/形状6拷贝7@2x.png" style="width: 22upx; height: 30upx;" mode=""></image></view>	
 				</view>
 			</view>
-			<view class="flex justify-between bg-white solid-top solid-bottom " @tap="goMore('/pages/index/Personal-center/My-points')">
-				<view class="flex justify-left">
-					<view class=" padding-sm"><image src="../../../static/input/me5.png" style="width: 50upx; height: 50upx;" mode=""></image></view>
+			<view class="flex justify-between bg-white solids-bottom align-center" @tap="goMore('/pages/index/Personal-center/My-points')">
+				<view class="flex justify-left align-center">
+					<view class=" padding-sm"><image src="../../../static/input/me5.png" style="width: 45upx; height: 45upx;" mode=""></image></view>
 					<view class="padding-tb-sm">
-						<view class="text-grey">我的积分</view>
-						<view class="text-gray text-sm flex">
-						</view>
+						<view class="text-black" style="font-size: 30upx;">我的积分</view>
 					</view>
 				</view>
-				<view class="padding-sm flex justify-start">
+				<view class="padding-sm">
 					<view class="text-grey text-xs"><image src="../../../static/input/形状6拷贝7@2x.png" style="width: 22upx; height: 30upx;" mode=""></image></view>	
 				</view>
 			</view>
-			<view class="flex justify-between bg-white solid-top solid-bottom " @tap="goMore('/pages/index/Personal-center/Set')">
+			<view class="flex justify-between bg-white solids-bottom align-center" @tap="goMore('/pages/index/Personal-center/Set')">
 				<view class="flex justify-left">
-					<view class=" padding-sm"><image src="../../../static/input/me6.png" style="width: 50upx; height: 50upx;" mode=""></image></view>
+					<view class=" padding-sm"><image src="../../../static/input/me6.png" style="width: 45upx; height: 45upx;" mode=""></image></view>
 					<view class="padding-tb-sm">
-						<view class="text-grey">设置</view>
-						<view class="text-gray text-sm flex">
-						</view>
+						<view class="text-black" style="font-size: 30upx;">设置</view>
 					</view>
 				</view>
-				<view class="padding-sm flex justify-start">
+				<view class="padding-sm">
 					<view class="text-grey text-xs"><image src="../../../static/input/形状6拷贝7@2x.png" style="width: 22upx; height: 30upx;" mode=""></image></view>	
 				</view>
 			</view>
@@ -172,7 +158,7 @@
 				this.userinfo={
 					face:'../../static/HM-PersonalCenter/face.jpeg',
 					username:"游客",
-					integral:"请登录注册加入社区"
+					integral:"请登录进入社区"
 				}		
 			},
 			//用户点击订单类型
@@ -248,4 +234,13 @@
 	width: calc(100% - 96upx - 60upx - 120upx - 20upx);
 	line-height: 1.6em;
 }
+.log-bnt{
+	font-size: 24upx; 
+	width: 100upx;
+	height: 50upx; 
+	padding: 0;
+	text-align:center;
+	line-height: 50upx;
+}
+	
 </style>

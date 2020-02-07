@@ -4,15 +4,15 @@
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		<view class="box top">
-			<view class="cu-bar bg-gray solid-bottom">
+			<!-- <view class="cu-bar bg-gray solid-bottom">
 				<view class="action ">
 					<text class="cuIcon-close"></text>民呼我应-建言献策
 				</view>
 				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
 					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
 				</view>
-			</view>
-			<view class="cu-bar bg-white search solid-bottom">
+			</view> -->
+			<view class="cu-bar bg-white search">
 				<view class="action" @tap="goMore('/pages/index/index_people/Advice')">
 					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>

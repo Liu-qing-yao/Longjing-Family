@@ -4,17 +4,8 @@
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		<view class="box top">
-			<view class="cu-bar bg-gray">
-				<view class="action">
-					<text class="cuIcon-close"></text> 健康驿站-健康常识
-				</view>
-				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
-					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
-				</view>
-			</view>
-			<view class="cu-bar bg-white search" style="border-top: #DDDDDD 1upx solid;">
+			<view class="cu-bar bg-white search solid-bottom" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index_healthy/index_healthy')">
-					<!-- <text class="cuIcon-homefill text-gray"></text> -->
 					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red">
@@ -129,17 +120,16 @@
 				</view>
 				<view class="action">
 					<view class="text-grey text-xs">
-					
 					2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
 				</view>
 			</view>
-			<view class="cu-bar bg-white solid-bottom line-gray">
+			<!-- <view class="cu-bar bg-white solid-bottom line-gray">
 				<view class="action">
 				</view>
 				<view class="action">
 					<button class="cu-btn shadow bg-orange text-black" @tap="showModal" data-target="gridModal">更多</button>
 				</view>
-			</view>
+			</view> -->
 		</view>
 		<view style="height: 100upx;"></view>
 		<view class="cu-bar tabbar bg-white shadow foot">

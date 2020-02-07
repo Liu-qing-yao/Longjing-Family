@@ -4,14 +4,6 @@
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		<view class="box top">
-			<view class="cu-bar bg-gray">
-				<view class="action">
-					<text class="cuIcon-close"></text> 党建联盟-党建阵地
-				</view>
-				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
-					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
-				</view>
-			</view>
 			<view class="cu-bar bg-white search" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action"  @tap="goMore('/pages/index/index_longjing/index_Alliance')">
 					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
@@ -68,50 +60,114 @@
 							</view>
 						</view>
 					</view>
-					<view class="" style="position:fixed; top:600upx; right:0;">
+					<view class="arrow-trans" style="position:fixed; top:600upx; right:-10upx;">
 						<image class="" src="../../../static/input/地图箭头.png" mode=""  
 							@tap="showModal" data-target="DrawerModalR" style="width: 60upx; height: 120upx;"></image>
 					</view>
 		        </view>
 		 </view>
 		<view>
-			<view class="cu-modal drawer-modal justify-end " :class="modalName=='DrawerModalR'?'show':''" @tap="hideModal">
-				<view class="cu-dialog basis-lg " @tap.stop="" :style="[{top:CustomBar+'px',height:'calc(100vh - ' + CustomBar + 'px)'}]">
+			<view class="cu-modal drawer-modal justify-end " :class="modalName=='DrawerModalR'?'show':''" >
+				<view class="arrow-trans2" style="position:fixed; top:600upx; left: 256upx;">
+					<image class="" src="../../../static/input/地图箭头1.png" mode=""  
+						@tap="hideModal" data-target="DrawerModalR" style="width: 60upx; height: 120upx;"></image>
+				</view>
+				<view class="cu-dialog basis-lg " @tap.stop="" :style="[{top:CustomBar+'px',height:'calc(80vh - ' + CustomBar + 'px)'}]">
 					<view class="cu-list menu text-left ">
 						<view class="text-white bg-red text-center padding-tb-sm " style="font-size: 34upx;">党建阵地列表</view>
 						<uni-collapse accordion="true">
-						    <uni-collapse-item title="大观楼区域">
-						        <view class="solid-bottom solid-top bg-white" style="padding: 20upx 30upx;">
-						            1.东城街道党委
-									<view style="font-size: 20upx; padding: 10upx 20upx 0;">地址：宜宾市888号</view>
+						    <uni-collapse-item title="大安街道办事处" style="background-color: #fe9148; color: #ffffff;">
+						        <view class="solid-top bg-white" @tap="showModalL" data-target="DrawerModalL"  style="padding: 20upx 30upx;">
+						            1.华大社区
+									<view style="font-size: 20upx; padding: 10upx 20upx 0;">地址：华大社区888号</view>
 						        </view>
-								<view class="bg-white" style="padding: 20upx 30upx; ">
-								    2.西城街道党委
-									<view style="font-size: 20upx; padding: 10upx 20upx 0;">地址：宜宾市888号</view>
+								<view class="bg-white solid-top" @tap="showModalL" data-target="DrawerModalL" style="padding: 20upx 30upx; ">
+								    2.大楻桶社区
+									<view style="font-size: 20upx; padding: 10upx 20upx 0;">地址：华大社区888号</view>
+								</view>
+								<view class="bg-white solid-top" @tap="showModalL" data-target="DrawerModalL" style="padding: 20upx 30upx; ">
+								    3.广华社区
+									<view style="font-size: 20upx; padding: 10upx 20upx 0;">地址：华大社区888号</view>
+								</view>
+								<view class="bg-white solid-top" @tap="showModalL" data-target="DrawerModalL" style="padding: 20upx 30upx; ">
+								    4.红苕地社区
+									<view style="font-size: 20upx; padding: 10upx 20upx 0;">地址：华大社区888号</view>
 								</view>
 						    </uni-collapse-item>
-						    <uni-collapse-item title="钟鼓楼区域">
-						       <view class="solid-bottom solid-top bg-white" style="padding: 20upx 30upx;">
-						           1.东城街道党委
-						       	<view style="font-size: 20upx; padding: 10upx 20upx 0;">地址：宜宾市888号</view>
+						    <uni-collapse-item title="凉高山街道办事处" style="background-color: #fe9148; color: #ffffff;">
+						       <view class="solid-top bg-white" @tap="showModalL" data-target="DrawerModalL"  style="padding: 20upx 30upx;">
+						           1.华大社区
+						       	<view style="font-size: 20upx; padding: 10upx 20upx 0;">地址：华大社区888号</view>
 						       </view>
-						       <view class="bg-white" style="padding: 20upx 30upx; ">
-						           2.西城街道党委
-						       	<view style="font-size: 20upx; padding: 10upx 20upx 0;">地址：宜宾市888号</view>
+						       <view class="bg-white solid-top" @tap="showModalL" data-target="DrawerModalL" style="padding: 20upx 30upx; ">
+						           2.大楻桶社区
+						       	<view style="font-size: 20upx; padding: 10upx 20upx 0;">地址：华大社区888号</view>
+						       </view>
+						       <view class="bg-white solid-top" @tap="showModalL" data-target="DrawerModalL" style="padding: 20upx 30upx; ">
+						           3.广华社区
+						       	<view style="font-size: 20upx; padding: 10upx 20upx 0;">地址：华大社区888号</view>
+						       </view>
+						       <view class="bg-white solid-top" @tap="showModalL" data-target="DrawerModalL" style="padding: 20upx 30upx; ">
+						           4.红苕地社区
+						       	<view style="font-size: 20upx; padding: 10upx 20upx 0;">地址：华大社区888号</view>
 						       </view>
 						    </uni-collapse-item>
-						    <uni-collapse-item title="临港区域">
-						        <view class="solid-bottom solid-top bg-white" style="padding: 20upx 30upx;">
-						            1.东城街道党委
-						        	<view style="font-size: 20upx; padding: 10upx 20upx 0;">地址：宜宾市888号</view>
+						    <uni-collapse-item title="龙井街道办事处" style="background-color: #fe9148; color: #ffffff;">
+						        <view class="solid-top bg-white" @tap="showModalL" data-target="DrawerModalL"  style="padding: 20upx 30upx;">
+						            1.华大社区
+						        	<view style="font-size: 20upx; padding: 10upx 20upx 0;">地址：华大社区888号</view>
 						        </view>
-						        <view class="bg-white" style="padding: 20upx 30upx; ">
-						            2.西城街道党委
-						        	<view style="font-size: 20upx; padding: 10upx 20upx 0;">地址：宜宾市888号</view>
+						        <view class="bg-white solid-top" @tap="showModalL" data-target="DrawerModalL" style="padding: 20upx 30upx; ">
+						            2.大楻桶社区
+						        	<view style="font-size: 20upx; padding: 10upx 20upx 0;">地址：华大社区888号</view>
+						        </view>
+						        <view class="bg-white solid-top" @tap="showModalL" data-target="DrawerModalL" style="padding: 20upx 30upx; ">
+						            3.广华社区
+						        	<view style="font-size: 20upx; padding: 10upx 20upx 0;">地址：华大社区888号</view>
+						        </view>
+						        <view class="bg-white solid-top" @tap="showModalL" data-target="DrawerModalL" style="padding: 20upx 30upx; ">
+						            4.红苕地社区
+						        	<view style="font-size: 20upx; padding: 10upx 20upx 0;">地址：华大社区888号</view>
 						        </view>
 						    </uni-collapse-item>
+							<uni-collapse-item title="马冲口街道办事处" style="background-color: #fe9148; color: #ffffff;">
+							    <view class="solid-top bg-white" @tap="showModalL" data-target="DrawerModalL"  style="padding: 20upx 30upx;">
+							        1.华大社区
+							    	<view style="font-size: 20upx; padding: 10upx 20upx 0;">地址：华大社区888号</view>
+							    </view>
+							    <view class="bg-white solid-top" @tap="showModalL" data-target="DrawerModalL" style="padding: 20upx 30upx; ">
+							        2.大楻桶社区
+							    	<view style="font-size: 20upx; padding: 10upx 20upx 0;">地址：华大社区888号</view>
+							    </view>
+							    <view class="bg-white solid-top" @tap="showModalL" data-target="DrawerModalL" style="padding: 20upx 30upx; ">
+							        3.广华社区
+							    	<view style="font-size: 20upx; padding: 10upx 20upx 0;">地址：华大社区888号</view>
+							    </view>
+							    <view class="bg-white solid-top" @tap="showModalL" data-target="DrawerModalL" style="padding: 20upx 30upx; ">
+							        4.红苕地社区
+							    	<view style="font-size: 20upx; padding: 10upx 20upx 0;">地址：华大社区888号</view>
+							    </view>
+							</uni-collapse-item>
 						</uni-collapse>
-
+					</view>
+				</view>
+			</view>
+		</view>
+		<view>
+			<view class="cu-modal drawer-modal" :class="modalNameL=='DrawerModalL'?'show':''" @tap="hideModalL" >
+				<image src="../../../static/input/介绍箭头1.png" mode="" style="width: 50upx; height: 126upx; position: fixed;left: -10upx; bottom: 101upx;"></image>
+			</view>
+			<view class="cu-modal cu-modal1 drawer-modal flex justify-start" :class="modalNameL=='DrawerModalL'?'show':''">
+				
+				<view class="cu-dialog basis-lg cu-modal1" @tap.stop="" :style="[{top:CustomBar+'px',height:'calc(16vh - ' + CustomBar + 'px)'}]" style="overflow: auto;">
+					<view class="cu-list menu text-left" >
+						<view class="text-white solid-right" style="background-color: #fe9148; font-size: 24upx;">
+							<text>
+								华大社区是四川省自贡大安区龙井街道下辖的社区，城乡分类代码为111，为主城区。
+								区划代码为510304002014，居民身份证号码前6位为510304。邮政编码为643020，长途电话区号为0813 ，车牌号码为川C。
+								华大社区与和大社区、红苕地社区、广华社区、大楻桶社区、龙井社区相邻。
+							</text>
+						</view>
 					</view>
 				</view>
 			</view>
@@ -163,6 +219,7 @@
 					
 					CustomBar: this.CustomBar,
 					modalName: null,
+					modalNameL: null,
 	                title: 'map',
 	                latitude: 39.909,
 	                longitude: 116.39742,
@@ -199,6 +256,12 @@
 			showModal(e) {
 				this.modalName = e.currentTarget.dataset.target
 			},
+			hideModalL(e) {
+				this.modalNameL = null
+			},
+			showModalL(e) {
+				this.modalNameL = e.currentTarget.dataset.target
+			},
 	    },
 		components: {
 			uniCollapse,uniCollapseItem
@@ -207,7 +270,7 @@
 </script>
 
 <style>
-	
+
 .box{
 	border-bottom: 1upx #DDDDDD solid;
 }
@@ -247,5 +310,45 @@
 	text-align: left;
 	padding-left: 10upx;
 }
+
+.arrow-trans image {
+            animation: myfirst 0.9s infinite;
+}
+@keyframes myfirst {
+            0% {
+                transform: translate(0upx, 0upx);
+            }
+            50% {
+                transform: translate(-12upx, 0upx);
+            }
+            100% {
+                transform: translate(0upx, 0upx);
+            }
+}
+
+.arrow-trans2 image {
+            animation: myfirst2 0.9s infinite;
+}
+@keyframes myfirst2 {
+            0% {
+                transform: translate(0upx, 0upx);
+            }
+            50% {
+                transform: translate(-12upx, 0upx);
+            }
+            100% {
+                transform: translate(0upx, 0upx);
+            }
+}
+
+.cu-modal1{
+	position: fixed;
+	top: 1020upx;
+	right: 0;
+	bottom: 0upx;
+	left: 21upx;
+	z-index: 1110; 
+	background: rgba(0, 0, 0, 0);
+} 
 
 </style>

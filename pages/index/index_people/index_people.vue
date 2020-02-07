@@ -4,14 +4,14 @@
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		<view class="box top">
-			<view class="cu-bar bg-gray" style="border-bottom: #DDDDDD 1upx solid;">
+			<!-- <view class="cu-bar bg-gray" style="border-bottom: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index')">
 					<text class="cuIcon-close"></text> 关闭-龙井人家
 				</view>
 				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
 					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
 				</view>
-			</view>
+			</view> -->
 			<view class="cu-bar bg-white search" style="border-bottom: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index')">
 					<!-- <text class="cuIcon-homefill text-gray"></text> -->

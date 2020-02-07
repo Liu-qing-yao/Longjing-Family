@@ -1,14 +1,14 @@
 <template>
 	<view>
 		<view class="box top">
-			<view class="cu-bar bg-gray">
+			<!-- <view class="cu-bar bg-gray">
 				<view class="action">
 					<text class="cuIcon-close"></text>我的-我的消息
 				</view>
 				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
 					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
 				</view>
-			</view>
+			</view> -->
 			<view class="cu-bar bg-white search solid-bottom" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action"  @tap="goMore('/pages/index/Personal-center/Personal-center')">
 					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
@@ -69,8 +69,8 @@
 							<view style="margin: 10upx 0 0; font-size: 22upx;">2019-12-12 22：00</view>
 					    </view>
 					</view>
-					<view class="action" style="font-size: 24upx;">
-						<image src="../../../static/input/形状599拷贝@3x.png" mode="" style="width: 25upx;height: 25upx;"></image>
+					<view class="img-align">
+						<image src="../../../static/input/形状599拷贝@3x.png" mode="" style="width: 26upx;height: 26upx; margin: 0 8upx;"></image>
 						<text class="text-orange">您的报事未受理</text>
 					</view>
 			</view>
@@ -82,8 +82,8 @@
 							<view style="margin: 10upx 0 0; font-size: 22upx;">2019-12-12 22：00</view>
 					    </view>
 					</view>
-					<view class="action" style="font-size: 24upx;">
-						<image src="../../../static/input/形状616@3x.png" mode="" style="width: 40upx;height: 30upx; margin: 0 10upx;"></image>
+					<view class="img-align" style="margin-right: 68upx;">
+						<image src="../../../static/input/形状616@3x.png" mode="" style="width: 32upx;height: 28upx; margin: 0 8upx;"></image>
 						<text class="text-blue">正在办理</text>
 					</view>
 			</view>
@@ -95,8 +95,8 @@
 							<view style="margin: 10upx 0 0; font-size: 22upx;">2019-12-12 22：00</view>
 					    </view>
 					</view>
-					<view class="action" style="font-size: 24upx;">
-						<image src="../../../static/input/形状13拷贝2@3x.png" mode="" style="width: 30upx;height: 30upx; margin: 0 10upx;"></image>
+					<view class="img-align">
+						<image src="../../../static/input/形状13拷贝2@3x.png" mode="" style="width: 26upx;height: 26upx; margin: 0 8upx;"></image>
 						<text class="text-red">您的报事已完结</text>
 					</view>
 			</view>
@@ -161,5 +161,10 @@
 	position: absolute;
 	left: 200upx;
 	line-height: 1.6em;
+}
+.img-align *{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 24upx;
 }
 </style>

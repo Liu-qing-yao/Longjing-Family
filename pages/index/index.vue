@@ -4,14 +4,6 @@
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		<view class="box top">
-			<view class="cu-bar bg-gray">
-				<view class="action" @tap="goMore('/pages/index/News')">
-					<text class="cuIcon-close"></text>关闭-龙井人家
-				</view>
-				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
-					<image src="../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
-				</view>
-			</view>
 			<view class="cu-bar bg-gradual-red search">
 				<view class="content">	
 					龙井人家
@@ -99,18 +91,18 @@
 					name: '龙井之窗',
 					url: '/pages/index/index_longjing/index_longjing',
 				}, {
-					cuIcon: 'dfdb', 
-					badge: 0,
-					name: '玩味生活',
-					url: '/pages/index/index_play/index_play',
-					
-				}, {
 					 cuIcon: 'dfcaade',
 					badge: 0,
 					name: '民呼我应',
 					url: '/pages/index/index_people/index_people',
 					
-				}, {
+				},{
+					cuIcon: 'dfdb', 
+					badge: 0,
+					name: '乐享生活',
+					url: '/pages/index/index_play/index_play',
+					
+				},  {
 				    cuIcon: 'dfcccb', 
 					badge: 0,
 					name: '益路有你',

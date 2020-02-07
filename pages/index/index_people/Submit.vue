@@ -4,14 +4,14 @@
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		<view class="box top">
-			<view class="cu-bar bg-gray">
+			<!-- <view class="cu-bar bg-gray">
 				<view class="action">
 					<text class="cuIcon-close"></text>民呼我应-提交
 				</view>		
 				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
 					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
 				</view>
-			</view>
+			</view> -->
 			<view class="cu-bar bg-white search" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action"  @tap="goMore('/pages/index/index_people/Call_me')">
 					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
@@ -31,8 +31,8 @@
 			<image src="../../../static/input/图层1312.png" mode="" style="width: 750upx; height: 280rpx;"></image>
 			<view class="padding-lr" style="position: absolute;top: 450upx;">
 				<view class="txtmodle bg-white text-center padding" style="height: 210upx; width: 690upx;">
-					<view class="text-green text-xl">提交成功，等待接案人员处理</view>
-					<view class="text-orange" style="padding: 25upx 0;">【点击查看处理结果】</view>
+					<view class="text-green text-xl">提交成功，等待接件人员处理</view>
+					<view class="text-orange" style="padding: 25upx 0;"  @tap="goMore('/pages/index/Personal-center/Report')">【点击查看处理结果】</view>
 				</view>
 			</view>
 		</view>

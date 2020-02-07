@@ -4,14 +4,14 @@
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		<view class="box top">
-			<view class="cu-bar bg-gray">
+			<!-- <view class="cu-bar bg-gray">
 				<view class="action">
 					<text class="cuIcon-close"></text> 龙井之家-民呼我应
 				</view>
 				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
 					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
 				</view>
-			</view>
+			</view> -->
 			<view class="cu-bar bg-white search" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index_people/index_people')">
 					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
@@ -32,7 +32,7 @@
 				</button>
 			</view>
 		</view>
-		<view class="flex justify-between bg-white padding" @tap="goMore('/pages/index/index_people/My-advice')">
+		<view class="flex justify-between bg-white padding" @tap="goMore('/pages/index/Personal-center/My-advice')">
 			<view class="flex" >
 				<image src="../../../static/input/背景拷贝.png" mode="" style="width: 60upx; height: 40upx; padding-right: 10upx;"></image>
 				<view class="text-black text-xl">我的建言献策</view>

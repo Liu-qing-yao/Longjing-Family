@@ -4,15 +4,15 @@
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		<view class="box top">
-			<view class="cu-bar bg-gray">
+			<!-- <view class="cu-bar bg-gray">
 				<view class="action">
 					<text class="cuIcon-close"></text> 龙井之家-民呼我应
 				</view>
 				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
 					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
 				</view>
-			</view>
-			<view class="cu-bar bg-white search" style="border-top: #DDDDDD 1upx solid;">
+			</view> -->
+			<view class="cu-bar bg-white search solid-bottom" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index_people/index_people')">
 					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
@@ -29,90 +29,70 @@
 			    {{item.name}}
 			</view>
 		</scroll-view>
-		<view class="flex bg-white solid-bottom">
-			<view class="bg-gray text-black mall_change" >
-				<image src="../../../static/input/形状559.png" mode="" style="width: 32upx;height: 30upx; padding-right: 5upx;"></image>
-				请选择分类
+		<view class="flex bg-white" >
+			<view class="bg-gray mall_change img-align" >
+				<image src="../../../static/input/形状559.png" mode="" style="width: 30upx;height: 30upx; padding: 0; margin-right: 12upx;"></image>
+				<view>请选择分类</view>
 			</view>
-			<view class="mall_change" >
+			<view class="mall_change img-align" >
 				先选择街道
 			</view>
 			<view class="" style="margin: 16upx 16upx;">
 				<picker @change="PickerChange" :value="index_Street" :range="picker1">
-					<view class="picker">
-						<image src="../../../static/input/下.png" mode="" style="width: 30upx;height: 35upx;"></image>
+					<view class="picker img-align">
+						<image src="../../../static/input/下.png" mode="" style="width: 31upx;height: 36upx;"></image>
 					</view>
 				</picker>
 			</view>
-			<view class="mall_change" >
+			<view class="mall_change img-align" >
 				再选择社区
 			</view>
 			<view class="" style="margin: 16upx 16upx;">
 				<picker @change="PickerChange" :value="index_Community" :range="picker2">
-					<view class="picker">
-						<image src="../../../static/input/下.png" mode="" style="width: 30upx;height: 35upx;"></image>
+					<view class="picker img-align">
+						<image src="../../../static/input/下.png" mode="" style="width: 31upx;height: 36upx;"></image>
 					</view>
 				</picker>
 			</view>
 		</view>
 		
-		<view class="cu-list menu-avatar">
+		<view class="cu-list menu-avatar solid-top">
 			<view class="flex bg-white justify-between" style="padding: 10upx; border-bottom: #DDDDDD 1upx solid;">
 				<view class="flex" >
 					<view>
-						<image src="../../../static/input/图层11_1.png" mode="" style="width: 180upx; height: 160upx;"></image>
+						<image src="../../../static/input/益路有你_11.png" mode="" style="width: 200upx; height: 160upx;"></image>
 					</view>
-					<view class="" style="margin-left: 10upx;">
-						<view class="text-black text-xs" style="width: 440upx;">新街社区-12月19日就业援助对象公示</view>
+					<view class="" style="margin-left: 15upx;">
+						<view class="text-black">法制宣传进社区</view>
 						<view class="text-gray text-sm flex">
-							<view class="text-cut text-xs" style="padding-top: 90upx;">
-								<text class=" text-red"></text>
+							<view class="text-cut" style="padding-top: 90upx;">
+								<text class=" text-red  margin-right-xs"></text>
 								2019-12-22  16:00
 							</view> 
 						</view>
 					</view>
 				</view>
 				<view class="com_count">
-					<view class="text-xs" style="width: 200upx;">2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
+					<view class="">2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
 				</view>
 			</view>
-			<view class="bg-white" style="padding-bottom: 10upx; border-bottom: #DDDDDD 1upx solid;">
-				<view class="content">
-					<view class="text-gray flex" style="padding: 15upx;">
-						<view class="text-center text-black text-xs">富裕村纪检工作公开</view>
-					</view>
-					<view class="">
-						<view class="flex" style="padding: 0 10upx;">
-							<image src="../../../static/input/图层11_1.png" mode="" style="width: 190upx; height: 160upx; padding-right: 10upx;"></image>
-							<image src="../../../static/input/图层12_1.png" mode="" style="width: 190upx; height: 160upx; "></image>
-						</view>
-					</view>
-					<view class="margin-top-sm flex justify-between">
-						<view class="text-gray text-xs" style="padding-left: 10upx;">2019-12-23 19:00</view>
-						<view class="action">
-							<text class="text-xs">2404</text>
-							<text class="text-gray"><image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></text>
-						</view>
-					</view>
-				</view>
-			</view>
-			<view class="flex bg-white justify-between" style="padding: 10upx; border-bottom: #DDDDDD 1upx solid;">
+			<view class="flex bg-white justify-between" style="padding: 10upx;border-bottom: #DDDDDD 1upx solid;">
 				<view class="flex" >
 					<view>
-						<image src="../../../static/input/图层11_1.png" mode="" style="width: 180upx; height: 160upx;"></image>
+						<image src="../../../static/input/益路有你_11.png" mode="" style="width: 200upx; height: 160upx;"></image>
 					</view>
-					<view class="" style="margin-left: 10upx;">
-						<view class="text-black text-xs" style="width: 440upx;">小干村党员学习通知</view>
+					<view class="" style="margin-left: 15upx;">
+						<view class="text-black">葡萄园社区开发创文</view>
 						<view class="text-gray text-sm flex">
-							<view class="text-cut text-xs" style="padding-top: 90upx;">
-								<text class=" text-red"></text>
+							<view class="text-cut" style="padding-top: 90upx;">
+								<text class=" text-red  margin-right-xs"></text>
 								2019-12-22  16:00
 							</view> 
 						</view>
 					</view>
 				</view>
 				<view class="com_count">
-					<view class="text-xs" style="width: 200upx;">2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
+					<view class="">2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
 				</view>
 			</view>
 		</view>
@@ -277,6 +257,11 @@
 .mall_change{
 	border-left: #DDDDDD 1upx solid;
 	border-right: #DDDDDD 1upx solid;
-	padding: 10upx 29upx;
+	padding: 10upx 27upx;
+}
+.img-align *{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 28upx;
 }
 </style>

@@ -4,14 +4,14 @@
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		<view class="box top">
-			<view class="cu-bar bg-gray">
+			<!-- <view class="cu-bar bg-gray">
 				<view class="action">
 					<text class="cuIcon-close"></text> 龙井人家-益路有你
 				</view>
 				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
 					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
 				</view>
-			</view>
+			</view> -->
 			<view class="cu-bar bg-white search" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index_volunteer/index_volunteer')">
 					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
@@ -24,7 +24,7 @@
 				</view>
 			</view>
 		</view>
-		<scroll-view scroll-x class="bg-white nav navfirst align-center">
+		<scroll-view scroll-x class="bg-white nav navfirst align-center solid-top">
 			<view class="cu-item service-nav_1" :class="0==Tab?'bg-red cur':'bg-orange'" @tap="goMore('/pages/index/index_volunteer/index_volService')" data-id="0">
 				<text class="" >志愿服务</text>
 			</view>
@@ -135,9 +135,9 @@
 				<view class="text-black margin-left" >
 					智慧龙井 发现您身边的天使
 				</view>
-				<view class="action">
+				<!-- <view class="action">
 					<button class="cu-btn shadow bg-orange text-black" @tap="showModal" data-target="gridModal">更多</button>
-				</view>
+				</view> -->
 			</view>
 		</view>
 		<view style="height: 100upx;"></view>

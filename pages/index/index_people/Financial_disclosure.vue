@@ -4,15 +4,15 @@
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		<view class="box top">
-			<view class="cu-bar bg-gray">
+			<!-- <view class="cu-bar bg-gray">
 				<view class="action">
 					<text class="cuIcon-close"></text> 民呼我应-财务公开
 				</view>
 				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
 					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
 				</view>
-			</view>
-			<view class="cu-bar bg-white search" style="border-top: #DDDDDD 1upx solid;">
+			</view> -->
+			<view class="cu-bar bg-white search solid-bottom" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index_people/index_people')">
 					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
@@ -29,40 +29,40 @@
 				<text class=""></text> 党务公开
 			</view>
 			<view class="cu-item navfirst_1" :class="1==TabCur?'bg-red cur':'bg-orange'" @tap="goMore('/pages/index/index_people/Village_affairs')" data-id="1">
-				<text class=""></text> 村(居)务公开
+				<text class=""></text> 居务公开
 			</view>
 			<view class="cu-item navfirst_1" :class="2==TabCur?'bg-red cur':'bg-orange'" @tap="goMore('/pages/index/index_people/Financial_disclosure')" data-id="2">
 				<text class=""></text> 财务公开
 			</view>
 		</scroll-view>
-		<view class="flex bg-white solid-bottom">
-			<view class="bg-gray text-black mall_change" >
-				<image src="../../../static/input/形状559.png" mode="" style="width: 32upx;height: 30upx; padding-right: 5upx;"></image>
-				请选择分类
+		<view class="flex bg-white" >
+			<view class="bg-gray mall_change img-align" >
+				<image src="../../../static/input/形状559.png" mode="" style="width: 30upx;height: 30upx; padding: 0; margin-right: 12upx;"></image>
+				<view>请选择分类</view>
 			</view>
-			<view class="mall_change" >
+			<view class="mall_change img-align" >
 				先选择街道
 			</view>
 			<view class="" style="margin: 16upx 16upx;">
 				<picker @change="PickerChange" :value="index_Street" :range="picker1">
-					<view class="picker">
-						<image src="../../../static/input/下.png" mode="" style="width: 30upx;height: 35upx;"></image>
+					<view class="picker img-align">
+						<image src="../../../static/input/下.png" mode="" style="width: 31upx;height: 36upx;"></image>
 					</view>
 				</picker>
 			</view>
-			<view class="mall_change" >
+			<view class="mall_change img-align" >
 				再选择社区
 			</view>
 			<view class="" style="margin: 16upx 16upx;">
 				<picker @change="PickerChange" :value="index_Community" :range="picker2">
-					<view class="picker">
-						<image src="../../../static/input/下.png" mode="" style="width: 30upx;height: 35upx;"></image>
+					<view class="picker img-align">
+						<image src="../../../static/input/下.png" mode="" style="width: 31upx;height: 36upx;"></image>
 					</view>
 				</picker>
 			</view>
 		</view>
 		
-		<view class="cu-list menu-avatar">
+		<view class="cu-list menu-avatar solid-top">
 			<view class="flex bg-white justify-between" style="padding: 10upx; border-bottom: #DDDDDD 1upx solid;">
 				<view class="flex" >
 					<view>
@@ -247,6 +247,11 @@
 .mall_change{
 	border-left: #DDDDDD 1upx solid;
 	border-right: #DDDDDD 1upx solid;
-	padding: 10upx 29upx;
+	padding: 10upx 27upx;
+}
+.img-align *{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 28upx;
 }
 </style>
