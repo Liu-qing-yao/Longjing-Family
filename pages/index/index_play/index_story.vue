@@ -19,8 +19,7 @@
 				<view class="content text-bold text-red ">
 					发布动态
 				</view>
-				
-				<view class="action">
+				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
 					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
@@ -56,7 +55,20 @@
 		
 		<view class="bg-white text-center padding-top-xl">
 			<view class="">
-				<button class="cu-btn bg-orange" @tap="showModal" data-target="gridModal">发 表</button>
+				<button class="cu-btn bg-orange" @tap="showModal" data-target="Modal">发 表</button>
+			</view>
+			<view class="cu-modal" :class="modalName=='Modal'?'show':''">
+				<view class="cu-dialog solid">
+					<view class="cu-bar bg-white justify-start">
+						<view class="text-bold margin-lr" style="font-size: 34upx;">提示信息</view>
+					</view>
+					<view class="solid-bottom solid-top text-left" style="padding: 30upx;" >
+						发表成功！
+					</view>
+					<view class=""  @tap="hideModal" style="margin: 20upx 0 15upx 550upx;">
+						<button style="width: 90upx;height: 50upx; line-height: 50upx; background-color: #fe9148;color: #FFFFFF;font-size: 28upx;padding: 0;">关闭</button>
+					</view>
+				</view>
 			</view>
 		</view>
 		<view class="bg-white" style="height: 100upx;"></view>
@@ -101,6 +113,7 @@
 			return {
 				PageCur: 'Home',
 				imgList: [],
+				modalName: null,
 			}
 		},
 		methods: {
@@ -111,6 +124,12 @@
 				uni.navigateTo({
 					url: url
 				});
+			},
+			showModal(e) {
+				this.modalName = e.currentTarget.dataset.target
+			},
+			hideModal(e) {
+				this.modalName = null
 			},
 			ChooseImage() {
 				uni.chooseImage({

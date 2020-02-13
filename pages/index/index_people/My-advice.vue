@@ -19,13 +19,13 @@
 				<view class="content text-bold text-red">
 					建言献策
 				</view>
-				<view class="action">
+				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
 					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
 		
-		<view class="flex justify-between bg-white padding">
+		<view class="flex justify-between solid-bottom bg-white padding">
 			<view class="flex">
 				<image src="../../../static/input/背景拷贝.png" mode="" style="width: 60upx; height: 40upx; padding-right: 10upx;"></image>
 				<view class="text-black text-xl">我的建言献策</view>

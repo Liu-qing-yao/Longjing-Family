@@ -19,14 +19,14 @@
 				<view class="content text-bold text-red">
 					党建视频
 				</view>
-				<view class="action">
+				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
 					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 			
 		</view>
         <view class="cu-list menu-avatar">
-			<view class="flex bg-white justify-between" style="padding: 10upx; border-bottom: #DDDDDD 1upx solid;">
+			<view class="flex bg-white justify-between"  @tap="goMore('/pages/index/index_longjing/video-detail')" style="padding: 10upx; border-bottom: #DDDDDD 1upx solid;">
 				<view class="flex" >
 					<view>
 						<image src="../../../static/input/图层1_1.png" mode="" style="width: 220upx; height: 160upx;"></image>
@@ -45,7 +45,7 @@
 					<view class="text-xs flex">2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
 				</view>
 			</view>
-			<view class="flex bg-white justify-between" style="padding: 10upx; border-bottom: #DDDDDD 1upx solid;">
+			<view class="flex bg-white justify-between"  @tap="goMore('/pages/index/index_longjing/video-detail')" style="padding: 10upx; border-bottom: #DDDDDD 1upx solid;">
 				<view class="flex" >
 					<view>
 						<image src="../../../static/input/图层1_1.png" mode="" style="width: 220upx; height: 160upx;"></image>
@@ -64,7 +64,7 @@
 					<view class="text-xs flex">2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
 				</view>
 			</view>
-			<view class="flex bg-white justify-between" style="padding: 10upx;border-bottom: #DDDDDD 1upx solid;">
+			<view class="flex bg-white justify-between"  @tap="goMore('/pages/index/index_longjing/video-detail')" style="padding: 10upx;border-bottom: #DDDDDD 1upx solid;">
 				<view class="flex" >
 					<view>
 						<image src="../../../static/input/图层2_1.png" mode="" style="width: 220upx; height: 160upx;"></image>
@@ -83,7 +83,7 @@
 					<view class="text-xs flex">2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
 				</view>
 			</view>
-			<view class="flex bg-white justify-between" style="padding: 10upx;border-bottom: #DDDDDD 1upx solid;">
+			<view class="flex bg-white justify-between"  @tap="goMore('/pages/index/index_longjing/video-detail')" style="padding: 10upx;border-bottom: #DDDDDD 1upx solid;">
 				<view class="flex" >
 					<view>
 						<image src="../../../static/input/图层2_1.png" mode="" style="width: 220upx; height: 160upx;"></image>

@@ -19,7 +19,7 @@
 				<view class="content text-bold text-red">
 					志愿服务
 				</view>
-				<view class="action">
+				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
 					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
@@ -28,10 +28,10 @@
 			<view class="cu-item service-nav_1" :class="0==Tab?'bg-red cur':'bg-orange'" @tap="goMore('/pages/index/index_volunteer/index_volService')" data-id="0">
 				<text class="" >志愿服务</text>
 			</view>
-			<view class="cu-item service-nav_1" :class="2==Tab?'bg-red cur':'bg-orange'" @tap="goMore('/pages/index/index_volunteer/honor_List')" data-id="2">
+			<view class="cu-item service-nav_1" :class="2==Tab?'bg-red cur':'bg-orange'" @tap="goMore('/pages/index/index_volunteer/honor_List')" data-id="1">
 				<text class="">光荣榜</text>
 			</view>
-			<view class="cu-item service-nav_1" :class="3==Tab?'bg-red cur':'bg-orange'" @tap="goMore('/pages/index/index_volunteer/index_points-Mall')" data-id="3">
+			<view class="cu-item service-nav_1" :class="3==Tab?'bg-red cur':'bg-orange'" @tap="goMore('/pages/index/index_volunteer/index_points-Mall')" data-id="2">
 				<text>积分兑换</text>
 			</view>
 		</scroll-view>

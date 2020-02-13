@@ -20,11 +20,19 @@
 				<view class="content text-bold text-red" >
 					网格党建
 				</view>
-				<view class="action">
+				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
 					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
+		<scroll-view scroll-x class="bg-white nav align-center solid-bottom">
+			<view class="cu-item service-nav_1" :class="0==Tab?'bg-red cur':'bg-orange'" @tap="goMore('/pages/index/index_longjing/Grid_par_building')" data-id="0">
+				<text class="" >网格党建</text>
+			</view>
+			<view class="cu-item service-nav_1" :class="1==Tab?'bg-red cur':'bg-orange'" @tap="goMore('/pages/index/index_longjing/community-par-building1')" data-id="1">
+				<text>小区党建</text>
+			</view>
+		</scroll-view>
 		<view class="cu-list menu-avatar">
 			<view class="service-intro">
 			    <view class="text-black text-center" style="font-size: 32upx;padding: 20upx 0;">区域党委“三张清单”公示</view>
@@ -139,7 +147,7 @@
 			</view>
 		</view>
 		
-		<view style="height: 100upx;"></view>
+		<view style="height: 90upx;"></view>
 		<view class="cu-bar tabbar bg-white shadow foot">
 			<view class="action" @click="goMore('/pages/index/index')" data-cur="Home">
 				<view class='cuIcon-cu-image'>
@@ -180,11 +188,23 @@
 		data() {
 			return {
 				PageCur: 'Home',
+				Tab: 0,
+				botton: 0,
+				scrollLeft: 0,
+				scroll: 0,
 			}
 		},
 		methods: {
 			NavChange: function(e) {
 				this.PageCur = e.currentTarget.dataset.cur
+			},
+			tabSelect(e) {
+				this.TabCur = e.currentTarget.dataset.id;
+				this.scrollLeft = (e.currentTarget.dataset.id - 1) * 60
+			},
+			Select(e) {
+				this.Tab = e.currentTarget.dataset.id;
+				this.scroll = (e.currentTarget.dataset.id - 1) * 60
 			},
 			goMore(url) {
 				uni.navigateTo({
@@ -274,5 +294,23 @@
 	width: 160upx;
 	padding: 0;
 }
+.navfirst{
+	border-bottom: 1upx #DDDDDD solid;
+	padding: 0 10upx;
+	display: flex;
+	justify-content: space-between;
+}
+.service-nav_1{
+		/* background: #5ddad4; */
+		margin: 10upx 0 10upx 8upx;
+		border-radius: 15upx;
+		width: 190upx;
+		height: 80upx;
+		line-height: 80upx;
+		padding: 0;
+		text-align: center;
+		border: #DDDDDD 1upx solid;
+	}
+
 </style>
 

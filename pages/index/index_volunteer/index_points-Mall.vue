@@ -21,7 +21,7 @@
 				<view class="content text-bold text-red">
 					积分商城
 				</view>
-				<view class="action">
+				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
 					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
@@ -71,7 +71,20 @@
 						<view class="" style="font-size: 18upx;">时间：2019-12-12</view>
 						<view class="" style="font-size: 18upx;">积分：0</view>
 						<view class="" style="font-size: 18upx;">状态：未兑换</view>
-						<button class="shadow bg-orange"  style="margin: 10upx 0upx;font-size: 22upx;padding: 0;">积分兑换</button>
+						<button class="shadow bg-orange" @tap="showModalS1" data-target="Modal" style="margin: 10upx 0upx;font-size: 22upx;padding: 0;">积分兑换</button>
+					</view>
+					<view class="cu-modal" :class="modalNameS1=='Modal'?'show':''">
+						<view class="cu-dialog solid">
+							<view class="cu-bar bg-white justify-start">
+								<view class="text-bold margin-lr" style="font-size: 34upx;">提示信息</view>
+							</view>
+							<view class="solid-bottom solid-top text-left" style="padding: 30upx;" >
+								兑换成功！
+							</view>
+							<view class=""  @tap="hideModalS1" style="margin: 20upx 0 15upx 550upx;">
+								<button style="width: 90upx;height: 50upx; line-height: 50upx; background-color: #fe9148;color: #FFFFFF;font-size: 28upx;padding: 0;">关闭</button>
+							</view>
+						</view>
 					</view>
 				</view>
 				<view class="mall_contents bg-white flex" style="border: #929191 1upx solid;border-radius: 10upx;">
@@ -83,7 +96,20 @@
 						<view class="" style="font-size: 18upx;">时间：2019-12-12</view>
 						<view class="" style="font-size: 18upx;">积分：0</view>
 						<view class="" style="font-size: 18upx;">状态：未兑换</view>
-						<button class="shadow bg-orange"  style="margin: 10upx 0upx;font-size: 22upx;padding: 0;">积分兑换</button>
+						<button class="shadow bg-orange" @tap="showModalS2" data-target="Modal" style="margin: 10upx 0upx;font-size: 22upx;padding: 0;">积分兑换</button>
+					</view>
+					<view class="cu-modal" :class="modalNameS2=='Modal'?'show':''">
+						<view class="cu-dialog solid">
+							<view class="cu-bar bg-white justify-start">
+								<view class="text-bold margin-lr" style="font-size: 34upx;">提示信息</view>
+							</view>
+							<view class="solid-bottom solid-top text-left" style="padding: 30upx;" >
+								已兑换完！
+							</view>
+							<view class=""  @tap="hideModalS2" style="margin: 20upx 0 15upx 550upx;">
+								<button style="width: 90upx;height: 50upx; line-height: 50upx; background-color: #fe9148;color: #FFFFFF;font-size: 28upx;padding: 0;">关闭</button>
+							</view>
+						</view>
 					</view>
 				</view>
 			</view>
@@ -97,7 +123,20 @@
 						<view class="" style="font-size: 18upx;">时间：2019-12-12</view>
 						<view class="" style="font-size: 18upx;">积分：0</view>
 						<view class="" style="font-size: 18upx;">状态：未兑换</view>
-						<button class="shadow bg-orange"  style="margin: 10upx 0upx;font-size: 22upx;padding: 0;">积分兑换</button>
+						<button class="shadow bg-orange" @tap="showModalS3" data-target="Modal" style="margin: 10upx 0upx;font-size: 22upx;padding: 0;">积分兑换</button>
+					</view>
+					<view class="cu-modal" :class="modalNameS3=='Modal'?'show':''">
+						<view class="cu-dialog solid">
+							<view class="cu-bar bg-white justify-start">
+								<view class="text-bold margin-lr" style="font-size: 34upx;">提示信息</view>
+							</view>
+							<view class="solid-bottom solid-top text-left" style="padding: 30upx;" >
+								兑换成功！
+							</view>
+							<view class=""  @tap="hideModalS3" style="margin: 20upx 0 15upx 550upx;">
+								<button style="width: 90upx;height: 50upx; line-height: 50upx; background-color: #fe9148;color: #FFFFFF;font-size: 28upx;padding: 0;">关闭</button>
+							</view>
+						</view>
 					</view>
 				</view>
 				<view class="mall_contents bg-white flex" style="border: #929191 1upx solid;border-radius: 10upx;">
@@ -109,7 +148,20 @@
 						<view class="" style="font-size: 18upx;">时间：2019-12-12</view>
 						<view class="" style="font-size: 18upx;">积分：0</view>
 						<view class="" style="font-size: 18upx;">状态：未兑换</view>
-						<button class="shadow bg-orange"  style="margin: 10upx 0upx;font-size: 22upx;padding: 0;">积分兑换</button>
+						<button class="shadow bg-orange" @tap="showModalS4" data-target="Modal"  style="margin: 10upx 0upx;font-size: 22upx;padding: 0;">积分兑换</button>
+					</view>
+					<view class="cu-modal" :class="modalNameS4=='Modal'?'show':''">
+						<view class="cu-dialog solid">
+							<view class="cu-bar bg-white justify-start">
+								<view class="text-bold margin-lr" style="font-size: 34upx;">提示信息</view>
+							</view>
+							<view class="solid-bottom solid-top text-left" style="padding: 30upx;" >
+								已兑换完！
+							</view>
+							<view class=""  @tap="hideModalS4" style="margin: 20upx 0 15upx 550upx;">
+								<button style="width: 90upx;height: 50upx; line-height: 50upx; background-color: #fe9148;color: #FFFFFF;font-size: 28upx;padding: 0;">关闭</button>
+							</view>
+						</view>
 					</view>
 				</view>
 			</view>
@@ -123,7 +175,20 @@
 						<view class="" style="font-size: 18upx;">时间：2019-12-12</view>
 						<view class="" style="font-size: 18upx;">积分：0</view>
 						<view class="" style="font-size: 18upx;">状态：未兑换</view>
-						<button class="shadow bg-orange"  style="margin: 10upx 0upx;font-size: 22upx;padding: 0;">积分兑换</button>
+						<button class="shadow bg-orange"  @tap="showModalS5" data-target="Modal"  style="margin: 10upx 0upx;font-size: 22upx;padding: 0;">积分兑换</button>
+					</view>
+					<view class="cu-modal" :class="modalNameS5=='Modal'?'show':''">
+						<view class="cu-dialog solid">
+							<view class="cu-bar bg-white justify-start">
+								<view class="text-bold margin-lr" style="font-size: 34upx;">提示信息</view>
+							</view>
+							<view class="solid-bottom solid-top text-left" style="padding: 30upx;" >
+								已兑换完！
+							</view>
+							<view class=""  @tap="hideModalS5" style="margin: 20upx 0 15upx 550upx;">
+								<button style="width: 90upx;height: 50upx; line-height: 50upx; background-color: #fe9148;color: #FFFFFF;font-size: 28upx;padding: 0;">关闭</button>
+							</view>
+						</view>
 					</view>
 				</view>
 				<view class="mall_contents bg-white flex" style="border: #929191 1upx solid;border-radius: 10upx;">
@@ -135,7 +200,20 @@
 						<view class="" style="font-size: 18upx;">时间：2019-12-12</view>
 						<view class="" style="font-size: 18upx;">积分：0</view>
 						<view class="" style="font-size: 18upx;">状态：未兑换</view>
-						<button class="shadow bg-orange"  style="margin: 10upx 0upx;font-size: 22upx;padding: 0;">积分兑换</button>
+						<button class="shadow bg-orange"  @tap="showModalS6" data-target="Modal"   style="margin: 10upx 0upx;font-size: 22upx;padding: 0;">积分兑换</button>
+					</view>
+					<view class="cu-modal" :class="modalNameS6=='Modal'?'show':''">
+						<view class="cu-dialog solid">
+							<view class="cu-bar bg-white justify-start">
+								<view class="text-bold margin-lr" style="font-size: 34upx;">提示信息</view>
+							</view>
+							<view class="solid-bottom solid-top text-left" style="padding: 30upx;" >
+								兑换成功！
+							</view>
+							<view class=""  @tap="hideModalS6" style="margin: 20upx 0 15upx 550upx;">
+								<button style="width: 90upx;height: 50upx; line-height: 50upx; background-color: #fe9148;color: #FFFFFF;font-size: 28upx;padding: 0;">关闭</button>
+							</view>
+						</view>
 					</view>
 				</view>
 			</view>
@@ -192,9 +270,14 @@
 				PageCur: 'Home',
 				index_Street: -1,
 				index_Communities: -1,
-				picker1: ['中山街', '西街', '北街','翠屏街'],
-				picker2: ['五粮液社区', '翠屏社区', '黄河公园社区'],
-				
+				picker1: ['大安街道办事处', '凉高山街道办事处', '龙井街道办事处','马冲口街道办事处'],
+				picker2: ['华大社区', '大楻桶社区', '广华社区','红苕地社区'],
+				modalNameS1: null,
+				modalNameS2: null,
+				modalNameS3: null,
+				modalNameS4: null,
+				modalNameS5: null,
+				modalNameS6: null,
 				TabCur: 0,
 				botton: 0,
 				scrollLeft: 0,
@@ -224,6 +307,42 @@
 				uni.navigateTo({
 					url: url
 				});
+			},
+			showModalS1(e) {
+				this.modalNameS1 = e.currentTarget.dataset.target
+			},
+			hideModalS1(e) {
+				this.modalNameS1 = null
+			},
+			showModalS2(e) {
+				this.modalNameS2 = e.currentTarget.dataset.target
+			},
+			hideModalS2(e) {
+				this.modalNameS2 = null
+			},
+			showModalS3(e) {
+				this.modalNameS3 = e.currentTarget.dataset.target
+			},
+			hideModalS3(e) {
+				this.modalNameS3 = null
+			},
+			showModalS4(e) {
+				this.modalNameS4 = e.currentTarget.dataset.target
+			},
+			hideModalS4(e) {
+				this.modalNameS4 = null
+			},
+			showModalS5(e) {
+				this.modalNameS5 = e.currentTarget.dataset.target
+			},
+			hideModalS5(e) {
+				this.modalNameS5 = null
+			},
+			showModalS6(e) {
+				this.modalNameS6 = e.currentTarget.dataset.target
+			},
+			hideModalS6(e) {
+				this.modalNameS6 = null
 			},
 		}
 	}

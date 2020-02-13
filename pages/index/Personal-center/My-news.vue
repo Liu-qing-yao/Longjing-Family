@@ -16,50 +16,71 @@
 				<view class="content text-bold text-red">
 					我的消息
 				</view>
-				<view class="action">
+				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
 					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
 		<view>
-			<view class="bg-white solid-bottom flex justify-between" style="padding: 15upx 10upx;">
-				    <view class="flex justify-left">
-						<view class="face"><image src="../../../static/input/2.7.png" mode="" style="width: 120upx; height: 100upx;"></image></view>
+			<view class="bg-white solid-bottom " >
+				<view v-for="(item, index) in listData1" :key="index" class="flex justify-between" :data-url="listData1[index]" style="padding: 15upx 10upx;">
+					<view class="flex justify-left">
+						<view class="face" ><image :id="'image' + index" mode="aspectFill" :src="item.images0" style="width: 120upx; height: 100upx;"/></view>
 						<view class="padding-left">
-							<view style="font-size: 27upx;">张三（书记）<image src="../../../static/input/删除.png" mode="" style="width: 27upx; height: 32upx;"></image></view>
-							<view style="font-size: 24upx;">点赞<image src="../../../static/input/爱心.png" mode="" style="width: 34upx; height: 25upx; margin: 5upx 5upx 0;"></image></view>
-							<view style="margin: 10upx 0 0; font-size: 22upx;">2019-12-12 22：00</view>
-					    </view>
-					</view>
-						<view>
-							<image src="../../../static/input/图层860.png" mode="" style="width: 120upx;height: 80upx; margin: 10upx 10upx;"></image>
+							<view class="" style="font-size: 27upx;">
+							   {{ item.title }}<image :id="'image' + index" mode="aspectFill" :src="item.images1" @tap.stop="DelImg1" :data-index="index"  style="width: 27upx; height: 32upx;"/>
+							</view>
+							<view class="" style="font-size: 24upx;">
+							   {{ item.description1 }}
+							    <image :id="'image' + index" mode="aspectFill" :src="item.images2" style="width: 34upx; height: 25upx; margin: 5upx 5upx 0;"/>
+						    </view>
+							<view class="" style="font-size: 24upx;">
+							   {{ item.description2 }}
+							</view>
 						</view>
+					</view>
+					<view ><image :id="'image' + index" mode="aspectFill" :src="item.images3" style="width: 120upx;height: 80upx; margin: 10upx 10upx;"/></view>
+				</view>
 			</view>
-			<view class="bg-white solid-bottom flex justify-between" style="padding: 15upx 10upx;">
-				    <view class="flex justify-left">
-						<view class="face"><image src="../../../static/input/2.7.png" mode="" style="width: 120upx; height: 100upx;"></image></view>
+			<view class="bg-white solid-bottom " >
+				<view v-for="(item, index) in listData2" :key="index" class="flex justify-between" :data-url="listData2[index]" style="padding: 15upx 10upx;">
+					<view class="flex justify-left">
+						<view class="face" ><image :id="'image' + index" mode="aspectFill" :src="item.images0" style="width: 120upx; height: 100upx;"/></view>
 						<view class="padding-left">
-							<view style="font-size: 27upx;">张三（书记）<image src="../../../static/input/删除.png" mode="" style="width: 27upx; height: 32upx;"></image></view>
-							<view style="font-size: 24upx;">评论：新年快乐！</view>
-							<view style="margin: 10upx 0 0; font-size: 22upx;">2019-12-12 22：00</view>
-					    </view>
+							<view class="" style="font-size: 27upx;">
+							   {{ item.title }}<image :id="'image' + index" mode="aspectFill" :src="item.images1" @tap.stop="DelImg2" :data-index="index" style="width: 27upx; height: 32upx;"/>
+							</view>
+							<view class="" style="font-size: 24upx;">
+							   {{ item.description1 }}
+							    <image :id="'image' + index" mode="aspectFill" :src="item.images2" style="width: 34upx; height: 25upx; margin: 5upx 5upx 0;"/>
+						    </view>
+							<view class="" style="font-size: 24upx;">
+							   {{ item.description2 }}
+							</view>
+						</view>
 					</view>
-					<view>
-						<image src="../../../static/input/图层860.png" mode="" style="width: 120upx;height: 80upx; margin: 10upx 10upx;"></image>
-					</view>
+					<view ><image :id="'image' + index" mode="aspectFill" :src="item.images3" style="width: 120upx;height: 80upx; margin: 10upx 10upx;"/></view>
+				</view>
 			</view>
-			<view class="bg-white solid-bottom flex justify-between" style="padding: 15upx 10upx;">
-				    <view class="flex justify-left">
-						<view class="face"><image src="../../../static/input/2.7.png" mode="" style="width: 120upx; height: 100upx;"></image></view>
+			
+			<view class="bg-white solid-bottom " >
+				<view v-for="(item, index) in listData3" :key="index" class="flex justify-between" :data-url="listData3[index]" style="padding: 15upx 10upx;">
+					<view class="flex justify-left">
+						<view class="face" ><image :id="'image' + index" mode="aspectFill" :src="item.images0" :data-index="index" style="width: 120upx; height: 100upx;"/></view>
 						<view class="padding-left">
-							<view style="font-size: 27upx;">张三（书记）<image src="../../../static/input/删除.png" mode="" style="width: 27upx; height: 32upx;"></image></view>
-							<view style="font-size: 24upx;">评论：辛苦了！</view>
-							<view style="margin: 10upx 0 0; font-size: 22upx;">2019-12-12 22：00</view>
-					    </view>
+							<view class="" style="font-size: 27upx;">
+							   {{ item.title }}<image :id="'image' + index" mode="aspectFill" :src="item.images1" @tap.stop="DelImg3" :data-index="index" style="width: 27upx; height: 32upx;"/>
+							</view>
+							<view class="" style="font-size: 24upx;">
+							   {{ item.description1 }}
+						    </view>
+							<view class="" style="font-size: 24upx;">
+							   {{ item.description2 }}
+							</view>
+						</view>
 					</view>
-					<view>
-						<image src="../../../static/input/图层860.png" mode="" style="width: 120upx;height: 80upx; margin: 10upx 10upx;"></image>
-					</view>
+					<view ><image :id="'image' + index" mode="aspectFill" :src="item.images3" style="width: 120upx;height: 80upx; margin: 10upx 10upx;"/></view>
+				</view>
 			</view>
 			<view class="bg-white solid-bottom flex justify-between" style="padding: 15upx 10upx;">
 				    <view class="flex justify-left">
@@ -74,7 +95,7 @@
 						<text class="text-orange">您的报事未受理</text>
 					</view>
 			</view>
-			<view class="bg-white solid-bottom flex justify-between" style="padding: 15upx 10upx;">
+			<view class="bg-white solid-top solid-bottom flex justify-between" style="padding: 15upx 10upx;">
 				    <view class="flex justify-left">
 						<view class="face padding-lr" style=""><image src="../../../static/input/me1.png" mode="" style="width: 60upx; height: 50upx;"></image></view>
 						<view class="padding-left">
@@ -87,7 +108,7 @@
 						<text class="text-blue">正在办理</text>
 					</view>
 			</view>
-			<view class="bg-white solid-bottom solid-top flex justify-between" style="padding: 15upx 10upx;">
+			<view class="bg-white solid-bottom flex justify-between" style="padding: 15upx 10upx;">
 				    <view class="flex justify-left">
 						<view class="face padding-lr" style=""><image src="../../../static/input/me1.png" mode="" style="width: 60upx; height: 50upx;"></image></view>
 						<view class="padding-left">
@@ -139,11 +160,48 @@
 </template>
 
 <script>
+	import uniSection from '../../../components/uni-section/uni-section.vue'
+	import uniSwipeAction from '../../../components/uni-swipe-action/uni-swipe-action.vue'
+	import uniSwipeActionItem from '../../../components/uni-swipe-action-item/uni-swipe-action-item.vue'
 	export default {
 		data() {
 			return {
 				PageCur: '我的',
-				
+				listData1: [
+					{
+						images0: '../../../static/input/头像.png',
+						title: '张三（书记）',
+						images1: '../../../static/input/删除.png',
+						description1: '点赞',
+						images2: '../../../static/input/爱心.png',
+						description2: '2019-12-12 22：00',
+						images3: '../../../static/input/图层860.png',
+						
+					},
+				],
+				listData2: [
+					{
+						images0: '../../../static/input/头像.png',
+						title: '张三（书记）',
+						images1: '../../../static/input/删除.png',
+						description1: '点赞',
+						images2: '../../../static/input/爱心.png',
+						description2: '2019-12-12 22：00',
+						images3: '../../../static/input/图层860.png',
+						
+					},
+				],
+				listData3: [
+					{
+						images0: '../../../static/input/头像.png',
+						title: '张三（书记）',
+						images1: '../../../static/input/删除.png',
+						description1: '评论：新年快乐！',
+						description2: '2019-12-12 22：00',
+						images3: '../../../static/input/图层860.png',
+						
+					},
+				]
 			}
 		},
 		methods: {
@@ -151,6 +209,48 @@
 				uni.navigateTo({
 					url: url
 				});
+			},
+			swipeChange(e) {
+				console.log('返回：', e);
+			},
+			DelImg1(e) {
+				uni.showModal({
+					title: '提示信息',
+					content: '确定要删除该条记录吗？',
+					cancelText: '取消',
+					confirmText: '删除',
+					success: res => {
+						if (res.confirm) {
+							this.listData1.splice(e.currentTarget.dataset.index, 1)
+						}
+					}
+				})
+			},
+			DelImg2(e) {
+				uni.showModal({
+					title: '提示信息',
+					content: '确定要删除该条记录吗？',
+					cancelText: '取消',
+					confirmText: '删除',
+					success: res => {
+						if (res.confirm) {
+							this.listData2.splice(e.currentTarget.dataset.index, 1)
+						}
+					}
+				})
+			},
+			DelImg3(e) {
+				uni.showModal({
+					title: '提示信息',
+					content: '确定要删除该条记录吗？',
+					cancelText: '取消',
+					confirmText: '删除',
+					success: res => {
+						if (res.confirm) {
+							this.listData3.splice(e.currentTarget.dataset.index, 1)
+						}
+					}
+				})
 			},
 		}
 	}

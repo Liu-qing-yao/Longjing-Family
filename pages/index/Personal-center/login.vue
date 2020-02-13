@@ -35,69 +35,124 @@
 					<view class="text-center margin-top">
 						<text class="text-xl text-black ">注册</text>
 					</view>
-					<view class="" style="margin: 10upx 60upx;">
-						<view class="padding-top">
-							<view class="flex" style="height: 40upx;">
-								<text class="text-left">用户名</text>
-								<text class="text-left text-red" style="font-size: 60upx;">*</text>
+					<form  @submit="formSubmit">
+						<view class="" style="margin: 10upx 60upx;">
+							<view class="padding-top">
+								<view class="flex" style="height: 40upx;">
+									<text class="text-left">用户名</text>
+									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								</view>
+								<input class="uni-input" name="user" focus />
 							</view>
-							<input class="uni-input" focus />
-						</view>
-						<view class="padding-top">
-							<view class="flex" style="height: 40upx;">
-								<text class="text-left" style="padding-right: 10upx;">街道</text>
-								<image src="../../../static/input/三角.png" mode="" style="width: 30upx; height: 28upx;"></image>
+							<view class="padding-top">
+								<view class="flex" style="height: 40upx;">
+									<text class="text-left" style="padding-right: 10upx;">街道</text>
+									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								</view>
+								<view class="input-lists" >
+								       <xfl-select name="country"
+								           :list="list1"
+								           :clearable="false"
+								           :showItemNum="5" 
+								           :listShow="false"
+								           :isCanInput="true"  
+								           :style_Container="'height: 60upx; width:500upx;'"
+								           :placeholder = "'placeholder'"
+								           :initValue="''"
+								           :selectHideType="'hideAll'"
+								       >
+								       </xfl-select>
+								   </view>
 							</view>
-							<input class="uni-input" focus password type="text"/>
-						</view>
-						<view class="padding-top">
-							<view class="flex" style="height: 40upx;">
-								<text class="text-left" style="padding-right: 10upx;">社区</text>
-								<image src="../../../static/input/三角.png" mode="" style="width: 30upx; height: 28upx;"></image>
+							<view class="padding-top">
+								<view class="flex" style="height: 40upx;">
+									<text class="text-left" style="padding-right: 10upx;">社区</text>
+									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								</view>
+								<view class="input-lists" >
+								       <xfl-select name="country"
+								           :list="list2"
+								           :clearable="false"
+								           :showItemNum="5" 
+								           :listShow="false"
+								           :isCanInput="true"  
+								           :style_Container="'height: 60upx; width:500upx;'"
+								           :placeholder = "'placeholder'"
+								           :initValue="''"
+								           :selectHideType="'hideAll'"
+								       >
+								       </xfl-select>
+								   </view>
 							</view>
-							<input class="uni-input" focus password type="text" />
-						</view>
-						
-						<view class="padding-top">
-							<view class="flex" style="height: 40upx;">
-								<text class="text-left">真实姓名</text>
-								<text class="text-left text-red" style="font-size: 60upx;">*</text>
+							<view class="padding-top">
+								<view class="flex" style="height: 40upx;">
+									<text class="text-left" style="padding-right: 10upx;">小区</text>
+									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								</view>
+								<view class="input-lists" >
+								       <xfl-select name="country"
+								           :list="list3"
+								           :clearable="false"
+								           :showItemNum="5" 
+								           :listShow="false"
+								           :isCanInput="true"  
+								           :style_Container="'height: 60upx; width:500upx;'"
+								           :placeholder = "'placeholder'"
+								           :initValue="''"
+								           :selectHideType="'hideAll'"
+								       >
+								       </xfl-select>
+								   </view>
 							</view>
-							<input class="uni-input" focus />
-						</view>
-						<view class="padding-top">
-							<view class="flex" style="height: 40upx;">
-								<text class="text-left">电话号码</text>
-								<text class="text-left text-red" style="font-size: 60upx;">*</text>
+							<view class="padding-top">
+								<view class="flex" style="height: 40upx;">
+									<text class="text-left">真实姓名</text>
+									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								</view>
+								<input class="uni-input" name="nickname" focus />
 							</view>
-							<input class="uni-input" focus placeholder="请输入手机号"/>
-						</view>
-						<view class="padding-top">
-							<view class="flex" style="height: 40upx;">
-								<text class="text-left">验证码</text>
-								<text class="text-left text-red" style="font-size: 60upx;">*</text>
+							<view class="padding-top">
+								<view class="flex" style="height: 40upx;">
+									<text class="text-left">电话号码</text>
+									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								</view>
+								<input class="uni-input" focus name="num" placeholder="请输入手机号"/>
 							</view>
-							<view class="solid flex justify-between" style="height: 55upx; border-radius: 20upx; width: 500upx;margin-top: 10upx;">
-								<input placeholder="请输入验证码" name="input" style="text-align: center;">
-								<button class='cu-btn bg-white text-red' >获取验证码</button>
-								</input>
-								
+							<view class="padding-top">
+								<view class="flex" style="height: 40upx;">
+									<text class="text-left">验证码</text>
+									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								</view>
+								<view class="solid flex justify-between" style="height: 55upx; border-radius: 20upx; width: 500upx;margin-top: 10upx;">
+									<input class="" placeholder="请输入验证码" name="input" style="text-align: left; text-indent: 55upx;">
+									<button class='cu-btn bg-white text-red' >获取验证码</button>
+									</input>
+									
+								</view>
+							</view>
+							<view class="padding-top">
+								<view class="flex" style="height: 40upx;">
+									<text class="text-left">电子邮箱</text>
+								</view>
+								<input class="uni-input" focus type="idcard"/>
+							</view>
+							<view class="margin-bottom text-bold">
+								<checkbox-group class="block" name="agreement" @change="CheckboxChange">
+									<view class="margin-top">
+										<checkbox :class="checkbox[0].checked?'checked':''" :checked="checkbox[0].checked?true:false" value="A" color="#FFCC33" style="transform:scale(0.7)"></checkbox>已阅读并同意<text class="text-red">网站服务条款</text>
+									</view>
+								</checkbox-group>
+							</view>
+							<view class="flex justify-between">
+								<view class="text-red">(加*为必填项)</view>
+							</view>
+							
+							<view>
+								<button class="bg-orange margin" form-type="submit">注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;册</button>
 							</view>
 						</view>
-						<view class="padding-top padding-bottom-xl">
-							<view class="flex" style="height: 40upx;">
-								<text class="text-left">电子邮箱</text>
-							</view>
-							<input class="uni-input" focus type="idcard"/>
-						</view>
-						<view class="flex justify-between">
-							<view class="text-red">(加*为必填项)</view>
-						</view>
-						
-						<view>
-							<button class="bg-orange margin">注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;册</button>
-						</view>
-					</view>
+					</form>
+					
 					
 					<view style="height: 40upx;"></view>
 				</view>
@@ -140,15 +195,52 @@
 </template>
 
 <script>
+	import xflSelect from '../../../components/xfl-select/xfl-select.vue'
+	var  graceChecker = require("../../../common/graceChecker.js");
 	export default {
 		data() {
 			return {
 				PageCur: 'Home',
 				TabCur: 0,
 				scrollLeft: 0,
+				imgList: [],
+				switchA: false,
+				switchB: true,
+				switchC: false,
+				switchD: false,
+				radio: 'A',
+				checkbox: [{
+					value: 'A',
+					checked: false
+				}, {
+					value: 'B',
+					checked: true
+				}, {
+					value: 'C',
+					checked: false
+				}],
+				list1: [
+				   '大安街道',
+				   '凉高山街道',
+				   '龙井街道',
+				   '马冲口街道',
+				],
+				list2: [
+				   '华大社区',
+				   '大楻桶社区',
+				   '广华社区',
+				   '红苕地社区',
+				],
+				list3: [
+				   '华大小区',
+				   '大楻桶小区',
+				   '广华小区',
+				   '红苕地小区',
+				],
 			
 			}
 		},
+		components: { xflSelect },  //注册为子组件
 		methods: {
 			NavChange: function(e) {
 				this.PageCur = e.currentTarget.dataset.cur
@@ -161,6 +253,57 @@
 				uni.navigateTo({
 					url: url
 				});
+			},
+			PickerChange(e) {
+				this.index = e.detail.value
+			},
+			SwitchA(e) {
+				this.switchA = e.detail.value
+			},
+			SwitchB(e) {
+				this.switchB = e.detail.value
+			},
+			SwitchC(e) {
+				this.switchC = e.detail.value
+			},
+			SwitchD(e) {
+				this.switchD = e.detail.value
+			},
+			
+			CheckboxChange(e) {
+				var items = this.checkbox,
+					values = e.detail.value;
+				for (var i = 0, lenI = items.length; i < lenI; ++i) {
+					items[i].checked = false;
+					for (var j = 0, lenJ = values.length; j < lenJ; ++j) {
+						if (items[i].value == values[j]) {
+							items[i].checked = true;
+							break
+						}
+					}
+				}
+			},
+			formSubmit: function(e) {
+				console.log('form发生了submit事件，携带数据为：' + JSON.stringify(e.detail.value))
+			    //定义表单规则
+			    var rule = [
+				    {name:"user", checkType : "string", checkRule:"1,8",  errorMsg:"用户名为必填项"},
+					{name:"country", checkType :"notnull", checkRule:"1,50",  errorMsg:"加*的下拉列表为必选项"},
+					{name:"country", checkType : "notnull", checkRule:"1,50",  errorMsg:"加*的下拉列表为必选项"},
+					{name:"country", checkType : "notnull", checkRule:"1,50",  errorMsg:"加*的下拉列表为必选项"},
+					{name:"nickname", checkType : "string", checkRule:"1,4",  errorMsg:"姓名应为1-4个字符"},
+					{name:"num", checkType : "phoneno", checkRule:"1,50",  errorMsg:"手机号码为必填项"},
+					{name:"input", checkType : "string", checkRule:"1,50",  errorMsg:"验证码为必选项"},
+					{name:"agreement", checkType : "notnull",  checkRule:"",  errorMsg:"请同意勾选协议"},
+			    ];
+			    //进行表单检查
+			    var formData = e.detail.value;
+			    var checkRes = graceChecker.check(formData, rule);
+			    if(checkRes){
+			        uni.showToast({title:"验证通过!", icon:"none"});
+			    }else{
+			        uni.showToast({ title: graceChecker.error, icon: "none" });
+			    }
 			},
 		}
 	}
@@ -181,9 +324,10 @@
 	border-radius: 10upx;
 	border: #b5b1b1 1upx solid;
 	margin-top: 10upx;
-	height: 50upx;
+	height: 60upx;
 	width: 500upx;
-	text-align: center;
+	text-align: left;
+	text-indent: 55upx;
 }
 .solid-bottom{
 	padding: 15upx 20upx;

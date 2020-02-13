@@ -19,7 +19,7 @@
 				<view class="content text-bold text-red">
 					党建联盟
 				</view>
-				<view class="action">
+				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
 					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
@@ -126,7 +126,7 @@
 				}, {
 					cuIcon: 'eceaa', 
 					badge: 0,
-					name: '网格党建',
+					name: '区域党建',
 					url: '/pages/index/index_longjing/Grid_par_building',
 				}, {
 					 cuIcon: 'ec1',

@@ -16,17 +16,17 @@
 				<view class="content text-bold text-red">
 					我的参与
 				</view>
-				<view class="action">
+				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
 					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
 		
 		 <scroll-view scroll-x class="bg-white nav navfirst align-center">
-		 	<view class="cu-item par_nav_1" :class="0==TabCur?'bg-orange':'bg-gray'"  @tap="goMore('/pages/index/Personal-center/Participation')" data-id="0">
+		 	<view class="cu-item par_nav_1" :class="0==TabCur?'bg-orange':'bg-lgrey'"  @tap="goMore('/pages/index/Personal-center/Participation')" data-id="0">
 		 		<text class=""></text>志 愿 活 动
 		 	</view>
-		 	<view class="cu-item par_nav_1" :class="1==TabCur?'bg-orange cur':'bg-gray'" @tap="goMore('/pages/index/Personal-center/Participation1')" data-id="1">
+		 	<view class="cu-item par_nav_1" :class="1==TabCur?'bg-orange cur':'bg-lgrey'" @tap="goMore('/pages/index/Personal-center/Participation1')" data-id="1">
 		 		<text class=""></text>生 活 动 态
 		 	</view>
 		 </scroll-view>
@@ -76,7 +76,7 @@
 		 						</view>
 		 					</view>
 		 					<view style="">
-		 						<button class="bg-gray flex" style="padding: 0 15upx; width: 180upx; height: 80upx;">
+		 						<button class="flex" style="padding: 0 15upx; width: 180upx; height: 80upx;background-color: #d1d1d1;">
 		 							<view class="text-center"><image src="../../../static/input/形状13.png" mode="" style="width: 45upx; height: 35upx;padding-right: 8upx;"></image></view>
 		 							<view class="text-center text-white">已完成</view>
 		 						</button>

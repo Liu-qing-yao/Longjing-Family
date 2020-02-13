@@ -23,7 +23,6 @@ const app = new Vue({
 app.$mount()
 
 
-
 /**
  * 页面跳转,普通跳转
  * @param {Object} item

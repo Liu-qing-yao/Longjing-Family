@@ -20,23 +20,28 @@
 				<view class="content text-bold text-red" >
 					详情
 				</view>
-				<view class="action">
+				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
 					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
 		<view class="cu-list menu-avatar">
-			<view class="txtmodle padding-lr bg-white">
-				<view class="padding-tb text-center">
-					<text class="text-red text-xl">北城社区卫生服务中心</text>
-				</view>
-				<view class="text-xs text-gray" style="display: flex; justify-content: space-between;">
-					<view class="text-cut">
-						<text class=" text-red  margin-right-xs"></text>
-						2019-12-22  16:00
-					</view> 
-					<view class="">
-						<view class="">2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
+			<view class="bg-white solid-bottom ">
+				<view class="" style="margin: 0 20upx ; padding-bottom: 10upx;">
+					<view class="content">
+						<view class="text-gray text-center" style="padding: 15upx 0;font-size: 31upx;">					
+							<view class="text-center text-black">
+								<text class="text-red text-xl">华大社区卫生服务中心</text>
+							</view>
+						</view>
+						<view class="margin-top-sm flex justify-around align-center">
+							<view class=" text-df">2019-12-12 16:00</view>
+							<view style="font-size: 27upx;">卫生服务</view>
+							<view class="action">
+								<text class="">2404</text>
+								<text class=""><image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></text>
+							</view>
+						</view>
 					</view>
 				</view>
 			</view>
@@ -45,7 +50,7 @@
 				<view class="padding-lr">
 				 	<view class="txtmodle padding-lr bg-white">
 				 		<view class="text-xs" style="height: 300upx; padding-top: 10upx;">
-				 			<text class="">北城社区卫生服务中心位于</text>
+				 			<text class="">华大社区卫生服务中心位于</text>
 				 		</view>
 				 	</view>
 				 	<view class="txtmodle padding-lr bg-white margin-top">

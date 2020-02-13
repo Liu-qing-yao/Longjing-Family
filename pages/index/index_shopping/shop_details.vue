@@ -20,14 +20,14 @@
 				<view class="content text-bold text-red" >
 					品牌商家
 				</view>
-				<view class="action">
+				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
 					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
 		<view>
-			<view class="text-white text-center">
-				<view class="" style="height: 80upx;background-color: #ff637a;padding: 15upx;  font-size: 35upx;">店 铺 详 情</view>
+			<view class="text-white text-center text-bold">
+				<view class="" style="height: 80upx;background-color: #ff637a;padding: 15upx;  font-size: 29upx;">店 铺 详 情</view>
 			</view>
 		</view>
 		

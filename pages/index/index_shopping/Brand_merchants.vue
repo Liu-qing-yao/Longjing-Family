@@ -20,27 +20,55 @@
 				<view class="content text-bold text-red" >
 					品牌商家
 				</view>
-				<view class="action">
+				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
 					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
 		<view>
-			<view class="text-white text-center">
-				<view class="" style="height: 80upx;background-color: #ff637a;padding: 15upx;  font-size: 35upx;">店 铺 列 表</view>
+			<view class="text-white text-center text-bold">
+				<view class="" style="height: 80upx;background-color: #ff637a;padding: 15upx;  font-size: 29upx;">店 铺 列 表</view>
 			</view>
 		</view>
-		<scroll-view scroll-x class="bg-white nav navfirst align-center">
-			<view class="cu-item navfirst_1" :class="0==TabCur?'bg-red':'bg-gray'" @tap="tabSelect" data-id="0">
-				<text class=""></text> 全 部 分 类
+		<view class="bg-white align-center flex justify-around solid-bottom" style="padding: 15upx;">
+			<view class=""  style=""> 
+				<view style="font-size: 30upx;">
+				       <xfl-select 
+				           :list="list1"
+				           :clearable="false"
+				           :showItemNum="5" 
+				           :listShow="false"
+				           :isCanInput="true"  
+				           :style_Container="'height: 70upx; width:220upx;'"
+				           :placeholder = "'placeholder'"
+				           :initValue="'全 部 分 类'"
+				           :selectHideType="'hideAll'"
+				       >
+				       </xfl-select>
+				</view>
 			</view>
-			<view class="cu-item navfirst_1" :class="1==TabCur?'bg-red cur':'bg-gray'" @tap="tabSelect" data-id="1">
-				<text class=""></text> 全 城
+			
+			<view class="">
+				<view style="width: 220upx;font-size: 30upx;">
+				       <xfl-select 
+				           :list="list2"
+				           :clearable="false"
+				           :showItemNum="5" 
+				           :listShow="false"
+				           :isCanInput="true"  
+				           :style_Container="'height: 70upx; width:220upx;'"
+				           :placeholder = "'placeholder'"
+				           :initValue="'街 道'"
+				           :selectHideType="'hideAll'"
+				       >
+				       </xfl-select>
+				</view>
 			</view>
-			<view class="cu-item navfirst_1" :class="2==TabCur?'bg-red cur':'bg-gray'" @tap="tabSelect" data-id="2">
-				<text class=""></text> 离 我 最 近
+			<view class="img-align solid" @tap="tabSelect" style="width: 220upx; height: 70upx; line-height: 70upx;border-radius: 20upx;padding: 0 0 0 15upx;">
+				<text class="" style="font-size: 31upx;padding: 0;">离 我 最 近</text>
+				<image src="../../../static/input/下.png" style="width: 33upx; height: 22upx; margin-left: 30upx;padding: 0; margin: 0 0 0 18upx;" mode=""></image>
 			</view>
-		</scroll-view>
+		</view>
 		
 		<view class="cu-list menu-avatar">
 			<view class="bg-white">
@@ -251,14 +279,31 @@
 </template>
 
 <script>
+	import xflSelect from '../../../components/xfl-select/xfl-select1.vue'
 	export default {
 		data() {
 			return {
 				PageCur: 'Home',
-				TabCur: 0,
-				scrollLeft: 0,
+				/* TabCur: 0,
+				scrollLeft: 0, */
+				list1: [ //全部分类
+				    '超市',
+				    '零售',
+				    '餐饮',
+				    '鲜香',
+					'特惠',
+					'通讯',
+					'服务'
+				],
+				list2: [ //全部分类
+				    '大安街道',
+				    '凉高山街道',
+				    '龙井街道',
+				    '马冲口街道',
+				],
 			}
 		},
+		components: { xflSelect },  //注册为子组件
 		methods: {
 			NavChange: function(e) {
 				this.PageCur = e.currentTarget.dataset.cur
@@ -272,6 +317,7 @@
 					url: url
 				});
 			},
+			
 		}
 	}
 </script>
@@ -293,6 +339,7 @@
 		font-size: 30upx;
 		width: 235upx;
 		height: 80upx;
+		line-height: 80upx;
 		text-align: center;
 		border: #DDDDDD 1upx solid;
 	}
@@ -326,5 +373,10 @@
 }
 .text-title{
 	color: text-black;
+}
+.img-align *{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 28upx;
 }
 </style>

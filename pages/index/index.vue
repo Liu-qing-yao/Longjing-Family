@@ -23,8 +23,16 @@
 				<button class="cu-btn shadow"  @tap="goMore('/pages/index/index_people/Community_announcement')" data-target="gridModal">更多</button>
 			</view>
 		</view>
-		<view style="text-align: center; padding-top: 12rpx;">
-			<text style="font-size: 28rpx;">自贡龙井街集中开展 “春季卫生大行动” </text>
+		<view class="text-center flex justify-center" style="font-size: 25upx;margin-top: 10upx;">
+			<view>大安 </view>
+			<view style="margin: 0 18upx;"> 晴 </view>
+			<view> 24℃~30℃ </view>
+			<view style="margin: 0 0 0 18upx;"> 空气质量：良</view>
+		</view>
+		<view class="flex justify-center" style="padding: 0; margin: 0;">
+			<button class="bnt-lg" @tap="goMore('/pages/index/Personal-center/login')">登 录</button>
+			<button class="bnt-lg" @tap="goMore('/pages/index/Personal-center/login')">注 册</button>
+			<button class="bnt-lg">公众号</button>
 		</view>
 		
 		
@@ -189,6 +197,17 @@
 </script>
 
 <style>
+.bnt-lg{
+		 background-color: #f06e72; 
+		 color: #FFFFFF;
+		 font-size: 24upx;
+		 padding: 0 15upx;
+		 margin: 15upx 30upx 0;
+		 width: 100upx;
+		 height: 40upx;
+		 line-height: 40upx;
+		 border-radius: 0upx;
+	}
 .cu-btn{
 	color: #333333; 
 	width: 150rpx; 

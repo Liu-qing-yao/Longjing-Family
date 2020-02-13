@@ -341,6 +341,54 @@
             "path" : "pages/index/Personal-center/login",
             "style" : {}
         }
+        ,{
+            "path" : "pages/index/index_longjing/search",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_longjing/video-detail",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_longjing/news-detail",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_longjing/community-par-building1",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_longjing/community-par-building2",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_volunteer/volunteer-detail",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_play/try1",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_shopping/business-detail",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_shopping/map-search",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_longjing/extranet",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/address-search/address-search",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/shop-map",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"mp-alipay": {

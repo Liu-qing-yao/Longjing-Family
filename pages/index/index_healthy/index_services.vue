@@ -15,20 +15,18 @@
 			</view> -->
 			<view class="cu-bar bg-white search" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index_healthy/index_healthy')">
-					<!-- <text class="cuIcon-homefill text-gray"></text> -->
 					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red" >
 					卫生服务中心
 				</view>
-				<view class="action">
-					<!-- <text class="cuIcon-recordfill text-red"></text> -->
+				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
 					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
 		
-		<scroll-view scroll-x class="bg-white nav navfirst align-center">
+		<scroll-view scroll-x class="bg-white nav navfirst align-center solid-top">
 			<view class="cu-item service-nav_1" :class="0==Tab?'bg-orange cur':'bg-cyan'" @tap="goMore('/pages/index/index_healthy/index_common')" data-id="0">
 				<text class="" >健康常识</text>
 			</view>
@@ -43,7 +41,7 @@
 		<view class="cu-list menu-avatar">
 			<view class="cu-item" @tap="goMore('/pages/index/index_healthy/index_service_detail')">
 				<view class="content">
-					<view class="text-black">北城社区服务中心</view>
+					<view class="text-black">华大社区服务中心</view>
 					<view class="text-gray text-sm flex">
 						<view class="text-cut">
 							<text class=" text-red  margin-right-xs"></text>
@@ -57,7 +55,7 @@
 			</view>
 			<view class="cu-item " @tap="goMore('/pages/index/index_healthy/index_service_detail')">
 				<view class="content">
-					<view class="text-black">南城社区服务中心</view>
+					<view class="text-black">红苕地社区服务中心</view>
 					<view class="text-gray text-sm flex">
 						<view class="text-cut">
 							<text class=" text-red  margin-right-xs"></text>
@@ -71,7 +69,7 @@
 			</view>
 			<view class="cu-item cur" @tap="goMore('/pages/index/index_healthy/index_service_detail')">
 				<view class="content">
-					<view class="text-black">西城社区服务中心</view>
+					<view class="text-black">广华社区服务中心</view>
 					<view class="text-gray text-sm flex">
 						<view class="text-cut">
 							<text class=" text-red  margin-right-xs"></text>
@@ -85,7 +83,7 @@
 			</view>
 			<view class="cu-item cur" @tap="goMore('/pages/index/index_healthy/index_service_detail')">
 				<view class="content">
-					<view class="text-black">东城社区服务中心</view>
+					<view class="text-black">大楻桶社区服务中心</view>
 					<view class="text-gray text-sm flex">
 						<view class="text-cut">
 							<text class=" text-red  margin-right-xs"></text>
@@ -99,7 +97,7 @@
 			</view>
 			<view class="cu-item cur" @tap="goMore('/pages/index/index_healthy/index_service_detail')">
 				<view class="content">
-					<view class="text-black">葡萄园社区服务中心</view>
+					<view class="text-black">华大社区服务中心</view>
 					<view class="text-gray text-sm flex">
 						<view class="text-cut">
 							<text class=" text-red  margin-right-xs"></text>
@@ -112,13 +110,6 @@
 				</view>
 			</view>
 		</view>
-		<!-- <view class="cu-bar bg-white solid-bottom line-gray">
-			<view class="action">
-			</view>
-			<view class="action">
-				<button class="cu-btn shadow bg-orange text-black" @tap="showModal" data-target="gridModal">更多</button>
-			</view>
-		</view> -->
 		
 		<view style="height: 96rpx;"></view>
 		<view class="cu-bar tabbar bg-white shadow foot">

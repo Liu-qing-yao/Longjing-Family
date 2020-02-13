@@ -20,8 +20,7 @@
 				<view class="content text-bold text-red">
 					民呼我应
 				</view>
-				<view class="action">
-					<!-- <text class="cuIcon-recordfill text-red"></text> -->
+				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
 					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>

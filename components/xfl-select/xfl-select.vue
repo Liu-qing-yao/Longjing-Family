@@ -3,7 +3,7 @@
 		<!-- 输入框，仅在可输入模式下使用 -->
 		<input  
 			v-if="showInput"  class="input"  placeholder-style="color: #bbb;"
-			type="text" v-model="selectText"  :placeholder="placeholder"
+			type="text" v-model="selectText"  :placeholder="placeholder" name="country"
 			@focus="onFocus" @blur="onBlur" @input="onInput" @confirm="$emit('confirm', $event)"
 		>
 		<!-- 显示框 -->
@@ -12,8 +12,9 @@
 		<!-- 右侧的小三角图标 -->
 		<span 
 			@click="onUpperClick" 
-			class="iconfont iconarrowBottom-fill right-arrow" 
-			:class="{isRotate: isRotate}"
+			class="right-arrow" 
+			:class="{isRotate: isRotate}" 
+			style="background-image: url(../../static/input/三角.png); background-position: 450upx 20upx;background-size:30upx 20upx;"
 		></span>
 		
 		<!-- 清除按钮图标 -->
@@ -761,8 +762,8 @@
 	@hover-color: #c0c4cc;       //边框的颜色
 	@active-color: #409eff;       //活动的颜色
 	@mouse-move-color: #f5f7fa;  //在列表项上按下时的列表项的背景色
-	@padding-left: 5%;           //两侧的边距
-	@arrowWidth: 12%;            //右边的小三角按钮区域的宽度
+	@padding-left: 10%;           //两侧的边距
+	@arrowWidth: 5.8%;            //右边的小三角按钮区域的宽度
 
 	.placeholder11{
 		color: red; top: 10px;
@@ -810,10 +811,10 @@
 			&.isRotate{
 				transform: rotate(180deg);
 			}
-			transition: transform .2s cubic-bezier(.645,.045,.355,1);
-			position: absolute; font-size: 1em; right: 0px; display: flex; 
-			top: 0;
-			align-items: center; color: @hover-color; height: 100%;
+			transition: transform .2s cubic-bezier(.645,.045,.355,0.5);
+			position: absolute; font-size: 1em; right: 8px; display: flex; 
+			top: 20upx;
+			align-items: center; color: @hover-color; height: 20upx;
 			font-weight: 100; width: @arrowWidth; justify-content: center;
 		}
 		.clear{

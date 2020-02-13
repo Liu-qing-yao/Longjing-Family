@@ -17,16 +17,27 @@
 					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red">
-					玩味生活
+					乐享生活
 				</view>
-				<view class="action">
-					<!-- <text class="cuIcon-recordfill text-red"></text> -->
+				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
 					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
 		<view class="Illustration1">
-			<image src="../../../static/input/访问数222人.png" style="width: 750rpx; height: 350rpx;" mode=""></image>
+			<view class="bg-white solid text-center align-center" style="border-radius: 60upx;width: 380upx;padding: 10upx 30upx;margin-left: 40upx; top:140upx">龙井街道办事处华大社区</view>
+			<view class="bg-white solid" style="border-radius: 15upx;padding: 15upx 30upx;margin: 0 40upx; top:155upx">
+				<view class="flex justify-between">
+					<view>居民数<text style="color: #ffca49;">222</text>人</view>
+					<view>党员数<text style="color: #ffca49;">222</text>人</view>
+					<view>访问数<text style="color: #ffca49;">222</text>人</view>
+				</view>
+				
+				<view class="flex justify-between" style="padding: 10upx 0 0 0;">
+					<text>近7天动态<text style="color: #ffca49;">22</text>条</text>
+					<text>近7天社区志愿活动<text style="color: #ffca49;">22</text>人</text>
+				</view>
+			</view>
 		</view>
 		<view class="intro-all bg-white" >
 			<view class="flex justify-between solid" style="padding: 15upx;">
@@ -154,6 +165,7 @@
 					url: url
 				});
 			},
+			
 		}
 	}
 </script>
@@ -178,5 +190,7 @@
 }
 .Illustration1{
 	height: 350upx;
+	background-image: url(../../../static/input/乐享生活1.png);
+	background-size: 750upx 350upx;
 }
 </style>

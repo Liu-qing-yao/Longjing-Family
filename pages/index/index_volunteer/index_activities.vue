@@ -19,7 +19,7 @@
 				<view class="content text-bold text-red">
 					志愿服务
 				</view>
-				<view class="action">
+				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
 					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
@@ -80,10 +80,23 @@
 								</view>
 							</view>
 							<view>
-								<button class="bg-orange flex" style="width: 180upx; height: 80upx;">
+								<button class="bg-orange flex" @tap="showModalS1" data-target="Modal" style="width: 180upx; height: 80upx;">
 									<view class="text-center"><image src="../../../static/input/形状12拷贝3.png" mode="" style="width: 50upx; height: 30upx;padding-right: 8upx;"></image></view>
 									<view class="text-center">报名</view>
 								</button>
+								<view class="cu-modal" :class="modalNameS1=='Modal'?'show':''">
+									<view class="cu-dialog solid">
+										<view class="cu-bar bg-white justify-start">
+											<view class="text-bold margin-lr" style="font-size: 34upx;">提示信息</view>
+										</view>
+										<view class="solid-top" style="padding: 30upx;font-size: 32upx;" >
+											报名成功！
+										</view>
+										<view class=""  @tap="hideModalS1" style="margin: 20upx 0 15upx 550upx;">
+											<button style="width: 90upx;height: 50upx; line-height: 50upx; background-color: #fe9148;color: #FFFFFF;font-size: 28upx;padding: 0;">关闭</button>
+										</view>
+									</view>
+								</view>
 							</view>
 						</view>
 					</view>
@@ -106,10 +119,23 @@
 								</view>
 							</view>
 							<view>
-								<button class="bg-orange flex" style="width: 180upx; height: 80upx;">
+								<button class="bg-orange flex" @tap="showModalS2" data-target="Modal" style="width: 180upx; height: 80upx;">
 									<view class="text-center"><image src="../../../static/input/形状12拷贝3.png" mode="" style="width: 50upx; height: 30upx;padding-right: 8upx;"></image></view>
 									<view class="text-center">报名</view>
 								</button>
+								<view class="cu-modal" :class="modalNameS2=='Modal'?'show':''">
+									<view class="cu-dialog solid">
+										<view class="cu-bar bg-white justify-start">
+											<view class="text-bold margin-lr" style="font-size: 34upx;">提示信息</view>
+										</view>
+										<view class="solid-bottom solid-top text-left" style="padding: 30upx;" >
+											报名成功！
+										</view>
+										<view class=""  @tap="hideModalS2" style="margin: 20upx 0 15upx 550upx;">
+											<button style="width: 90upx;height: 50upx; line-height: 50upx; background-color: #fe9148;color: #FFFFFF;font-size: 28upx;padding: 0;">关闭</button>
+										</view>
+									</view>
+								</view>
 							</view>
 						</view>
 					</view>
@@ -132,10 +158,23 @@
 								</view>
 							</view>
 							<view>
-								<button class="bg-orange flex" style="width: 180upx; height: 80upx;">
+								<button class="bg-orange flex" @tap="showModalS3" data-target="Modal" style="width: 180upx; height: 80upx;">
 									<view class="text-center"><image src="../../../static/input/形状12拷贝3.png" mode="" style="width: 50upx; height: 30upx;padding-right: 8upx;"></image></view>
 									<view class="text-center">报名</view>
 								</button>
+								<view class="cu-modal" :class="modalNameS3=='Modal'?'show':''">
+									<view class="cu-dialog solid">
+										<view class="cu-bar bg-white justify-start">
+											<view class="text-bold margin-lr" style="font-size: 34upx;">提示信息</view>
+										</view>
+										<view class="solid-bottom solid-top text-left" style="padding: 30upx;" >
+											报名成功！
+										</view>
+										<view class=""  @tap="hideModalS3" style="margin: 20upx 0 15upx 550upx;">
+											<button style="width: 90upx;height: 50upx; line-height: 50upx; background-color: #fe9148;color: #FFFFFF;font-size: 28upx;padding: 0;">关闭</button>
+										</view>
+									</view>
+								</view>
 							</view>
 						</view>
 					</view>
@@ -158,10 +197,23 @@
 								</view>
 							</view>
 							<view>
-								<button class="bg-orange flex" style="width: 180upx; height: 80upx;">
+								<button class="bg-orange flex" @tap="showModalS4" data-target="Modal" style="width: 180upx; height: 80upx;">
 									<view class="text-center"><image src="../../../static/input/形状12拷贝3.png" mode="" style="width: 50upx; height: 30upx;padding-right: 8upx;"></image></view>
 									<view class="text-center">报名</view>
 								</button>
+								<view class="cu-modal" :class="modalNameS4=='Modal'?'show':''">
+									<view class="cu-dialog solid">
+										<view class="cu-bar bg-white justify-start">
+											<view class="text-bold margin-lr" style="font-size: 34upx;">提示信息</view>
+										</view>
+										<view class="solid-bottom solid-top text-left" style="padding: 30upx;" >
+											报名成功！
+										</view>
+										<view class=""  @tap="hideModalS4" style="margin: 20upx 0 15upx 550upx;">
+											<button style="width: 90upx;height: 50upx; line-height: 50upx; background-color: #fe9148;color: #FFFFFF;font-size: 28upx;padding: 0;">关闭</button>
+										</view>
+									</view>
+								</view>
 							</view>
 						</view>
 					</view>
@@ -192,9 +244,7 @@
 						</view>
 					</view>
 				</view>
-				
 			</view>
-			
 			<!-- <view class="cu-bar bg-white solid-bottom line-gray">
 				<view class="action">
 				</view>
@@ -246,6 +296,10 @@
 				PageCur: 'Home',
 				TabCur: 0,
 				scrollLeft: 0,
+				modalNameS1: null,
+				modalNameS2: null,
+				modalNameS3: null,
+				modalNameS4: null,
 				List: [{
 					name: '全部'
 				}, 
@@ -267,6 +321,30 @@
 			tabSelect(e) {
 				this.TabCur = e.currentTarget.dataset.id;
 				this.scrollLeft = (e.currentTarget.dataset.id - 1) * 60
+			},
+			showModalS1(e) {
+				this.modalNameS1 = e.currentTarget.dataset.target
+			},
+			hideModalS1(e) {
+				this.modalNameS1 = null
+			},
+			showModalS2(e) {
+				this.modalNameS2 = e.currentTarget.dataset.target
+			},
+			hideModalS2(e) {
+				this.modalNameS2 = null
+			},
+			showModalS3(e) {
+				this.modalNameS3 = e.currentTarget.dataset.target
+			},
+			hideModalS3(e) {
+				this.modalNameS3 = null
+			},
+			showModalS4(e) {
+				this.modalNameS4 = e.currentTarget.dataset.target
+			},
+			hideModalS4(e) {
+				this.modalNameS4 = null
 			},
 			goMore(url) {
 				uni.navigateTo({

@@ -16,7 +16,7 @@
 				<view class="content text-bold text-red">
 					我的积分
 				</view>
-				<view class="action">
+				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
 					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
@@ -43,7 +43,7 @@
 					<view class="" style="font-size: 18upx;">时间：2019-12-12</view>
 					<view class="" style="font-size: 18upx;">积分：200</view>
 					<view class="" style="font-size: 18upx;">状态：已兑换</view>
-					<button class="shadow bg-orange"  style="margin: 10upx 0upx;font-size: 22upx;padding: 0;">兑换成功</button>
+					<button class="shadow bg-orange"  @tap="showModalS1" data-target="Modal"  style="margin: 10upx 0upx;font-size: 22upx;padding: 0;">兑换成功</button>
 				</view>
 			</view>
 			<view class="mall_contents bg-white flex" style="border: #929191 1upx solid;border-radius: 10upx;">
@@ -55,7 +55,20 @@
 					<view class="" style="font-size: 18upx;">时间：2019-12-12</view>
 					<view class="" style="font-size: 18upx;">积分：200</view>
 					<view class="" style="font-size: 18upx;">状态：已兑换</view>
-					<button class="shadow bg-orange"  style="margin: 10upx 0upx;font-size: 22upx;padding: 0;">兑换成功</button>
+					<button class="shadow bg-orange" @tap="showModalS1" data-target="Modal" style="margin: 10upx 0upx;font-size: 22upx;padding: 0;">兑换成功</button>
+				</view>
+				<view class="cu-modal" :class="modalNameS1=='Modal'?'show':''">
+					<view class="cu-dialog solid">
+						<view class="cu-bar bg-white justify-start">
+							<view class="text-bold margin-lr" style="font-size: 34upx;">提示信息</view>
+						</view>
+						<view class="solid-top" style="padding: 30upx;font-size: 32upx;" >
+							兑换成功！
+						</view>
+						<view class=""  @tap="hideModalS1" style="margin: 20upx 0 15upx 550upx;">
+							<button style="width: 90upx;height: 50upx; line-height: 50upx; background-color: #fe9148;color: #FFFFFF;font-size: 28upx;padding: 0;">关闭</button>
+						</view>
+					</view>
 				</view>
 			</view>
 		</view>
@@ -100,15 +113,27 @@
 		data() {
 			return {
 				PageCur: '我的',
+				modalNameS1: null,
 				
 			}
 		},
 		methods: {
+			tabSelect(e) {
+				this.TabCur = e.currentTarget.dataset.id;
+				this.scrollLeft = (e.currentTarget.dataset.id - 1) * 60
+			},
+			showModalS1(e) {
+				this.modalNameS1 = e.currentTarget.dataset.target
+			},
+			hideModalS1(e) {
+				this.modalNameS1 = null
+			},
 			goMore(url) {
 				uni.navigateTo({
 					url: url
 				});
 			},
+			
 		}
 	}
 </script>

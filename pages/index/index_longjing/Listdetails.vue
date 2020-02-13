@@ -19,7 +19,7 @@
 				<view class="content text-bold text-red">
 					清单详情
 				</view>
-				<view class="action">
+				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
 					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
@@ -28,21 +28,24 @@
 		
 		<view class="cu-list menu-avatar bg-white">
 			<view class="Service_N">
-				<view class="" style="margin: 20upx; padding-bottom: 10upx; border-bottom: #DDDDDD 1upx solid;">
-					<view class="content">
-						<view class="text-gray text-center" style="padding: 15upx;font-size: 36upx;">					
-							<view class="text-center margin-lr text-black">钟鼓楼区域“三张清单”(资源清单)</view>
-						</view>
-						<view class="margin-top-sm flex justify-between">
-							<view class="text-gray text-df">2019-12-12 16:00</view>
-							<view class="action">
-								<text class="text-gray">2404</text>
-								<text class="text-gray"><image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></text>
+				<view class="bg-white solid-bottom ">
+					<view class="" style="margin: 0 20upx ; padding-bottom: 10upx;">
+						<view class="content">
+							<view class="text-gray text-center" style="padding: 15upx 0;font-size: 36upx;">					
+								<view class="text-center text-black">钟鼓楼区域“三张清单”(资源清单)</view>
+							</view>
+							<view class="margin-top-sm flex justify-around align-center">
+								<view class=" text-df">2019-12-12 16:00</view>
+								<view style="font-size: 27upx;">社区信息</view>
+								<view class="action">
+									<text class="">2404</text>
+									<text class=""><image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></text>
+								</view>
 							</view>
 						</view>
 					</view>
 				</view>
-				<view class="bg-white text-center">
+				<view class="bg-white text-center margin-tb">
 					<image src="../../../static/input/mmexport1577241762378.png" mode=""></image>
 				</view>
 				

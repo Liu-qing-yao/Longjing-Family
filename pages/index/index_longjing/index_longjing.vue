@@ -3,7 +3,7 @@
 		 <basics v-if="PageCur=='basics'"></basics> 
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
-		<view class="box top">
+		<view class="box top bg-white">
 			<!-- <view class="cu-bar bg-gray">
 				<view class="action" @tap="goMore('/pages/index/index')">
 					<text class="cuIcon-close"></text>首页-龙井之窗
@@ -12,22 +12,23 @@
 					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
 				</view>
 			</view> -->
-			<view class="cu-bar bg-white search">
+			<view class="cu-bar bg-white search solid-bottom">
 				<view class="action" @tap="goMore('/pages/index/index')">
 					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red">
 					龙井之窗
 				</view>
-				<view class="action">
+				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
 					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
-		<view class="Illustration1">
-			<image src="../../../static/input/展最新时事映最新动态你我共同成长.png" style="width: 750rpx; height: 400rpx;" mode=""></image>
+		<view style="background-color: #FFFFFF;height: 25upx;"></view>
+		<view class="bg-white ">
+			<image src="../../../static/input/展最新时事映最新动态你我共同成长.png" style="width: 750rpx; height: 400rpx; margin: 0; padding: 0;" mode=""></image>
 		</view>
-		<view class="cu-bar bg-gray solid-bottom line-gray ">
+		<view class="cu-bar bg-gray solid-bottom line-gray " style="margin: 0;">
 			<view class="action">
 				<image src="../../../static/model/图层18.png" mode="" style="width: 50upx; height: 40upx; padding-right: 10upx;"></image>
 				<view class="text-red"><text style="color: #333333; font-size: 32rpx; font-weight: 590; padding-right: 10upx;">社区公告</text></view>
@@ -38,7 +39,7 @@
 			</view>
 		</view>
 		
-		 <view class="cu-list grid" :class="['col-' + gridCol,gridBorder?'':'no-border']">
+		 <view class="cu-list grid bg-white" :class="['col-' + gridCol,gridBorder?'':'no-border']">
 			<view class="cu-item" v-for="(item,index) in cuIconList" :key="index" @tap="gotoUrl(item)" v-if="index<gridCol*2">
 				<view :class="['icon-' + item.cuIcon,'text-' + item.color]" >
 					 <view class="cu-tag badge" v-if="item.badge!=0" >
@@ -46,6 +47,12 @@
 					</view> 
 				</view>
 				<text>{{item.name}}</text>
+			</view>
+			<view class="intro-all bg-white">
+			    <view class="introduce text-left">
+				 模块简介：<br>
+					 展示最新时事，放映社区工作动态与成果。加入党建模块参与学习教育。
+			    </view>
 			</view>
 		</view>
 		
@@ -198,5 +205,15 @@
 		color: #333333; 
 		width: 150rpx; 
 		background-color: #f0ad79;
+	}
+   .intro-all {
+		padding: 5upx;
+	}
+	.introduce{
+		border:5rpx dashed #f0ad79;
+		 margin: 0 8upx 0 0;
+		padding: 5upx 0upx 5upx 6upx;
+		color: #fdcc6a;
+		font-size: 26upx;
 	}
 </style>

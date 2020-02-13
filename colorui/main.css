@@ -2423,7 +2423,7 @@ button.cuIcon.lg {
 	transform: scale(1.185);
 	backface-visibility: hidden;
 	perspective: 2000upx;
-	background: rgba(0, 0, 0, 0);
+	background: rgba(0, 0, 0, 0.1);
 	transition: all 0.3s ease-in-out 0s;
 	pointer-events: none;
 }
@@ -3461,6 +3461,10 @@ scroll-view.cu-steps .cu-item {
 
 .bg-grey {
 	background-color: #8799a3;
+	color: #ffffff;
+}
+.bg-lgrey {
+	background-color: #d1d1d1;
 	color: #ffffff;
 }
 

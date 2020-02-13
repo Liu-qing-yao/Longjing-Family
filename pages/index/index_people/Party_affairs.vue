@@ -19,7 +19,7 @@
 				<view class="content text-bold text-red">
 					党务公开
 				</view>
-				<view class="action">
+				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
 					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
@@ -167,8 +167,8 @@
 				scrollLeft: 0,
 				index_Street: -1,
 				index_Communities: -1,
-				picker1: ['中山街', '西街', '北街','翠屏街'],
-				picker2: ['五粮液社区', '翠屏社区', '黄河公园社区'],
+				picker1: ['大安街道办事处', '凉高山街道办事处', '龙井街道办事处','马冲口街道办事处'],
+				picker2: ['华大社区', '大楻桶社区', '广华社区','红苕地社区'],
 			}
 		},
 		methods: {

@@ -20,7 +20,7 @@
 					你呼我应
 				</view>
 				
-				<view class="action">
+				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
 					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
@@ -77,7 +77,31 @@
 								</radio-group>
 							</view>
 						</view>
-					</view>		
+					</view>	
+						<view  class="three">
+							<view class="bg-white ">
+								<view class="action1 margin-bottom-sm">
+									<view class="text-black text-xl padding-left" style="padding-top: 10upx;">小区</view>
+									<image src="../../../static/input/形状.png" class="padding-left" 
+									    @tap="showModal4" data-target="RadioModal4" style="width: 80upx; height: 70upx;"></image>
+								</view>
+							</view>
+							<view class="cu-modal" :class="modalName=='RadioModal4'?'show':''" @tap="hideModal4">
+								<view class="cu-dialog" @tap.stop="">
+									<radio-group class="block" @change="RadioChange4">
+										<view class="cu-list menu text-left">
+											<view class="cu-item" v-for="(item,index) in List4" :key="index">
+												<label class="flex justify-between align-center flex-sub">
+													<view class="flex-sub">{{item.name}}</view>
+													<radio class="round" :class="radio=='radio' + index?'checked':''" :checked="radio=='radio' + index?true:false"
+														:value="'radio' + index"></radio>
+												</label>
+											</view>
+										</view>
+									</radio-group>
+								</view>
+							</view>
+						</view>
 					<view>
 						<view class="bg-white padding-bottom-xs margin-bottom-sm">
 							<view class="">
@@ -145,7 +169,7 @@
 			</view>
 		</view>
 		
-		<view class="" style="height: 120upx; background-color: #fd7576;"></view>
+		<view class="" style="height: 300upx; background-color: #fd7576;"></view>
 		<view class="cu-bar tabbar bg-white shadow foot">
 			<view class="action" @click="goMore('/pages/index/index')" data-cur="Home">
 				<view class='cuIcon-cu-image'>
@@ -190,36 +214,36 @@
 				modalName: null,
 				radio: 'radio1',
 				List1: [{
-					name: '西街',
+					name: '大安街道',
 					flag: true,
 				}, 
 				{
-					name: '东街',
+					name: '凉高山街道',
 					flag: true,
 				}, 
 				{
-					name: '南街',
+					name: '龙井街道',
 					flag: true,
 				},
 				{
-					name: '北街',
+					name: '马冲口街道',
 					flag: true,
 				}],
 				
 				List2: [{
-					name: '葡萄园社区1',
+					name: '华大社区',
 					flag: true,
 				}, 
 				{
-					name: '葡萄园社区2',
+					name: '大楻桶社区',
 					flag: true,
 				}, 
 				{
-					name: '葡萄园社区3',
+					name: '广华社区',
 					flag: true,
 				},
 				{
-					name: '葡萄园社区4',
+					name: '红苕地社区',
 					flag: true,
 				}],
 				List3: [{
@@ -237,7 +261,24 @@
 				{
 					name: '其他',
 					flag: false,
-				}]
+				}],
+				List4: [{
+					name: '华大小区',
+					flag: true,
+				}, 
+				{
+					name: '大楻桶小区',
+					flag: true,
+				}, 
+				{
+					name: '广华小区',
+					flag: true,
+				},
+				{
+					name: '红苕地小区',
+					flag: true,
+				}],
+				
 			}
 		},
 		methods: {
@@ -309,6 +350,16 @@
 				this.modalName = null
 			},
 			RadioChange3(e) {
+				this.radio = e.detail.value
+			},
+			
+			showModal4(e) {
+				this.modalName = e.currentTarget.dataset.target
+			},
+			hideModal4(e) {
+				this.modalName = null
+			},
+			RadioChange4(e) {
 				this.radio = e.detail.value
 			},
 		}

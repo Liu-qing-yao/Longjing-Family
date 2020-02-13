@@ -19,7 +19,7 @@
 				<view class="content text-bold text-red">
 					社区概况
 				</view>
-				<view class="action">
+				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
 					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
@@ -29,28 +29,28 @@
 				社区分类
 			</view>
 			<view>
-				<view class="text-red" style="border-bottom: #DDDDDD 1upx solid;padding: 15upx 0;">
-					合计门街道
+				<view class="text-red" style="border-bottom: #DDDDDD 1upx solid;padding:  15upx 0 15upx 10upx;">
+					龙井街道办事处
 				</view>
 				<view class="bg-white flex justify-around" style="border-bottom: #DDDDDD 1upx solid;padding: 15upx 0;">
-					<view @tap="goMore('/pages/index/index_longjing/Com_detail')">东街社区</view>
-					<view>前进社区</view>
-					<view>中山社区</view>
+					<view @tap="goMore('/pages/index/index_longjing/Com_detail')">华大社区</view>
+					<view>大楻桶社区</view>
+					<view>广华社区</view>
 				</view>
 				<view class="bg-white flex justify-around" style="border-bottom: #DDDDDD 1upx solid;padding: 15upx 0;">
-					<view @tap="goMore('/pages/index/index_longjing/Com_detail')">东街社区</view>
-					<view>前进社区</view>
-					<view>中山社区</view>
+					<view @tap="goMore('/pages/index/index_longjing/Com_detail')">华大社区</view>
+					<view>大楻桶社区</view>
+					<view>广华社区</view>
 				</view>
 				<view class="bg-white flex justify-around" style="border-bottom: #DDDDDD 1upx solid;padding: 15upx 0;">
-					<view @tap="goMore('/pages/index/index_longjing/Com_detail')">东街社区</view>
-					<view>前进社区</view>
-					<view>中山社区</view>
+					<view @tap="goMore('/pages/index/index_longjing/Com_detail')">华大社区</view>
+					<view>大楻桶社区</view>
+					<view>广华社区</view>
 				</view>
 			</view>
 			<view>
-				<view class="text-red" style="border-bottom: #DDDDDD 1upx solid;padding: 15upx 0;">
-					大观楼街道
+				<view class="text-red" style="border-bottom: #DDDDDD 1upx solid;padding: 15upx 0 15upx 10upx;">
+					大安街道办事处
 				</view>
 				<view class="bg-white flex justify-around" style="border-bottom: #DDDDDD 1upx solid;padding: 15upx 0;">
 					<view>滨江社区</view>
