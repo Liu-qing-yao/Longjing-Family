@@ -4,24 +4,16 @@
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		<view class="box top">
-			<!-- <view class="cu-bar bg-gray solid-bottom">
-				<view class="action ">
-					<text class="cuIcon-close"></text> 龙井人家-民呼我应
-				</view>
-				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
-					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
-				</view>
-			</view> -->
 			<view class="cu-bar bg-white search solid-bottom">
 				<view class="action" @tap="goMore('/pages/index/index_people/index_people')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red ">
 					你呼我应
 				</view>
 				
 				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/search.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
@@ -133,43 +125,54 @@
 						</view>
 					</view>
 					<view>
-						<view class="bg-white padding">
-							<view class="padding-bottom" >
-								<view class="text-black padding-bottom-xs text-xl padding-left">报事内容</view>
-								<textarea class="uni-input text-xs" style="font-size: 24upx;" maxlength="-1" :disabled="modalName!=null" @input="textareaAInput" placeholder="请详细描述你的建议内容,以便我们及时改进,谢谢"></textarea>
-							</view>
-							<view class="padding-top flex justify-between">
-								<view class="text-black padding-bottom-xs text-xl padding-left">上传照片</view>
-								<view class="action text-xl">
-								   {{imgList.length}}/4
-							    </view>				
-							</view>
-							<view class="cu-form-group" style="height: 250upx;">
-								<view class="grid col-4 grid-square flex-sub padding-left">
-									<view class="bg-img" v-for="(item,index) in imgList" :key="index" @tap="ViewImage" :data-url="imgList[index]">
-									    <image :src="imgList[index]" mode="aspectFill"></image>
-									    <view class="cu-tag bg-red" @tap.stop="DelImg" :data-index="index">
-										     <text class='cuIcon-close'></text>
-									    </view>
-									</view>
-									<view class="solids" @tap="ChooseImage" v-if="imgList.length<4">
-										<text class='cuIcon-cameraadd'></text>
-									</view>
-								</view>
-							</view>
-							<view>（每张照片大小不能超过1M）</view>
-						</view>
-						<view class="bg-white text-center padding-tb-sm">
-							<view class="">
-								<button class="cu-btn" style="background-color: #fd4f53;" @tap="goMore('/pages/index/index_people/Submit')" data-target="gridModal">发 表</button>
-							</view>
-						</view>
-					</view>
+					 	<view class="bg-white padding">
+					 		<view class="padding-bottom" >
+					 			<view class="text-black padding-bottom-xs text-xl">报事内容</view>
+					 			<textarea class="uni-input text-xs" style="font-size: 24upx;" maxlength="-1" v-model="input_content" :disabled="modalName!=null" @input="textareaAInput" placeholder="请详细描述你的建议内容,以便我们及时改进,谢谢"></textarea>
+					 		</view>
+					 		<view class="padding-top flex justify-between">
+					 			<view class="text-black padding-bottom-xs text-xl padding-left">上传照片</view>
+					 			<view class="action text-xl">
+					 			   {{imgList.length}}/4
+					 		    </view>				
+					 		</view>
+					 		<view class="cu-form-group" style="height: 250upx;">
+					 			<view class="grid col-4 grid-square flex-sub padding-left">
+					 				<view class="bg-img" v-for="(item,index) in imgList" :key="index" @tap="ViewImage" :data-url="imgList[index]">
+					 				    <image :src="imgList[index]" mode="aspectFill"></image>
+					 				    <view class="cu-tag bg-red" @tap.stop="DelImg" :data-index="index">
+					 					     <text class='cuIcon-close'></text>
+					 				    </view>
+					 				</view>
+					 				<view class="solids" @tap="ChooseImage" v-if="imgList.length<4">
+					 					<text class='cuIcon-cameraadd'></text>
+					 				</view>
+					 			</view>
+					 		</view>
+					 		<view >
+					 			<view  class="cu-form-group" style="height: 250upx;">
+					 				<view class="grid col-4 grid-square flex-sub padding-left">
+					 				    <view class="bg-img">
+					 					    <image class="image" :src="path"></image>
+					 				    </view>
+					 				</view>
+					 			</view>
+					 			<kps-image-cutter @ok="onok" @cancel="oncancle" :url="url" :fixed="true" :width="200" :height="300"></kps-image-cutter>
+					 		</view>
+					 		<view>（每张照片大小不能超过1M）</view>
+					 	</view>
+					 	<view class="bg-white text-center padding-tb-sm">
+					 		<view class="">
+					 			<button class="feedback-submit cu-btn" type="default" style="background-color: #fd4f53;" @tap="goMore('/pages/index/index_people/Submit')" data-target="gridModal">发 表</button>
+					 		</view>
+					 	</view>
+					 </view>
+					
 				</view>
 			</view>
 		</view>
 		
-		<view class="" style="height: 300upx; background-color: #fd7576;"></view>
+		<view class="" style="height: 650upx; background-color: #fd7576;"></view>
 		<view class="cu-bar tabbar bg-white shadow foot">
 			<view class="action" @click="goMore('/pages/index/index')" data-cur="Home">
 				<view class='cuIcon-cu-image'>
@@ -206,9 +209,15 @@
 </template>
 
 <script>
+	import kpsImageCutter from "@/components/ksp-image-cutter/ksp-image-cutter.vue"
 	export default {
+		components: {
+			kpsImageCutter
+		},
 		data() {
 			return {
+				url: "",
+				path: "",
 				PageCur: '报事',
 				imgList: [],
 				modalName: null,
@@ -281,6 +290,9 @@
 				
 			}
 		},
+		onLoad() {
+		
+		    },
 		methods: {
 			NavChange: function(e) {
 				this.PageCur = e.currentTarget.dataset.cur
@@ -290,12 +302,29 @@
 					url: url
 				});
 			},
+			chooseImage() {
+			                uni.chooseImage({
+			                    success: (res) => {
+			                        // 设置url的值，显示控件
+			                        this.url = res.tempFilePaths[0];
+			                    }
+			                });
+			            },
+			 onok(ev) {
+			                this.path = ev.path;
+			                this.url = "";
+			            },
+			oncancle() {
+			                // url设置为空，隐藏控件
+			                this.url = "";
+			            },
 			ChooseImage() {
 				uni.chooseImage({
 					count: 4, //默认9
 					sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
 					sourceType: ['album'], //从相册选择
 					success: (res) => {
+						this.url = res.tempFilePaths[0];
 						if (this.imgList.length != 0) {
 							this.imgList = this.imgList.concat(res.tempFilePaths)
 						} else {
@@ -368,6 +397,10 @@
 </script>
 
 <style>
+.image {
+    width: 200px;
+    height: 200px;
+}
 .peo_content{
 	background-color: #fd7576;
 }

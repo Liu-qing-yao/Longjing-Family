@@ -500,23 +500,23 @@ radio.white.checked .uni-radio-input {
 }
 
 .solid::after {
-	border: 1upx solid rgba(0, 0, 0, 0.5);
+	border: 1upx solid rgba(0, 0, 0, 0.2);
 }
 
 .solid-top::after {
-	border-top: 1upx solid rgba(0, 0, 0, 0.5);
+	border-top: 1upx solid rgba(0, 0, 0, 0.2);
 }
 
 .solid-right::after {
-	border-right: 1upx solid rgba(0, 0, 0, 0.5);
+	border-right: 1upx solid rgba(0, 0, 0, 0.2);
 }
 
 .solid-bottom::after {
-	border-bottom: 1upx solid rgba(0, 0, 0, 0.5);
+	border-bottom: 1upx solid rgba(0, 0, 0, 0.2);
 }
 
 .solid-left::after {
-	border-left: 1upx solid rgba(0, 0, 0, 0.1);
+	border-left: 1upx solid rgba(0, 0, 0, 0.2);
 }
 
 .solids::after {
@@ -619,7 +619,23 @@ radio.white.checked .uni-radio-input {
 /* ==================
           按钮
  ==================== */
-
+.cu-btn1 {
+		background-color: #f5b17e;
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		box-sizing: border-box;
+		padding: 0 30upx;
+		font-size: 28upx;
+		height: 60upx;
+		line-height: 1;
+		text-align: center;
+		text-decoration: none;
+		overflow: visible;
+		transform: translate(0upx, 0upx);
+		margin : 0 30upx 0 0;
+	}
 .cu-btn {
 	position: relative;
 	border: 0upx;
@@ -1231,7 +1247,7 @@ button.cuIcon.lg {
 .cu-list.menu-avatar>.cu-item .content {
 	position: absolute;
 	left: 10upx;
-	width: calc(100% - 96upx - 60upx - 120upx - 20upx);
+	width: calc(100% - 96upx - 60upx - 200upx - 20upx);
 	line-height: 1.6em;
 }
 
@@ -1266,6 +1282,7 @@ button.cuIcon.lg {
 	position: relative;
 	left: 0;
 	width: auto;
+	height: auto;
 	flex: 1;
 }
 
@@ -1475,7 +1492,6 @@ button.cuIcon.lg {
 	margin-left: 30upx;
 	border-radius: 20upx
 }
-
 
 /* ==================
           操作条
@@ -2087,7 +2103,6 @@ button.cuIcon.lg {
 	font-size: 30upx;
 	position: relative;
 	min-height: 80upx;
-	line-height: 40upx;
 	text-align: left;
 }
 
@@ -2410,12 +2425,11 @@ button.cuIcon.lg {
  ==================== */
 
 .cu-modal {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	z-index: 1110;
 	opacity: 0;
 	outline: 0;
 	text-align: center;

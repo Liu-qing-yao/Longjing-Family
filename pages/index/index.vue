@@ -30,7 +30,7 @@
 			<view style="margin: 0 0 0 18upx;"> 空气质量：良</view>
 		</view>
 		<view class="flex justify-center" style="padding: 0; margin: 0;">
-			<button class="bnt-lg" @tap="goMore('/pages/index/Personal-center/login')">登 录</button>
+			<button class="bnt-lg" @tap="goMore('/pages/index/Personal-center/login2')">登 录</button>
 			<button class="bnt-lg" @tap="goMore('/pages/index/Personal-center/login')">注 册</button>
 			<button class="bnt-lg">公众号</button>
 		</view>

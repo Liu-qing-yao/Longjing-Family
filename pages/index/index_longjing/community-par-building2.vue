@@ -5,23 +5,15 @@
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		
 		<view class="box top">
-			<!-- <view class="cu-bar bg-gray">
-				<view class="action">
-					<text class="cuIcon-close" ></text> 党建联盟-党组织简介
-				</view>
-				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
-					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
-				</view>
-			</view> -->
 			<view class="cu-bar bg-white search solid-bottom" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action"  @tap="goMore('/pages/index/index_longjing/community-par-building1')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red" >
 					区域党建
 				</view>
 				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/search.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
@@ -35,16 +27,16 @@
 		</scroll-view>
 		<view class="flex bg-white solid-bottom" >
 			<view class="bg-gray mall_change img-align" >
-				<image src="../../../static/input/形状559.png" mode="" style="width: 30upx;height: 30upx; padding: 0; margin-right: 12upx;"></image>
+				<image src="../../../static/input/形状559.png" mode="" style="width: 30upx;height: 30upx; padding: 0; margin-right: 8upx;"></image>
 				<view>请选择分类</view>
 			</view>
-			<view class="mall_change img-align" >
+			<view class="mall_change img-align" style="padding-top: 15upx;">
 				先选择小区
 			</view>
 			<view class="" style="margin: 16upx 16upx;">
 				<picker @change="PickerChange" :value="index_Street" :range="picker1">
 					<view class="picker img-align">
-						<image src="../../../static/input/下.png" mode="" style="width: 31upx;height: 36upx;"></image>
+						<image src="../../../static/input/under.png" mode="" style="width: 31upx;height: 36upx;"></image>
 					</view>
 				</picker>
 			</view>
@@ -55,11 +47,13 @@
 		<view class="cu-list menu-avatar bg-white">
 			<view class="Service_N">
 				<view class="solid-bottom" style="margin: 20upx; padding-bottom: 10upx; ">
-					<view class="content">
+					<view class="content" @tap="goMore('/pages/index/index_longjing/par-build-detail')">
 						<view class="text-gray flex" style="padding: 15upx;">
 							<view><image src="../../../static/input/矩形10拷贝2.png" mode="" style="width: 45upx;height: 30upx; padding-right: 5upx;"></image></view>
-						    <view class="">12/18</view> 
-							<view class="text-center margin-lr text-black">葡萄园社区进行清洁卫生整改</view>
+						    <view class="tit-length">
+						    	12/18
+						    	<text class="text-black " style="margin-left: 10upx">合江门街道召开“不忘初心，牢记使命”主题教育</text>
+						    </view>
 						</view>
 						<view class="padding-lr">
 							<view class="flex" style="border-left: #f8404c 2upx solid;padding: 0 25upx;">
@@ -70,17 +64,19 @@
 							<view class="text-gray text-df">2020</view>
 							<view class="action">
 								<text class="text-gray">2404</text>
-								<text class="text-gray"><image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></text>
+								<text class="text-gray"><image src="../../../static/input/view.png" mode="" class="count-logo"></image></text>
 							</view>
 						</view>
 					</view>
 				</view>
 				<view class=" solid-bottom" style="margin: 20upx;padding-bottom: 10upx;">
-					<view class="content">
+					<view class="content" @tap="goMore('/pages/index/index_longjing/par-build-detail')">
 						<view class="text-gray flex" style="padding: 15upx;">
 							<view><image src="../../../static/input/矩形10拷贝2.png" mode="" style="width: 45upx;height: 30upx; padding-right: 5upx;"></image></view>
-						    <view class="">12/18</view> 
-							<view class="text-center margin-lr text-black">金象社区进行居民工作满意调查</view>
+						    <view class="tit-length">
+								12/18
+								<text class="text-black" style="margin-left: 10upx">合江门街道召开“不忘初心，牢记使命”主题教育</text>
+							</view> 
 						</view>
 						<view class="padding-lr">
 							<view class="flex" style="border-left: #f8404c 2upx solid;padding: 0 25upx;">
@@ -91,7 +87,7 @@
 							<view class="text-gray text-df">2020</view>
 							<view class="action">
 								<text class="text-gray">2404</text>
-								<text class="text-gray"><image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></text>
+								<text class="text-gray"><image src="../../../static/input/view.png" mode="" class="count-logo"></image></text>
 							</view>
 						</view>
 					</view>
@@ -174,6 +170,13 @@ page {
 			background-color: #FFFFFF;
 		}
 
+.tit-length{
+	width:280px; 
+	display:block; 
+	overflow: hidden; 
+	white-space: nowrap; 
+	text-overflow: ellipsis;
+}
 .party_cont{
 	padding: 20upx 0 0 20upx;
 	font-size: 25upx;

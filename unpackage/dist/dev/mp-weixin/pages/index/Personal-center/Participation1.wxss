@@ -1,0 +1,22 @@
+
+.par_nav_1{
+	width: 375rpx;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	color: #ffffff;
+}
+.par_nav_2{
+	width: 188rpx;
+	text-align: center;
+	margin: 5rpx 0 0;
+	padding: 0;
+	color: #ffffff;
+	float: right;
+}
+.face image{
+	-webkit-flex-shrink:0;
+	        flex-shrink:0;width:15vw;height:15vw;
+	width:100%;height:100%;border-radius:100%
+}
+

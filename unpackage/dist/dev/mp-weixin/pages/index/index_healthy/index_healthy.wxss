@@ -1,0 +1,20 @@
+
+.cu-btn{
+	color: #333333; 
+	width: 150rpx; 
+	background-color: #f0ad79;
+}
+.intro-all {
+	padding: 0 0 0 30rpx;
+}
+.introduce{
+	border:5rpx dashed #f0ad79;
+	margin: 0 45rpx 0 45rpx;
+	padding: 10rpx 5rpx;
+	line-height: 48rpx;
+	color: #fdcc6a;
+}
+.Illustration1{
+	height: 400rpx;
+}
+

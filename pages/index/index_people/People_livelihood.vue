@@ -4,23 +4,15 @@
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		<view class="box top">
-			<!-- <view class="cu-bar bg-gray">
-				<view class="action">
-					<text class="cuIcon-close"></text> 龙井之家-民呼我应
-				</view>
-				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
-					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
-				</view>
-			</view> -->
 			<view class="cu-bar bg-white search solid-bottom" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index_people/index_people')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red">
 					民生实事
 				</view>
 				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/search.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
@@ -31,26 +23,26 @@
 		</scroll-view>
 		<view class="flex bg-white" >
 			<view class="bg-gray mall_change img-align" >
-				<image src="../../../static/input/形状559.png" mode="" style="width: 30upx;height: 30upx; padding: 0; margin-right: 12upx;"></image>
+				<image src="../../../static/input/形状559.png" mode="" style="width: 30upx;height: 30upx; padding: 0; margin-right: 8upx;"></image>
 				<view>请选择分类</view>
 			</view>
-			<view class="mall_change img-align" >
+			<view class="mall_change img-align" style="padding-top: 15upx;" >
 				先选择街道
 			</view>
 			<view class="" style="margin: 16upx 16upx;">
 				<picker @change="PickerChange" :value="index_Street" :range="picker1">
 					<view class="picker img-align">
-						<image src="../../../static/input/下.png" mode="" style="width: 31upx;height: 36upx;"></image>
+						<image src="../../../static/input/under.png" mode="" style="width: 31upx;height: 36upx;"></image>
 					</view>
 				</picker>
 			</view>
-			<view class="mall_change img-align" >
+			<view class="mall_change img-align" style="padding-top: 15upx;">
 				再选择社区
 			</view>
 			<view class="" style="margin: 16upx 16upx;">
 				<picker @change="PickerChange" :value="index_Community" :range="picker2">
 					<view class="picker img-align">
-						<image src="../../../static/input/下.png" mode="" style="width: 31upx;height: 36upx;"></image>
+						<image src="../../../static/input/under.png" mode="" style="width: 31upx;height: 36upx;"></image>
 					</view>
 				</picker>
 			</view>
@@ -58,41 +50,39 @@
 		
 		<view class="cu-list menu-avatar solid-top">
 			<view class="flex bg-white justify-between" style="padding: 10upx; border-bottom: #DDDDDD 1upx solid;">
-				<view class="flex" >
+				<view class="flex"  @tap="goMore('/pages/index/index_people/People_livelihood_detail')">
 					<view>
 						<image src="../../../static/input/益路有你_11.png" mode="" style="width: 200upx; height: 160upx;"></image>
 					</view>
-					<view class="" style="margin-left: 15upx;">
-						<view class="text-black">法制宣传进社区</view>
-						<view class="text-gray text-sm flex">
-							<view class="text-cut" style="padding-top: 90upx;">
-								<text class=" text-red  margin-right-xs"></text>
+					<view class="" style="margin-left: 15upx; ">
+						<view class="text-black" style="width: 615upx;">法制宣传进社区</view>
+						<view class="text-gray text-sm flex justify-between" style="padding-top: 90upx;">
+							<view class="text-cut text-xs" >
 								2019-12-22  16:00
 							</view> 
+							<view>
+								<view class="text-xs" style="width: 200upx;">2404 <image src="../../../static/input/view.png" mode="" class="count-logo"></image></view>
+							</view>
 						</view>
 					</view>
-				</view>
-				<view class="com_count">
-					<view class="">2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
 				</view>
 			</view>
 			<view class="flex bg-white justify-between" style="padding: 10upx;border-bottom: #DDDDDD 1upx solid;">
-				<view class="flex" >
+				<view class="flex"  @tap="goMore('/pages/index/index_people/People_livelihood_detail')">
 					<view>
 						<image src="../../../static/input/益路有你_11.png" mode="" style="width: 200upx; height: 160upx;"></image>
 					</view>
 					<view class="" style="margin-left: 15upx;">
-						<view class="text-black">葡萄园社区开发创文</view>
-						<view class="text-gray text-sm flex">
-							<view class="text-cut" style="padding-top: 90upx;">
-								<text class=" text-red  margin-right-xs"></text>
+						<view class="text-black" style="width: 615upx;">葡萄园社区开发创文</view>
+						<view class="text-gray text-sm flex justify-between" style="padding-top: 90upx;">
+							<view class="text-cut text-xs" >
 								2019-12-22  16:00
 							</view> 
+							<view>
+								<view class="text-xs" style="width: 200upx;">2404 <image src="../../../static/input/view.png" mode="" class="count-logo"></image></view>
+							</view>
 						</view>
 					</view>
-				</view>
-				<view class="com_count">
-					<view class="">2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
 				</view>
 			</view>
 		</view>

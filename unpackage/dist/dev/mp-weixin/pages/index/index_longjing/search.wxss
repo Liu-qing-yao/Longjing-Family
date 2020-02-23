@@ -1,0 +1,37 @@
+
+.box{
+	border-bottom: 1rpx #DDDDDD solid;
+}
+.navfirst{
+	border-bottom: 1rpx #DDDDDD solid;
+	text-align: center;
+}
+.navfirst_1{
+		/* background: #5ddad4; */
+		margin: 15rpx 6rpx;
+		border-radius: 15rpx;
+		font-size: 30rpx;
+		width: 175rpx;
+		text-align: center;
+		padding: 0;
+		height: 85rpx;
+}
+.cu-item{
+	 border-bottom: #DDDDDD solid 1rpx;
+}
+.com_count{
+	padding-top: 130rpx;
+	width: 200rpx;
+}
+.logo-list{
+	width: 40rpx;
+	height: 30rpx;
+	margin: 10rpx;
+}
+.count-logo{
+	width: 40rpx;
+	height: 20rpx;
+	margin: 0 5rpx;
+}
+
+

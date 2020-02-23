@@ -1,0 +1,31 @@
+
+.bnt-lg{
+		 background-color: #f06e72; 
+		 color: #FFFFFF;
+		 font-size: 24rpx;
+		 padding: 0 15rpx;
+		 margin: 15rpx 30rpx 0;
+		 width: 100rpx;
+		 height: 40rpx;
+		 line-height: 40rpx;
+		 border-radius: 0rpx;
+}
+.cu-btn{
+	color: #333333; 
+	width: 150rpx; 
+	background-color: #f0ad79;
+}
+.intro-all {
+	padding: 30rpx 0;
+}
+.introduce{
+	border:5rpx dashed #f0ad79;
+	margin: 0 45rpx 0 45rpx;
+	padding: 10rpx 5rpx;
+	line-height: 48rpx;
+	color: #fdcc6a;
+}
+.Illustration1{
+	height: 400rpx;
+}	
+

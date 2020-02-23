@@ -6,27 +6,29 @@
 		<view class="box top">
 			<view class="cu-bar bg-white search">
 				<view class="action" @tap="goMore('/pages/index/index')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red">
 					健康驿站
 				</view>
 				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/search.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
 		<view class="Illustration1">
-			<image src="../../../static/input/预防胜于治疗情系健康缔造完美生活.png" style="width: 750rpx; height: 400rpx;" mode=""></image>
+			<image src="../../../static/input/health.png" style="width: 750rpx; height: 400rpx;" mode=""></image>
 		</view>
-		<view class="cu-bar bg-white solid-bottom line-gray">
-			<view class="action">
-				<image src="../../../static/model/图层18.png" mode="" style="width: 50upx; height: 40upx; padding-right: 10upx;"></image>
-				<view class="text-red"><text style="color: #333333; font-size: 32rpx; font-weight: 590; padding-right: 10upx;">社区公告</text></view>
+		<view class="bg-gray solid-bottom solid-top flex justify-between" style="margin: 0;height: 80upx;line-height: 60upx; padding-top: 10upx;">
+			<view class=" flex justify-left img-align">
+				<view class="text-red img-align margin-left">
+					<image src="../../../static/model/图层18.png" mode="" style="width: 50upx; height: 40upx; padding-right: 10upx;"></image>
+					<text style="color: #333333; font-size: 32rpx; font-weight: 590; padding-right: 10upx;">社区公告</text>
+				</view>
 				<view class="text-xs text-black">廿四季节气——今日立冬</view>
 			</view>
-			<view class="action">
-				<button class="cu-btn shadow"  @tap="goMore('/pages/index/index_people/Community_announcement')" data-target="gridModal">更多</button>
+			<view class="">
+				<button class="cu-btn1"  @tap="goMore('/pages/index/index_people/Community_announcement')" data-target="gridModal" style="color: #333333;">更多</button>
 			</view>
 		</view>
 		
@@ -47,7 +49,7 @@
 		    </view>
 		</view>
 		<view class="bg-white padding-top">
-			<image src="../../../static/input/底图片.png" mode="" style="width: 750rpx; height: 280rpx;"></image>
+			<image src="../../../static/input/heal_bnt.png" mode="" style="width: 750rpx; height: 280rpx;"></image>
 		</view>
 		<view style="height: 96rpx;"></view>
 		<view class="cu-bar tabbar bg-white shadow foot">
@@ -141,7 +143,7 @@
 	background-color: #f0ad79;
 }
 .intro-all {
-	padding: 30rpx 0;
+	padding: 0 0 0 30upx;
 }
 .introduce{
 	border:5rpx dashed #f0ad79;
@@ -153,4 +155,9 @@
 .Illustration1{
 	height: 400upx;
 }
+.img-align *{
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 28upx;
+	}
 </style>

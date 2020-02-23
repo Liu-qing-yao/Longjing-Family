@@ -330,10 +330,6 @@
             "style" : {}
         }
         ,{
-            "path" : "pages/index/index_people/My-advice",
-            "style" : {}
-        }
-        ,{
             "path" : "pages/index/Personal-center/My-news",
             "style" : {}
         }
@@ -366,10 +362,6 @@
             "style" : {}
         }
         ,{
-            "path" : "pages/index/index_play/try1",
-            "style" : {}
-        }
-        ,{
             "path" : "pages/index/index_shopping/business-detail",
             "style" : {}
         }
@@ -386,7 +378,95 @@
             "style" : {}
         }
         ,{
-            "path" : "pages/index/shop-map",
+            "path" : "pages/index/Personal-center/reminders-detail",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/Personal-center/advice-detail",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/Personal-center/dynamic-detail",
+            "style" : {}
+        }
+        ,{
+            "path" : "components/uni-collapse-item/uni-collapse-item1",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_longjing/com-style-detail",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_longjing/work-detail",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_longjing/par-build-detail",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_people/anuounce-detail",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_people/Policy_release_detail",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_people/Three_affairs_detail",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_people/Community_service_detail",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_volunteer/volunteer_news_detail",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_healthy/index_common_detail",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_healthy/hospital1",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_healthy/hospital2",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_healthy/hospital3",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_healthy/hospital4",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_healthy/hospital5",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/Personal-center/login",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/Personal-center/login2",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/Personal-center/forget-password",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_people/People_livelihood_detail",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_volunteer/mall_detail",
             "style" : {}
         }
     ],

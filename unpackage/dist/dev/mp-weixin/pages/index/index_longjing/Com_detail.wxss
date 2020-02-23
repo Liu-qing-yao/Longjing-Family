@@ -1,0 +1,81 @@
+
+.cu-btn{
+		color: #333333; 
+		width: 150rpx; 
+		background-color: #f0ad79;
+}
+.box{
+	border-bottom: 1rpx #DDDDDD solid;
+}
+.navfirst{
+	border-bottom: 1rpx #DDDDDD solid;
+}
+.navfirst_1{
+		/* background: #5ddad4; */
+		margin: 15rpx 5rpx;
+		border-radius: 15rpx;
+		font-size: 30rpx;
+		width: 220rpx;
+		text-align: center;
+}
+.cu-item{
+	 border-bottom: #DDDDDD solid 1rpx;
+}
+.service-title{
+	position: absolute;
+	margin: 0;
+	left: 250rpx;
+	color: red;
+	font-size: 30rpx;
+}
+.logo-list{
+	width: 40rpx;
+	height: 30rpx;
+	margin: 10rpx;
+}
+.count-logo{
+	width: 45rpx;
+	height: 20rpx;
+	margin: 0 5rpx;
+}
+.text-grey{
+	position: absolute;
+	right: 25rpx;
+	bottom: 10rpx;
+}
+.zuo{
+	width: 700rpx;
+}
+.cu-list.menu-avatar>.pic-modle{
+	height: 210rpx;
+}
+.cu-list.menu-avatar>.cu-item .content>view{
+	text-align: center;
+}
+.text-time{
+	color: #AAAAAA;
+}
+.text-title{
+	color: text-black;
+}
+.service-intro{
+	background-color: #FFFFFF;
+}
+.txtmodle{
+	border: #7b7b7b 2rpx solid;
+}
+.arrow{
+	width: 34rpx;
+	height: 34rpx;
+	position: absolute;
+	right: 180rpx;
+}
+.service-action{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+}
+

@@ -1,0 +1,49 @@
+
+.img_1{
+	position: absolute;
+	left: 120rpx;
+	top: 60rpx;
+}
+.img_2{
+	position: absolute;
+	right: 120rpx;
+	top: 60rpx;
+}
+.uni-input{
+	border-radius: 10rpx;
+	border: #b5b1b1 1rpx solid;
+	margin-top: 10rpx;
+	height: 60rpx;
+	width: 500rpx;
+	text-align: left;
+	text-indent: 55rpx;
+}
+.solid-bottom{
+	padding: 15rpx 20rpx;
+	margin: 0 auto;
+}
+.cu-btn {
+	position: relative;
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: inline-flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	font-size: 24rpx;
+	height: 50rpx;
+	width: 140rpx;
+	line-height: 1;
+	text-align: center;
+	text-decoration: none;
+	overflow: visible;
+	margin-right: initial;
+	border-left: #CCCCCC 1rpx solid;
+	padding: 0;
+	margin: 0;
+}
+
+

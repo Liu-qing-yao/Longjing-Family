@@ -4,37 +4,31 @@
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		<view class="box top">
-			<!-- <view class="cu-bar bg-gray">
-				<view class="action" @tap="goMore('/pages/index/index')">
-					<text class="cuIcon-close"></text> 首页-社区商圈
-				</view>
-				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
-					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
-				</view>
-			</view> -->
 			<view class="cu-bar bg-white search">
 				<view class="action" @tap="goMore('/pages/index/index')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red">
 					社区商圈
 				</view>
 				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/search.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
 		<view class="Illustration1">
-			<image src="../../../static/input/社区商圈.png" style="width: 750rpx; height: 450rpx;" mode=""></image>
+			<image src="../../../static/input/shop.png" style="width: 750rpx; height: 450rpx;" mode=""></image>
 		</view>
-		<view class="cu-bar bg-white solid-bottom line-gray">
-			<view class="action">
-				<image src="../../../static/model/图层18.png" mode="" style="width: 50upx; height: 40upx; padding-right: 10upx;"></image>
-				<view class="text-red"><text style="color: #333333; font-size: 32rpx; font-weight: 590; padding-right: 10upx;">社区公告</text></view>
+		<view class="bg-gray solid-bottom solid-top flex justify-between" style="margin: 0;height: 80upx;line-height: 60upx; padding-top: 10upx;">
+			<view class=" flex justify-left img-align">
+				<view class="text-red img-align margin-left">
+					<image src="../../../static/model/图层18.png" mode="" style="width: 50upx; height: 40upx; padding-right: 10upx;"></image>
+					<text style="color: #333333; font-size: 32rpx; font-weight: 590; padding-right: 10upx;">社区公告</text>
+				</view>
 				<view class="text-xs text-black">廿四季节气——今日立冬</view>
 			</view>
-			<view class="action">
-				<button class="cu-btn shadow"  @tap="goMore('/pages/index/index_people/Community_announcement')" data-target="gridModal">更多</button>
+			<view class="">
+				<button class="cu-btn1"  @tap="goMore('/pages/index/index_people/Community_announcement')" data-target="gridModal" style="color: #333333;">更多</button>
 			</view>
 		</view>
 		<view class="cu-list grid bg-white" :class="['col-' + gridCol,gridBorder?'':'no-border']">
@@ -57,7 +51,7 @@
 		<view class="bg-white" >
 			<view class="bg-white" style="border-top: #DDDDDD 1upx solid;">
 				<view style="padding: 15upx 20upx;">猜你喜欢</view>
-				<view class="mall_contents bg-white flex justify-around" style="">
+				<view class="mall_contents bg-white flex justify-around" @tap="goMore('/pages/index/index_shopping/shop_details')" >
 					<view>
 						<image src="../../../static/input/社区商圈改_07.png" mode="" style=" padding: 5upx;width: 220upx;height: 160upx;"></image>
 					</view>
@@ -188,4 +182,9 @@
 .Illustration1{
 	height: 400upx;
 }
+.img-align *{
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 28upx;
+	}
 </style>

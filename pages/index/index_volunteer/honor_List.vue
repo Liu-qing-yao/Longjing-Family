@@ -4,23 +4,15 @@
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		<view class="box top">
-			<!-- <view class="cu-bar bg-gray">
-				<view class="action" >
-					<text class="cuIcon-close"></text> 益路有你-光荣榜
-				</view>
-				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
-					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
-				</view>
-			</view> -->
 			<view class="cu-bar bg-white search" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index_volunteer/index_volunteer')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red">
 					志愿者光荣榜
 				</view>
 				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/search.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
@@ -29,23 +21,23 @@
 				<image src="../../../static/input/椭圆766拷贝.png" mode="" style="width: 26upx;height: 35upx; padding: 0; margin-right: 12upx;"></image>
 				<view>请选择分类</view>
 			</view>
-			<view class="mall_change img-align" >
+			<view class="mall_change img-align" style="padding-top: 15upx;">
 				先选择街道
 			</view>
 			<view class="" style="margin: 16upx 16upx;">
 				<picker @change="PickerChange" :value="index_Street" :range="picker1">
 					<view class="picker img-align">
-						<image src="../../../static/input/下.png" mode="" style="width: 31upx;height: 36upx;"></image>
+						<image src="../../../static/input/under.png" mode="" style="width: 31upx;height: 36upx;"></image>
 					</view>
 				</picker>
 			</view>
-			<view class="mall_change img-align" >
+			<view class="mall_change img-align" style="padding-top: 15upx;">
 				再选择社区
 			</view>
 			<view class="" style="margin: 16upx 16upx;">
 				<picker @change="PickerChange" :value="index_Community" :range="picker2">
 					<view class="picker img-align">
-						<image src="../../../static/input/下.png" mode="" style="width: 31upx;height: 36upx;"></image>
+						<image src="../../../static/input/under.png" mode="" style="width: 31upx;height: 36upx;"></image>
 					</view>
 				</picker>
 			</view>

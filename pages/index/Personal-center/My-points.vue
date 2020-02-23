@@ -1,23 +1,15 @@
 <template>
 	<view>
 		<view class="box top">
-			<!-- <view class="cu-bar bg-gray">
-				<view class="action">
-					<text class="cuIcon-close"></text>我的-我的积分
-				</view>
-				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
-					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
-				</view>
-			</view> -->
 			<view class="cu-bar bg-white search solid-bottom" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action"  @tap="goMore('/pages/index/Personal-center/Personal-center')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red">
 					我的积分
 				</view>
 				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/search.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
@@ -43,7 +35,7 @@
 					<view class="" style="font-size: 18upx;">时间：2019-12-12</view>
 					<view class="" style="font-size: 18upx;">积分：200</view>
 					<view class="" style="font-size: 18upx;">状态：已兑换</view>
-					<button class="shadow bg-orange"  @tap="showModalS1" data-target="Modal"  style="margin: 10upx 0upx;font-size: 22upx;padding: 0;">兑换成功</button>
+					<button class="exchange bg-orange" >兑换成功</button>
 				</view>
 			</view>
 			<view class="mall_contents bg-white flex" style="border: #929191 1upx solid;border-radius: 10upx;">
@@ -55,21 +47,9 @@
 					<view class="" style="font-size: 18upx;">时间：2019-12-12</view>
 					<view class="" style="font-size: 18upx;">积分：200</view>
 					<view class="" style="font-size: 18upx;">状态：已兑换</view>
-					<button class="shadow bg-orange" @tap="showModalS1" data-target="Modal" style="margin: 10upx 0upx;font-size: 22upx;padding: 0;">兑换成功</button>
+					<button class="exchange bg-orange">兑换成功</button>
 				</view>
-				<view class="cu-modal" :class="modalNameS1=='Modal'?'show':''">
-					<view class="cu-dialog solid">
-						<view class="cu-bar bg-white justify-start">
-							<view class="text-bold margin-lr" style="font-size: 34upx;">提示信息</view>
-						</view>
-						<view class="solid-top" style="padding: 30upx;font-size: 32upx;" >
-							兑换成功！
-						</view>
-						<view class=""  @tap="hideModalS1" style="margin: 20upx 0 15upx 550upx;">
-							<button style="width: 90upx;height: 50upx; line-height: 50upx; background-color: #fe9148;color: #FFFFFF;font-size: 28upx;padding: 0;">关闭</button>
-						</view>
-					</view>
-				</view>
+				
 			</view>
 		</view>
 		<view style="height: 100upx;"></view>
@@ -139,5 +119,11 @@
 </script>
 
 <style>
-
+.exchange{
+	height: 50upx;
+	width: 120upx;
+	line-height: 50upx;
+	margin: 10upx 0upx;
+	font-size: 22upx;padding: 0;
+}
 </style>

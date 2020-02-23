@@ -3,29 +3,20 @@
 		<basics v-if="PageCur=='basics'"></basics>
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
-		
 		<view class="box top">
-			<!-- <view class="cu-bar bg-gray">
-				<view class="action" @tap="goMore('/pages/index/index_healthy/index_healthy')">
-					<text class="cuIcon-close" ></text> 健康驿站-卫生服务中心
-				</view>
-				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
-					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
-				</view>
-			</view> -->
 			<view class="cu-bar bg-white search" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index_healthy/index_services')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red" >
 					详情
 				</view>
 				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/search.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
-		<view class="cu-list menu-avatar">
+		<view class="cu-list menu-avatar solid-top">
 			<view class="bg-white solid-bottom ">
 				<view class="" style="margin: 0 20upx ; padding-bottom: 10upx;">
 					<view class="content">
@@ -39,7 +30,7 @@
 							<view style="font-size: 27upx;">卫生服务</view>
 							<view class="action">
 								<text class="">2404</text>
-								<text class=""><image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></text>
+								<text class=""><image src="../../../static/input/view.png" mode="" class="count-logo"></image></text>
 							</view>
 						</view>
 					</view>
@@ -77,9 +68,6 @@
 					</view>
 				</view>
 			</view>
-		</view>
-		<view class="cu-bar bg-white solid-bottom line-gray">
-			
 		</view>
 		
 		<view style="height: 96rpx;"></view>
@@ -139,6 +127,9 @@
 </script>
 
 <style>
+page{
+		background-color: #FFFFFF;
+	}
 .box{
 	border-bottom: 1upx #DDDDDD solid;
 }

@@ -1,0 +1,17 @@
+
+.cu-list.menu-avatar>.pic-modle{
+	height: 210rpx;
+}
+.count-logo{
+	width: 45rpx;
+	height: 20rpx;
+	margin: 0 5rpx;
+}
+.com_count{
+	padding-top: 130rpx;
+}
+.cu-list.menu-avatar>.cu-item .action {
+	width: 200rpx;
+	text-align: left
+}
+

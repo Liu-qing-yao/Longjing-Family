@@ -5,23 +5,15 @@
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		
 		<view class="box top">
-			<!-- <view class="cu-bar bg-gray">
-				<view class="action">
-					<text class="cuIcon-close" ></text> 健康驿站-预约挂号
-				</view>
-				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
-					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
-				</view>
-			</view> -->
 			<view class="cu-bar bg-white search solid-bottom" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index_healthy/index_healthy')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red" >
 					预约挂号
 				</view>
 				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/search.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
@@ -39,10 +31,10 @@
 		</scroll-view>
 		
 		<view class="cu-list menu-avatar">
-			<view class="cu-item">
-				<view class="cu-avatar radius lg" style="background-image:url(../../../static/input/图层12.png);"></view>
+			<view class="cu-item" @tap="goMore('/pages/index/index_healthy/hospital1')">
+				<view class="cu-avatar radius lg" style="background-image:url(../../../static/input/h1.png);"></view>
 				<view class="content">
-					<view class="text-black">宜宾市第一人民医院</view>
+					<view class="text-black">自贡市第一人民医院</view>
 					<view class="text-gray text-sm flex">
 						<view class="text-cut">
 							<text class=" text-red  margin-right-xs"></text>
@@ -51,13 +43,13 @@
 					</view>
 				</view>
 				<view class="action">
-					<view class="text-grey text-xs">2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
+					<view class="text-grey text-xs">2404 <image src="../../../static/input/view.png" mode="" class="count-logo"></image></view>
 				</view>
 			</view>
-			<view class="cu-item ">
-				<view class="cu-avatar radius lg" style="background-image:url(../../../static/input/图层11.png);"></view>
+			<view class="cu-item" @tap="goMore('/pages/index/index_healthy/hospital2')">
+				<view class="cu-avatar radius lg" style="background-image:url(../../../static/input/h2.png);"></view>
 				<view class="content">
-					<view class="text-black">宜宾市第二人民医院</view>
+					<view class="text-black">自贡市中医医院</view>
 					<view class="text-gray text-sm flex">
 						<view class="text-cut">
 							<text class=" text-red  margin-right-xs"></text>
@@ -66,13 +58,13 @@
 					</view>
 				</view>
 				<view class="action">
-					<view class="text-grey text-xs">2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
+					<view class="text-grey text-xs">2404 <image src="../../../static/input/view.png" mode="" class="count-logo"></image></view>
 				</view>
 			</view>
-			<view class="cu-item cur">
-				<view class="cu-avatar radius lg" style="background-image:url(../../../static/input/2.png);"></view>
+			<view class="cu-item cur" @tap="goMore('/pages/index/index_healthy/hospital3')">
+				<view class="cu-avatar radius lg" style="background-image:url(../../../static/input/h3.png);"></view>
 				<view class="content">
-					<view class="text-black">宜宾市第二中医医院</view>
+					<view class="text-black">自贡市第三人民医院</view>
 					<view class="text-gray text-sm flex">
 						<view class="text-cut">
 							<text class=" text-red  margin-right-xs"></text>
@@ -81,7 +73,37 @@
 					</view>
 				</view>
 				<view class="action">
-					<view class="text-grey text-xs">2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
+					<view class="text-grey text-xs">2404 <image src="../../../static/input/view.png" mode="" class="count-logo"></image></view>
+				</view>
+			</view>
+			<view class="cu-item cur" @tap="goMore('/pages/index/index_healthy/hospital4')">
+				<view class="cu-avatar radius lg" style="background-image:url(../../../static/input/h4.png);"></view>
+				<view class="content">
+					<view class="text-black">自贡市第四人民医院</view>
+					<view class="text-gray text-sm flex">
+						<view class="text-cut">
+							<text class=" text-red  margin-right-xs"></text>
+							2019-12-22  16:00
+						</view> 
+					</view>
+				</view>
+				<view class="action">
+					<view class="text-grey text-xs">2404 <image src="../../../static/input/view.png" mode="" class="count-logo"></image></view>
+				</view>
+			</view>
+			<view class="cu-item cur" @tap="goMore('/pages/index/index_healthy/hospital5')">
+				<view class="cu-avatar radius lg" style="background-image:url(../../../static/input/h5.png);"></view>
+				<view class="content">
+					<view class="text-black">自贡市第五人民医院</view>
+					<view class="text-gray text-sm flex">
+						<view class="text-cut">
+							<text class=" text-red  margin-right-xs"></text>
+							2019-12-22  16:00
+						</view> 
+					</view>
+				</view>
+				<view class="action">
+					<view class="text-grey text-xs">2404 <image src="../../../static/input/view.png" mode="" class="count-logo"></image></view>
 				</view>
 			</view>
 		</view>

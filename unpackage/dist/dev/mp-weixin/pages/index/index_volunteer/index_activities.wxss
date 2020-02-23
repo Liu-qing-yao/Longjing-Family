@@ -1,0 +1,66 @@
+
+.cu-btn{
+	color: #333333; 
+	width: 150rpx; 
+	background-color: #f0ad79;
+}
+.box{
+	border-bottom: 1rpx #DDDDDD solid;
+}
+.service-nav{
+	border-bottom: 1rpx #DDDDDD solid;
+	/* display: flex;
+	justify-content: center; */
+}
+.service-nav_1{
+		/* background: #5ddad4; */
+		margin: 5rpx 5rpx;
+		border-radius: 15rpx;
+		width: 200rpx;
+		/* text-align: center; */
+}
+.service-nav_1 button{
+	font-size: 28rpx;
+}
+.cu-item{
+	 border-bottom: #DDDDDD solid 1rpx;
+	 padding: 10rpx 12rpx;
+}
+.logo-list{
+	width: 40rpx;
+	height: 30rpx;
+	margin: 10rpx;
+}
+.count-logo{
+	width: 45rpx;
+	height: 20rpx;
+	margin: 0 5rpx;
+}
+.text-grey{
+	position: absolute;
+	right: 25rpx;
+	bottom: 10rpx;
+}
+.zuo{
+	width: 700rpx;
+}
+.cu-list.menu-avatar>.pic-modle{
+	height: 210rpx;
+}
+.cu-list.menu-avatar>.cu-item .content {
+	position: absolute;
+	left: 140rpx;
+	width: calc(100% - 96rpx - 60rpx - 120rpx - 20rpx);
+	line-height: 1.4em;
+}
+.text-time{
+	color: #AAAAAA;
+}
+.text-title{
+	color: text-black;
+}
+.vol-news{
+	border-left: #333333 1rpx solid;
+}
+
+

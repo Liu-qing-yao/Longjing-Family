@@ -1,15 +1,6 @@
 <template>
 	<view>
 		<view class="box top">
-			<!-- <view class="cu-bar bg-gray flex justify-between">
-				<view class="action">
-					<text class="cuIcon-close"></text>我的
-				</view>
-				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
-					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
-					<view class="cu-tag round bg-red sm margin-lr-xs" style="position: absolute;top: 10upx;right: 13upx;">2</view>
-				</view>
-			</view> -->
 		</view>
 		<view class="header bg-white flex justify-between" v-bind:class="{'status':isH5Plus}">
 			<view class="userinfo ">
@@ -21,11 +12,11 @@
 			</view>
 			<view class="flex justify-end" >
 				<button class="bg-orange log-bnt" @tap="goMore('/pages/index/Personal-center/login')" style="margin-right: 15upx;">注 册</button>
-			    <button class="bg-orange log-bnt" @tap="goMore('/pages/index/Personal-center/login')" >登 录</button>
+			    <button class="bg-orange log-bnt" @tap="goMore('/pages/index/Personal-center/login2')" >登 录</button>
 				</view>
 		</view> 
 		<view class="margin-top-sm">
-			<view class="flex justify-between bg-white solids-bottom align-center" @tap="goMore('/pages/index/Personal-center/My-news')">
+			<view class="flex justify-between bg-white solid-bottom align-center" @tap="goMore('/pages/index/Personal-center/My-news')">
 				<view class="flex justify-left ">
 					<view class=" padding-sm"><image src="../../../static/input/me0.png" style="width: 45upx; height: 42upx;" mode=""></image></view>
 					<view class="padding-tb-sm">
@@ -37,7 +28,7 @@
 					<view class="text-grey text-xs"><image src="../../../static/input/形状6拷贝7@2x.png" style="width: 22upx; height: 30upx;" mode=""></image></view>	
 				</view>
 		    </view>
-			<view class="flex justify-between bg-white solids-bottom align-center" @tap="goMore('/pages/index/Personal-center/Report')">
+			<view class="flex justify-between bg-white solid-bottom align-center" @tap="goMore('/pages/index/Personal-center/Report')">
 				<view class="flex justify-left align-center">
 					<view class=" padding-sm"><image src="../../../static/input/me1.png" style="width: 48upx; height: 45upx;" mode=""></image></view>
 					<view class="padding-tb-sm">
@@ -48,7 +39,7 @@
 					<view class="text-grey text-xs"><image src="../../../static/input/形状6拷贝7@2x.png" style="width: 22upx; height: 30upx;" mode=""></image></view>	
 				</view>
 			</view>
-			<view class="flex justify-between bg-white solids-bottom align-center" @tap="goMore('/pages/index/Personal-center/My-advice')">
+			<view class="flex justify-between bg-white solid-bottom align-center" @tap="goMore('/pages/index/Personal-center/My-advice')">
 				<view class="flex justify-left align-center">
 					<view class=" padding-sm"><image src="../../../static/input/me2.png" style="width: 45upx; height: 44upx;" mode=""></image></view>
 					<view class="padding-tb-sm">
@@ -59,7 +50,7 @@
 					<view class="text-grey text-xs"><image src="../../../static/input/形状6拷贝7@2x.png" style="width: 22upx; height: 30upx;" mode=""></image></view>	
 				</view>
 			</view>
-			<view class="flex justify-between bg-white solids-bottom align-center" @tap="goMore('/pages/index/Personal-center/Collection')">
+			<view class="flex justify-between bg-white solid-bottom align-center" @tap="goMore('/pages/index/Personal-center/Collection')">
 				<view class="flex justify-left align-center">
 					<view class=" padding-sm"><image src="../../../static/input/me3.png" style="width: 45upx; height: 45upx;" mode=""></image></view>
 					<view class="padding-tb-sm">
@@ -70,7 +61,7 @@
 					<view class="text-grey text-xs"><image src="../../../static/input/形状6拷贝7@2x.png" style="width: 22upx; height: 30upx;" mode=""></image></view>	
 				</view>
 			</view>
-			<view class="flex justify-between bg-white solids-bottom align-center" @tap="goMore('/pages/index/Personal-center/Participation')">
+			<view class="flex justify-between bg-white solid-bottom align-center" @tap="goMore('/pages/index/Personal-center/Participation')">
 				<view class="flex justify-left align-center">
 					<view class=" padding-sm"><image src="../../../static/input/me4.png" style="width: 46upx; height: 42upx;" mode=""></image></view>
 					<view class="padding-tb-sm">
@@ -81,7 +72,7 @@
 					<view class="text-grey text-xs"><image src="../../../static/input/形状6拷贝7@2x.png" style="width: 22upx; height: 30upx;" mode=""></image></view>	
 				</view>
 			</view>
-			<view class="flex justify-between bg-white solids-bottom align-center" @tap="goMore('/pages/index/Personal-center/My-points')">
+			<view class="flex justify-between bg-white solid-bottom align-center" @tap="goMore('/pages/index/Personal-center/My-points')">
 				<view class="flex justify-left align-center">
 					<view class=" padding-sm"><image src="../../../static/input/me5.png" style="width: 45upx; height: 45upx;" mode=""></image></view>
 					<view class="padding-tb-sm">
@@ -92,7 +83,7 @@
 					<view class="text-grey text-xs"><image src="../../../static/input/形状6拷贝7@2x.png" style="width: 22upx; height: 30upx;" mode=""></image></view>	
 				</view>
 			</view>
-			<view class="flex justify-between bg-white solids-bottom align-center" @tap="goMore('/pages/index/Personal-center/Set')">
+			<view class="flex justify-between bg-white solid-bottom align-center" @tap="goMore('/pages/index/Personal-center/Set')">
 				<view class="flex justify-left">
 					<view class=" padding-sm"><image src="../../../static/input/me6.png" style="width: 45upx; height: 45upx;" mode=""></image></view>
 					<view class="padding-tb-sm">

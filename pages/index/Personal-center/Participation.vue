@@ -1,23 +1,15 @@
 <template>
 	<view>
 		<view class="box top">
-			<!-- <view class="cu-bar bg-gray">
-				<view class="action">
-					<text class="cuIcon-close"></text>我的-我的参与
-				</view>
-				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
-					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
-				</view>
-			</view> -->
 			<view class="cu-bar bg-white search solid-bottom" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action"  @tap="goMore('/pages/index/Personal-center/Personal-center')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red">
 					我的参与
 				</view>
 				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/search.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
@@ -34,8 +26,8 @@
 		 	<view class=""> 
 		 		<view class="" style="margin: 20upx; padding-bottom: 10upx; border-bottom: #DDDDDD 1upx solid;">
 		 			<view class="content">
-		 				<view class="text-gray flex" style=" font-size: 34upx;">
-		 					<view class="text-red">宜宾市第二医院志愿者招募</view>
+		 				<view class="text-gray flex" @tap="goMore('/pages/index/index_volunteer/volunteer-detail')" style=" font-size: 34upx;">
+		 					<view class="text-red">自贡市第二医院志愿者招募</view>
 		 				</view>
 		 				<view class="flex justify-between" style="line-height: 45upx;padding-left: 5upx; font-size: 27upx;">
 		 					<view>
@@ -50,7 +42,7 @@
 		 						</view>
 		 					</view>
 		 					<view>
-		 						<button class="bg-orange flex" style="width: 180upx; height: 80upx;">
+		 						<button class="bg-orange flex" style="width: 180upx; height: 80upx;line-height: 80upx;">
 		 							<view class="text-center" style="padding-left: 10upx;">进行中</view>
 		 						</button>
 		 					</view>
@@ -60,8 +52,8 @@
 				
 		 		<view class="" style="margin: 20upx 20upx 0; padding-bottom: 10upx; border-bottom: #DDDDDD 1upx solid;">
 		 			<view class="content">
-		 				<view class="text-gray flex" style=" font-size: 34upx;">
-		 					<view class="text-red">宜宾市第二医院志愿者招募</view>
+		 				<view class="text-gray flex"  @tap="goMore('/pages/index/index_volunteer/volunteer-detail')" style=" font-size: 34upx;">
+		 					<view class="text-red">自贡市第二医院志愿者招募</view>
 		 				</view>
 		 				<view class="flex justify-between" style="line-height: 45upx;padding-left: 5upx; font-size: 27upx;">
 		 					<view>
@@ -76,7 +68,7 @@
 		 						</view>
 		 					</view>
 		 					<view style="">
-		 						<button class="flex" style="padding: 0 15upx; width: 180upx; height: 80upx;background-color: #d1d1d1;">
+		 						<button class="flex" style="padding: 0 15upx; width: 180upx; height: 80upx;background-color: #d1d1d1;line-height: 80upx;">
 		 							<view class="text-center"><image src="../../../static/input/形状13.png" mode="" style="width: 45upx; height: 35upx;padding-right: 8upx;"></image></view>
 		 							<view class="text-center text-white">已完成</view>
 		 						</button>

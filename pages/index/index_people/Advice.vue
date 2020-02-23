@@ -4,23 +4,15 @@
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		<view class="box top">
-			<!-- <view class="cu-bar bg-gray">
-				<view class="action">
-					<text class="cuIcon-close"></text> 龙井之家-民呼我应
-				</view>
-				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
-					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
-				</view>
-			</view> -->
 			<view class="cu-bar bg-white search" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index_people/index_people')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red">
 					建言献策
 				</view>
 				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/search.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
@@ -32,19 +24,19 @@
 				</button>
 			</view>
 		</view>
-		<view class="flex justify-between bg-white padding" @tap="goMore('/pages/index/Personal-center/My-advice')">
+		<view class="flex justify-between bg-white padding " @tap="goMore('/pages/index/Personal-center/My-advice')">
 			<view class="flex" >
-				<image src="../../../static/input/背景拷贝.png" mode="" style="width: 60upx; height: 40upx; padding-right: 10upx;"></image>
-				<view class="text-black text-xl">我的建言献策</view>
+				<image src="../../../static/input/bg.png" mode="" style="width: 60upx; height: 40upx; padding-right: 10upx;"></image>
+				<view class="text-black text-xl align-center">我的建言献策</view>
 			</view>
 			<view>
-				<image src="../../../static/input/形状869.png" mode="" style="width: 40upx; height: 40upx;"></image>
+				<image src="../../../static/input/right.png" mode="" style="width: 40upx; height: 40upx;"></image>
 			</view>
 		</view>
 		
 		<view class="cu-list menu-avatar margin-tb-sm">
 			<view class="bg-white" style="padding-bottom: 10upx; border-bottom: #DDDDDD 1upx solid;">
-				<view class="content">
+				<view class="content"  @tap="goMore('/pages/index/Personal-center/advice-detail')">
 					<view class="text-gray" style="padding: 15upx;">
 						<view class="text-black text-s">近期消防火灾隐患存在，需要居民注意防患</view>
 						<view class="text-gray text-xs padding-tb-sm">居民建议反馈...消防知识早知道...</view>
@@ -53,13 +45,13 @@
 						<view class="text-gray text-xs" style="padding-left: 10upx;">2019-12-23 19:00</view>
 						<view class="action">
 							<text class="text-xs">2404</text>
-							<text class="text-gray"><image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></text>
+							<text class="text-gray"><image src="../../../static/input/view.png" mode="" class="count-logo"></image></text>
 						</view>
 					</view>
 				</view>
 			</view>
 			<view class="bg-white" style="padding-bottom: 10upx; border-bottom: #DDDDDD 1upx solid;">
-				<view class="content">
+				<view class="content" @tap="goMore('/pages/index/Personal-center/advice-detail')">
 					<view class="text-gray" style="padding: 15upx;">
 						<view class="text-black text-s">近期消防火灾隐患存在，需要居民注意防患</view>
 						<view class="text-gray text-xs padding-tb-sm">居民建议反馈...消防知识早知道...</view>
@@ -68,7 +60,7 @@
 						<view class="text-gray text-xs" style="padding-left: 10upx;">2019-12-23 19:00</view>
 						<view class="action">
 							<text class="text-xs">2404</text>
-							<text class="text-gray"><image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></text>
+							<text class="text-gray"><image src="../../../static/input/view.png" mode="" class="count-logo"></image></text>
 						</view>
 					</view>
 				</view>

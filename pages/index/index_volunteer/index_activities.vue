@@ -14,13 +14,13 @@
 			</view> -->
 			<view class="cu-bar bg-white search solid-bottom" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index_volunteer/index_volunteer')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red">
 					志愿服务
 				</view>
 				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/search.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
@@ -64,8 +64,8 @@
 			<view class=""> 
 				<view class="" style="margin: 20upx; padding-bottom: 10upx; border-bottom: #DDDDDD 1upx solid;">
 					<view class="content">
-						<view class="text-gray flex" style=" font-size: 34upx;">
-							<view class="text-red">宜宾市第二医院志愿者招募</view>
+						<view class="text-gray flex" @tap="goMore('/pages/index/index_volunteer/volunteer-detail')" style=" font-size: 34upx;">
+							<view class="text-red">自贡市第二医院志愿者招募</view>
 						</view>
 						<view class="flex justify-between" style="line-height: 45upx;padding-left: 5upx; font-size: 27upx;">
 							<view>
@@ -103,8 +103,8 @@
 				</view>
 				<view class="" style="margin: 20upx; padding-bottom: 10upx; border-bottom: #DDDDDD 1upx solid;">
 					<view class="content">
-						<view class="text-gray flex" style=" font-size: 34upx;">
-							<view class="text-red">宜宾市第二医院志愿者招募</view>
+						<view class="text-gray flex" @tap="goMore('/pages/index/index_volunteer/volunteer-detail')" style=" font-size: 34upx;">
+							<view class="text-red">自贡市第二医院志愿者招募</view>
 						</view>
 						<view class="flex justify-between" style="line-height: 45upx;padding-left: 5upx; font-size: 27upx;">
 							<view>
@@ -142,8 +142,8 @@
 				</view>
 				<view class="" style="margin: 20upx; padding-bottom: 10upx; border-bottom: #DDDDDD 1upx solid;">
 					<view class="content">
-						<view class="text-gray flex" style=" font-size: 34upx;">
-							<view class="text-red">宜宾市第二医院志愿者招募</view>
+						<view class="text-gray flex" @tap="goMore('/pages/index/index_volunteer/volunteer-detail')" style=" font-size: 34upx;">
+							<view class="text-red">自贡市第二医院志愿者招募</view>
 						</view>
 						<view class="flex justify-between" style="line-height: 45upx;padding-left: 5upx; font-size: 27upx;">
 							<view>
@@ -181,8 +181,8 @@
 				</view>
 				<view class="" style="margin: 20upx; padding-bottom: 10upx; border-bottom: #DDDDDD 1upx solid;">
 					<view class="content">
-						<view class="text-gray flex" style=" font-size: 34upx;">
-							<view class="text-red">宜宾市第二医院志愿者招募</view>
+						<view class="text-gray flex" @tap="goMore('/pages/index/index_volunteer/volunteer-detail')" style=" font-size: 34upx;">
+							<view class="text-red">自贡市第二医院志愿者招募</view>
 						</view>
 						<view class="flex justify-between" style="line-height: 45upx;padding-left: 5upx; font-size: 27upx;">
 							<view>
@@ -220,8 +220,8 @@
 				</view>
 				<view class="" style="margin: 20upx; padding-bottom: 10upx; border-bottom: #DDDDDD 1upx solid;">
 					<view class="content">
-						<view class="text-gray flex" style=" font-size: 34upx;">
-							<view class="text-red">宜宾市第二医院志愿者招募</view>
+						<view class="text-gray flex" @tap="goMore('/pages/index/index_volunteer/volunteer-detail')" style=" font-size: 34upx;">
+							<view class="text-red">自贡市第二医院志愿者招募</view>
 						</view>
 						<view class="flex justify-between" style="line-height: 45upx;padding-left: 5upx; font-size: 27upx;">
 							<view>
@@ -245,13 +245,6 @@
 					</view>
 				</view>
 			</view>
-			<!-- <view class="cu-bar bg-white solid-bottom line-gray">
-				<view class="action">
-				</view>
-				<view class="action">
-					<button class="cu-btn shadow bg-orange text-black" @tap="showModal" data-target="gridModal">更多</button>
-				</view>
-			</view> -->
 		</view>
 		<view style="height: 80upx;"></view>
 		<view class="cu-bar tabbar bg-white shadow foot">

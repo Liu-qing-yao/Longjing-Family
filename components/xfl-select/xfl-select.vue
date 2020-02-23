@@ -13,8 +13,8 @@
 		<span 
 			@click="onUpperClick" 
 			class="right-arrow" 
-			:class="{isRotate: isRotate}" 
-			style="background-image: url(../../static/input/三角.png); background-position: 450upx 20upx;background-size:30upx 20upx;"
+			:class="{isRotate: isRotate}"
+			style="background-image: url(../../static/input/triangle.png); background-position: 472upx 20upx;background-size:40upx 20upx;"
 		></span>
 		
 		<!-- 清除按钮图标 -->
@@ -763,7 +763,7 @@
 	@active-color: #409eff;       //活动的颜色
 	@mouse-move-color: #f5f7fa;  //在列表项上按下时的列表项的背景色
 	@padding-left: 10%;           //两侧的边距
-	@arrowWidth: 5.8%;            //右边的小三角按钮区域的宽度
+	@arrowWidth: 6.5%;            //右边的小三角按钮区域的宽度
 
 	.placeholder11{
 		color: red; top: 10px;
@@ -812,14 +812,14 @@
 				transform: rotate(180deg);
 			}
 			transition: transform .2s cubic-bezier(.645,.045,.355,0.5);
-			position: absolute; font-size: 1em; right: 8px; display: flex; 
+			position: absolute; font-size: 1em; right: 10px; display: flex; 
 			top: 20upx;
 			align-items: center; color: @hover-color; height: 20upx;
 			font-weight: 100; width: @arrowWidth; justify-content: center;
 		}
 		.clear{
 			color: #fff;  line-height: 1; 
-			background-color: @hover-color; border-radius: 50%;  padding: 2px;
+			background-color: @hover-color; border-radius: 50%;  padding: 5px;
 		}
 		
 		/****** 列表框部分样式 *****/

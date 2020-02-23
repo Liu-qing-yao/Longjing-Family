@@ -4,23 +4,15 @@
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		<view class="box top">
-			<!-- <view class="cu-bar bg-gray">
-				<view class="action">
-					<text class="cuIcon-close"></text> 龙井之家-民呼我应
-				</view>
-				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
-					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
-				</view>
-			</view> -->
 			<view class="cu-bar bg-white search solid-bottom" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index_people/index_people')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red">
 					政策发布
 				</view>
 				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/search.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
@@ -31,55 +23,58 @@
 		</scroll-view>
 		<view class="cu-list menu-avatar">
 			<view class="flex bg-white justify-between" style="padding: 10upx; border-bottom: #DDDDDD 1upx solid;">
-				<view class="flex" >
+				<view class="flex" @tap="goMore('/pages/index/index_people/Policy_release_detail')">
 					<view>
 						<image src="../../../static/input/图层9_1.png" mode="" style="width: 180upx; height: 160upx;"></image>
 					</view>
 					<view class="" style="margin-left: 10upx;">
-						<view class="text-black text-xs" style="width: 440upx;">最新发布《习近平新时代中国特色社会主义思想纲要》</view>
-						<view class="text-gray text-sm flex">
-							<view class="text-cut text-xs" style="padding-top: 60upx;">
+						<view class="text-black text-xs" style="width: 550upx;">最新发布《习近平新时代中国特色社会主义思想纲要》</view>
+						<view class="text-gray text-sm flex" style="padding-top: 60upx;">
+							<view class="text-cut text-xs flex justify-between" >
 								<text class=" text-red"></text>
 								2019-12-22  16:00
 							</view> 
+							<view >
+								<view class="text-xs" style="width: 110upx; position: absolute;right: 0;">2404 <image src="../../../static/input/view.png" mode="" class="count-logo"></image></view>
+							</view>
 						</view>
 					</view>
 				</view>
-				<view class="com_count">
-					<view class="text-xs" style="width: 110upx; position: absolute;right: 0;">2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
-				</view>
+				
 			</view>
 			<view class="flex bg-white justify-between" style="padding: 10upx; border-bottom: #DDDDDD 1upx solid;">
-				<view class="flex" >
+				<view class="flex" @tap="goMore('/pages/index/index_people/Policy_release_detail')">
 					<view class="" style="margin-left: 10upx;">
 						<view class="text-black text-xs" style="width: 750upx;">中共中央国务院关于营造更好发展环境支持民营企业改革发展的意见</view>
-						<view class="text-gray text-sm flex">
-							<view class="text-cut text-xs" style="padding-top: 60upx;">
+						<view class="text-gray text-sm flex" style="padding-top: 60upx;">
+							<view class="text-cut text-xs flex justify-between" >
 								<text class=" text-red"></text>
 								2019-12-22  16:00
 							</view> 
+							<view >
+								<view class="text-xs" style="width: 110upx; position: absolute;right: 0;">2404 <image src="../../../static/input/view.png" mode="" class="count-logo"></image></view>
+							</view>
 						</view>
 					</view>
 				</view>
-				<view class="com_count">
-					<view class="text-xs" style="width: 110upx; position: absolute;right: 0;">2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
-				</view>
+				
 			</view>
 			<view class="flex bg-white justify-between" style="padding: 10upx; border-bottom: #DDDDDD 1upx solid;">
-				<view class="flex" >
+				<view class="flex" @tap="goMore('/pages/index/index_people/Policy_release_detail')">
 					<view class="" style="margin-left: 10upx;">
 						<view class="text-black text-xs" style="width: 750upx;">中共中央国务院关于营造更好发展环境支持民营企业改革发展的意见</view>
-						<view class="text-gray text-sm flex">
-							<view class="text-cut text-xs" style="padding-top: 60upx;">
+						<view class="text-gray text-sm flex" style="padding-top: 60upx;">
+							<view class="text-cut text-xs flex justify-between" >
 								<text class=" text-red"></text>
 								2019-12-22  16:00
 							</view> 
+							<view >
+								<view class="text-xs" style="width: 110upx; position: absolute;right: 0;">2404 <image src="../../../static/input/view.png" mode="" class="count-logo"></image></view>
+							</view>
 						</view>
 					</view>
 				</view>
-				<view class="com_count">
-					<view class="text-xs" style="width: 110upx; position: absolute;right: 0;">2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
-				</view>
+				
 			</view>
 		</view>
 		<view style="height: 100upx;"></view>
@@ -211,9 +206,6 @@
 	margin: 0 5upx;
 }
 
-.com_count{
-	padding-top: 130upx;
-}
 .zuo{
 	width: 700upx;
 }

@@ -6,13 +6,13 @@
 		<view class="box top">
 			<view class="cu-bar bg-white search solid-bottom" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index_healthy/index_healthy')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red">
 					健康常识
 				</view>
 				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/search.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
@@ -35,101 +35,95 @@
 		</scroll-view>
 		
 		<view class="cu-list menu-avatar">
-			<view class="cu-item"> 
-				<view class="content">
+			<view class="cu-item" @tap="goMore('/pages/index/index_healthy/index_common_detail')"> 
+				<view class="content" style="width: 720upx;">
 					<view class="text-black"><image src="../../../static/input/矩形10拷贝4.png" mode="" class="logo-list" ></image>学校常见传染病防治知识</view>
-					<view class="text-gray text-sm flex">
-						<view class="text-cut">
-							<text class=" text-red  margin-right-xs"></text>
-							2019-12-22  16:00
-						</view> 
+					<view class="margin-top-sm flex justify-between align-center" style="font-size: 26upx;">
+						<view class="text-gray">2019-12-12 16:00</view>
+						<view class="flex justify-left">
+							<view class="text-gray">2404</view>
+							<view class=""><image src="../../../static/input/view.png" mode="" class="count-logo"></image></view>
+						</view>
 					</view>
-				</view>
-				<view class="action">
-					<view class="text-grey text-xs">2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
 				</view>
 			</view>
 			<view class="cu-item">
-				<view class="content">
-					<view class="text-black"><image src="../../../static/input/矩形10拷贝4.png" mode="" class="logo-list" ></image>手足口疾病</view>
-					<view class="text-gray text-sm flex">
-						<view class="text-cut">
-							<text class=" text-red  margin-right-xs"></text>
-							2019-12-22  16:00
-						</view> 
+				<view class="content"  @tap="goMore('/pages/index/index_healthy/index_common_detail')" style="width: 720upx;">
+					<view class="text-black">
+						<image src="../../../static/input/矩形10拷贝4.png" mode="" class="logo-list" ></image>
+						手足口疾病
+					</view>
+					<view class="margin-top-sm flex justify-between align-center" style="font-size: 26upx;">
+						<view class="text-gray">2019-12-12 16:00</view>
+						<view class="flex justify-left">
+							<view class="text-gray">2404</view>
+							<view class=""><image src="../../../static/input/view.png" mode="" class="count-logo"></image></view>
+						</view>
 					</view>
 				</view>
-				<view class="action">
-					<view class="text-grey text-xs">2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
-				</view>
+				
 			</view>
-			<view class="cu-item ">
-				<view class="content">
+			<view class="cu-item " @tap="goMore('/pages/index/index_healthy/index_common_detail')">
+				<view class="content" style="width: 720upx;">
 					<view class="text-black"><image src="../../../static/input/矩形10拷贝4.png" mode="" class="logo-list" ></image>青少年如何防御艾滋</view>
-					<view class="text-gray text-sm flex">
-						<view class="text-cut">
-							<text class=" text-red  margin-right-xs"></text>
-							2019-12-22  16:00
-						</view> 
+					<view class="margin-top-sm flex justify-between align-center" style="font-size: 26upx;">
+						<view class="text-gray">2019-12-12 16:00</view>
+						<view class="flex justify-left">
+							<view class="text-gray">2404</view>
+							<view class=""><image src="../../../static/input/view.png" mode="" class="count-logo"></image></view>
+						</view>
 					</view>
-				</view>
-				<view class="action">
-					<view class="text-grey text-xs">2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
 				</view>
 			</view>
-			<view class="cu-item cur">
-				<view class="content">
+			<view class="cu-item cur" @tap="goMore('/pages/index/index_healthy/index_common_detail')">
+				<view class="content"  style="width: 720upx;">
 					<view class="text-black"><image src="../../../static/input/矩形10拷贝4.png" mode="" class="logo-list" ></image>学校常见传染病防治知识</view>
-					<view class="text-gray text-sm flex">
-						<view class="text-cut">
-							<text class=" text-red  margin-right-xs"></text>
-							2019-12-22  16:00
-						</view> 
+					<view class="margin-top-sm flex justify-between align-center" style="font-size: 26upx;">
+						<view class="text-gray">2019-12-12 16:00</view>
+						<view class="flex justify-left">
+							<view class="text-gray">2404</view>
+							<view class=""><image src="../../../static/input/view.png" mode="" class="count-logo"></image></view>
+						</view>
 					</view>
 				</view>
-				<view class="action">
-					<view class="text-grey text-xs">2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
-				</view>
+
 			</view>
 			<view class="cu-item cur pic-modle">
-				<view class="content">
+				<view class="content" @tap="goMore('/pages/index/index_healthy/index_common_detail')">
 					<view class="text-black zuo">
 						<image src="../../../static/input/矩形10拷贝4.png" mode="" class="logo-list" style="margin-right: 30upx;"></image>
-						<image src="../../../static/input/图层9.png" style="height: 200upx;width: 200upx;"></image>
-						<view class="">
+						<image src="../../../static/input/图层9.png" style="height: 200upx;width: 200upx;margin-right: 10upx;"></image>
+						<view class="" style="width: 430upx;">
 							<view><text class="text-title"></text>注意儿童疾病，发烧吃药趁早<br></view><br>
-							<view class="text-gray text-xs"><text class="timeing" style="color: #F5F5F5;font-size: 10upx;"></text>2019-12-22  16:00</view>
+							<view class="margin-top-sm flex justify-between align-center" style="font-size: 26upx;">
+								<view class="text-gray">2019-12-12 16:00</view>
+								<view class="flex justify-left">
+									<view class="text-gray">2404</view>
+									<view class=""><image src="../../../static/input/view.png" mode="" class="count-logo"></image></view>
+								</view>
+							</view>
 						</view> 
 					</view>
-				</view>
-				<view class="action">
-					<view class="text-grey text-xs">2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
 				</view>
 			</view>
 			<view class="cu-item cur pic-modle">
-				<view class="content">
+				<view class="content" @tap="goMore('/pages/index/index_healthy/index_common_detail')" style="width: 720upx;">
 					<view class="zuo">
 						<image src="../../../static/input/矩形10拷贝4.png" mode="" class="logo-list" style="margin-right: 30upx;"></image>
-						<image src="../../../static/input/图层8.png" style="height: 200upx;width: 200upx;"></image>
-						<view class="">
+						<image src="../../../static/input/图层8.png" style="height: 200upx;width: 200upx;margin-right: 10upx;"></image>
+						<view class="" style="width: 430upx;">
 							<view><text class="text-title"></text>注意儿童疾病，提早疫苗接种<br></view><br>
-							<view class="text-gray text-xs"><text class="timeing" style="color: #F5F5F5;font-size: 10upx;"></text>2019-12-22  16:00</view>
+							<view class="margin-top-sm flex justify-between align-center" style="font-size: 26upx;">
+								<view class="text-gray">2019-12-12 16:00</view>
+								<view class="flex justify-left">
+									<view class="text-gray">2404</view>
+									<view class=""><image src="../../../static/input/view.png" mode="" class="count-logo"></image></view>
+								</view>
+							</view>
 						</view> 
 					</view>
-					
-				</view>
-				<view class="action">
-					<view class="text-grey text-xs">
-					2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
 				</view>
 			</view>
-			<!-- <view class="cu-bar bg-white solid-bottom line-gray">
-				<view class="action">
-				</view>
-				<view class="action">
-					<button class="cu-btn shadow bg-orange text-black" @tap="showModal" data-target="gridModal">更多</button>
-				</view>
-			</view> -->
 		</view>
 		<view style="height: 100upx;"></view>
 		<view class="cu-bar tabbar bg-white shadow foot">
@@ -264,7 +258,7 @@
 	bottom: 10upx;
 }
 .zuo{
-	width: 700upx;
+	width: 1000upx;
 }
 
 .cu-list.menu-avatar>.pic-modle{

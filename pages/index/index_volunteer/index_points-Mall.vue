@@ -3,52 +3,42 @@
 		<basics v-if="PageCur=='basics'"></basics>
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
-		
-
 		<view class="box top">
-			<!-- <view class="cu-bar bg-gray">
-				<view class="action">
-					<text class="cuIcon-close"></text>益路有你-积分兑换
-				</view>
-				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
-					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
-				</view>
-			</view> -->
 			<view class="cu-bar bg-white search" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index_volunteer/index_volunteer')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red">
 					积分商城
 				</view>
 				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/search.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
 		
 		<view class="flex bg-white solid-top solid-bottom">
 			<view class="bg-gray mall_change img-align" >
-				<image src="../../../static/input/形状557.png" mode="" style="width: 30upx;height: 30upx; padding: 0; margin-right: 12upx;"></image>
+				<image src="../../../static/input/形状557.png" mode="" style="width: 30upx;height: 30upx; padding: 0; margin-right: 8upx;"></image>
 				<view>请选择分类</view>
 			</view>
-			<view class="mall_change img-align" >
+			<view class="mall_change img-align" style="padding-top: 15upx;">
 				先选择街道
 			</view>
 			<view class="" style="margin: 16upx 16upx;">
 				<picker @change="PickerChange" :value="index_Street" :range="picker1">
 					<view class="picker img-align">
-						<image src="../../../static/input/下.png" mode="" style="width: 31upx;height: 36upx;"></image>
+						<image src="../../../static/input/under.png" mode="" style="width: 31upx;height: 36upx;"></image>
 					</view>
 				</picker>
 			</view>
-			<view class="mall_change img-align" >
+			<view class="mall_change img-align" style="padding-top: 15upx;">
 				再选择社区
 			</view>
 			<view class="" style="margin: 16upx 16upx;">
 				<picker @change="PickerChange" :value="index_Community" :range="picker2">
 					<view class="picker img-align">
-						<image src="../../../static/input/下.png" mode="" style="width: 31upx;height: 36upx;"></image>
+						<image src="../../../static/input/under.png" mode="" style="width: 31upx;height: 36upx;"></image>
 					</view>
 				</picker>
 			</view>
@@ -63,22 +53,26 @@
 		<view class="bg-white">
 			<view class="flex justify-around bg-white padding-top">
 				<view class="mall_contents bg-white flex" style="border: #929191 1upx solid;border-radius: 10upx;">
-					<view>
-						<image src="../../../static/input/图层11拷贝2.png" mode="" style=" padding: 5upx;width: 180upx;height: 200upx;"></image>
-					</view>
-					<view class="" style="line-height: 35upx; padding: 5upx;">
-						<view class="text-red">商品名称</view>
-						<view class="" style="font-size: 18upx;">时间：2019-12-12</view>
-						<view class="" style="font-size: 18upx;">积分：0</view>
-						<view class="" style="font-size: 18upx;">状态：未兑换</view>
-						<button class="shadow bg-orange" @tap="showModalS1" data-target="Modal" style="margin: 10upx 0upx;font-size: 22upx;padding: 0;">积分兑换</button>
+					<view class="flex">
+						<view @tap="goMore('/pages/index/index_volunteer/mall_detail')" >
+							<image src="../../../static/input/图层11拷贝2.png" mode="" style=" padding: 5upx;width: 180upx;height: 200upx;"></image>
+						</view>
+						<view>
+							<view class="" @tap="goMore('/pages/index/index_volunteer/mall_detail')"  style="line-height: 35upx; padding: 5upx;">
+								<view class="text-red">商品名称</view>
+								<view class="" style="font-size: 18upx;">时间：2019-12-12</view>
+								<view class="" style="font-size: 18upx;">积分：0</view>
+								<view class="" style="font-size: 18upx;">状态：未兑换</view>
+							</view>
+							<button class="exchange bg-orange" @tap="showModalS1" data-target="Modal" >积分兑换</button>
+						</view>
 					</view>
 					<view class="cu-modal" :class="modalNameS1=='Modal'?'show':''">
 						<view class="cu-dialog solid">
 							<view class="cu-bar bg-white justify-start">
 								<view class="text-bold margin-lr" style="font-size: 34upx;">提示信息</view>
 							</view>
-							<view class="solid-bottom solid-top text-left" style="padding: 30upx;" >
+							<view class="solid-top text-center" style="padding: 30upx;" >
 								兑换成功！
 							</view>
 							<view class=""  @tap="hideModalS1" style="margin: 20upx 0 15upx 550upx;">
@@ -88,22 +82,26 @@
 					</view>
 				</view>
 				<view class="mall_contents bg-white flex" style="border: #929191 1upx solid;border-radius: 10upx;">
-					<view>
-						<image src="../../../static/input/图层11拷贝2.png" mode="" style=" padding: 5upx;width: 180upx;height: 200upx;"></image>
-					</view>
-					<view class="" style="line-height: 35upx; padding: 5upx;">
-						<view class="text-red">商品名称</view>
-						<view class="" style="font-size: 18upx;">时间：2019-12-12</view>
-						<view class="" style="font-size: 18upx;">积分：0</view>
-						<view class="" style="font-size: 18upx;">状态：未兑换</view>
-						<button class="shadow bg-orange" @tap="showModalS2" data-target="Modal" style="margin: 10upx 0upx;font-size: 22upx;padding: 0;">积分兑换</button>
+					<view class="flex">
+						<view @tap="goMore('/pages/index/index_volunteer/mall_detail')" >
+							<image src="../../../static/input/图层11拷贝2.png" mode="" style=" padding: 5upx;width: 180upx;height: 200upx;"></image>
+						</view>
+						<view>
+							<view class="" @tap="goMore('/pages/index/index_volunteer/mall_detail')"  style="line-height: 35upx; padding: 5upx;">
+								<view class="text-red">商品名称</view>
+								<view class="" style="font-size: 18upx;">时间：2019-12-12</view>
+								<view class="" style="font-size: 18upx;">积分：0</view>
+								<view class="" style="font-size: 18upx;">状态：未兑换</view>
+							</view>
+							<button class="exchange bg-orange" @tap="showModalS2" data-target="Modal">积分兑换</button>
+						</view>
 					</view>
 					<view class="cu-modal" :class="modalNameS2=='Modal'?'show':''">
 						<view class="cu-dialog solid">
 							<view class="cu-bar bg-white justify-start">
 								<view class="text-bold margin-lr" style="font-size: 34upx;">提示信息</view>
 							</view>
-							<view class="solid-bottom solid-top text-left" style="padding: 30upx;" >
+							<view class="solid-top text-center" style="padding: 30upx;" >
 								已兑换完！
 							</view>
 							<view class=""  @tap="hideModalS2" style="margin: 20upx 0 15upx 550upx;">
@@ -115,22 +113,26 @@
 			</view>
 			<view class="flex justify-around bg-white padding-top">
 				<view class="mall_contents bg-white flex" style="border: #929191 1upx solid;border-radius: 10upx;">
-					<view>
-						<image src="../../../static/input/图层11拷贝2.png" mode="" style=" padding: 5upx;width: 180upx;height: 200upx;"></image>
-					</view>
-					<view class="" style="line-height: 35upx; padding: 5upx;">
-						<view class="text-red">商品名称</view>
-						<view class="" style="font-size: 18upx;">时间：2019-12-12</view>
-						<view class="" style="font-size: 18upx;">积分：0</view>
-						<view class="" style="font-size: 18upx;">状态：未兑换</view>
-						<button class="shadow bg-orange" @tap="showModalS3" data-target="Modal" style="margin: 10upx 0upx;font-size: 22upx;padding: 0;">积分兑换</button>
+					<view class="flex">
+						<view @tap="goMore('/pages/index/index_volunteer/mall_detail')" >
+							<image src="../../../static/input/图层11拷贝2.png" mode="" style=" padding: 5upx;width: 180upx;height: 200upx;"></image>
+						</view>
+						<view>
+							<view class="" @tap="goMore('/pages/index/index_volunteer/mall_detail')"  style="line-height: 35upx; padding: 5upx;">
+								<view class="text-red">商品名称</view>
+								<view class="" style="font-size: 18upx;">时间：2019-12-12</view>
+								<view class="" style="font-size: 18upx;">积分：0</view>
+								<view class="" style="font-size: 18upx;">状态：未兑换</view>
+							</view>
+							<button class="exchange bg-orange" @tap="showModalS3" data-target="Modal" >积分兑换</button>
+						</view>
 					</view>
 					<view class="cu-modal" :class="modalNameS3=='Modal'?'show':''">
 						<view class="cu-dialog solid">
 							<view class="cu-bar bg-white justify-start">
 								<view class="text-bold margin-lr" style="font-size: 34upx;">提示信息</view>
 							</view>
-							<view class="solid-bottom solid-top text-left" style="padding: 30upx;" >
+							<view class="solid-top text-center" style="padding: 30upx;" >
 								兑换成功！
 							</view>
 							<view class=""  @tap="hideModalS3" style="margin: 20upx 0 15upx 550upx;">
@@ -140,22 +142,26 @@
 					</view>
 				</view>
 				<view class="mall_contents bg-white flex" style="border: #929191 1upx solid;border-radius: 10upx;">
-					<view>
-						<image src="../../../static/input/图层11拷贝2.png" mode="" style=" padding: 5upx;width: 180upx;height: 200upx;"></image>
-					</view>
-					<view class="" style="line-height: 35upx; padding: 5upx;">
-						<view class="text-red">商品名称</view>
-						<view class="" style="font-size: 18upx;">时间：2019-12-12</view>
-						<view class="" style="font-size: 18upx;">积分：0</view>
-						<view class="" style="font-size: 18upx;">状态：未兑换</view>
-						<button class="shadow bg-orange" @tap="showModalS4" data-target="Modal"  style="margin: 10upx 0upx;font-size: 22upx;padding: 0;">积分兑换</button>
+					<view class="flex">
+						<view @tap="goMore('/pages/index/index_volunteer/mall_detail')" >
+							<image src="../../../static/input/图层11拷贝2.png" mode="" style=" padding: 5upx;width: 180upx;height: 200upx;"></image>
+						</view>
+						<view>
+							<view class="" @tap="goMore('/pages/index/index_volunteer/mall_detail')"  style="line-height: 35upx; padding: 5upx;">
+								<view class="text-red">商品名称</view>
+								<view class="" style="font-size: 18upx;">时间：2019-12-12</view>
+								<view class="" style="font-size: 18upx;">积分：0</view>
+								<view class="" style="font-size: 18upx;">状态：未兑换</view>
+							</view>
+							<button class="exchange bg-orange" @tap="showModalS4" data-target="Modal" >积分兑换</button>
+						</view>
 					</view>
 					<view class="cu-modal" :class="modalNameS4=='Modal'?'show':''">
 						<view class="cu-dialog solid">
 							<view class="cu-bar bg-white justify-start">
 								<view class="text-bold margin-lr" style="font-size: 34upx;">提示信息</view>
 							</view>
-							<view class="solid-bottom solid-top text-left" style="padding: 30upx;" >
+							<view class="solid-top text-center" style="padding: 30upx;" >
 								已兑换完！
 							</view>
 							<view class=""  @tap="hideModalS4" style="margin: 20upx 0 15upx 550upx;">
@@ -166,23 +172,28 @@
 				</view>
 			</view>
 			<view class="flex justify-around bg-white padding-top">
-				<view class="mall_contents bg-white flex" style="border: #929191 1upx solid;border-radius: 10upx;">
-					<view>
-						<image src="../../../static/input/图层11拷贝2.png" mode="" style=" padding: 5upx;width: 180upx;height: 200upx;"></image>
+				<view class="mall_contents bg-white" style="border: #929191 1upx solid;border-radius: 10upx;">
+					<view class="flex">
+						<view @tap="goMore('/pages/index/index_volunteer/mall_detail')" >
+							<image src="../../../static/input/图层11拷贝2.png" mode="" style=" padding: 5upx;width: 180upx;height: 200upx;"></image>
+						</view>
+						<view>
+							<view class="" @tap="goMore('/pages/index/index_volunteer/mall_detail')"  style="line-height: 35upx; padding: 5upx;">
+								<view class="text-red">商品名称</view>
+								<view class="" style="font-size: 18upx;">时间：2019-12-12</view>
+								<view class="" style="font-size: 18upx;">积分：0</view>
+								<view class="" style="font-size: 18upx;">状态：未兑换</view>
+							</view>
+							<button class="exchange bg-orange"  @tap="showModalS5" data-target="Modal" >积分兑换</button>
+						</view>
 					</view>
-					<view class="" style="line-height: 35upx; padding: 5upx;">
-						<view class="text-red">商品名称</view>
-						<view class="" style="font-size: 18upx;">时间：2019-12-12</view>
-						<view class="" style="font-size: 18upx;">积分：0</view>
-						<view class="" style="font-size: 18upx;">状态：未兑换</view>
-						<button class="shadow bg-orange"  @tap="showModalS5" data-target="Modal"  style="margin: 10upx 0upx;font-size: 22upx;padding: 0;">积分兑换</button>
-					</view>
+					
 					<view class="cu-modal" :class="modalNameS5=='Modal'?'show':''">
 						<view class="cu-dialog solid">
 							<view class="cu-bar bg-white justify-start">
 								<view class="text-bold margin-lr" style="font-size: 34upx;">提示信息</view>
 							</view>
-							<view class="solid-bottom solid-top text-left" style="padding: 30upx;" >
+							<view class="solid-top text-center" style="padding: 30upx;" >
 								已兑换完！
 							</view>
 							<view class=""  @tap="hideModalS5" style="margin: 20upx 0 15upx 550upx;">
@@ -192,22 +203,26 @@
 					</view>
 				</view>
 				<view class="mall_contents bg-white flex" style="border: #929191 1upx solid;border-radius: 10upx;">
-					<view>
-						<image src="../../../static/input/图层11拷贝2.png" mode="" style=" padding: 5upx;width: 180upx;height: 200upx;"></image>
-					</view>
-					<view class="" style="line-height: 35upx; padding: 5upx;">
-						<view class="text-red">商品名称</view>
-						<view class="" style="font-size: 18upx;">时间：2019-12-12</view>
-						<view class="" style="font-size: 18upx;">积分：0</view>
-						<view class="" style="font-size: 18upx;">状态：未兑换</view>
-						<button class="shadow bg-orange"  @tap="showModalS6" data-target="Modal"   style="margin: 10upx 0upx;font-size: 22upx;padding: 0;">积分兑换</button>
+					<view class="flex">
+						<view @tap="goMore('/pages/index/index_volunteer/mall_detail')" >
+							<image src="../../../static/input/图层11拷贝2.png" mode="" style=" padding: 5upx;width: 180upx;height: 200upx;"></image>
+						</view>
+						<view>
+							<view class="" @tap="goMore('/pages/index/index_volunteer/mall_detail')"  style="line-height: 35upx; padding: 5upx;">
+								<view class="text-red">商品名称</view>
+								<view class="" style="font-size: 18upx;">时间：2019-12-12</view>
+								<view class="" style="font-size: 18upx;">积分：0</view>
+								<view class="" style="font-size: 18upx;">状态：未兑换</view>
+							</view>
+							<button class="exchange bg-orange"  @tap="showModalS6" data-target="Modal" >积分兑换</button>
+						</view>
 					</view>
 					<view class="cu-modal" :class="modalNameS6=='Modal'?'show':''">
 						<view class="cu-dialog solid">
 							<view class="cu-bar bg-white justify-start">
 								<view class="text-bold margin-lr" style="font-size: 34upx;">提示信息</view>
 							</view>
-							<view class="solid-bottom solid-top text-left" style="padding: 30upx;" >
+							<view class="solid-top text-center" style="padding: 30upx;" >
 								兑换成功！
 							</view>
 							<view class=""  @tap="hideModalS6" style="margin: 20upx 0 15upx 550upx;">
@@ -349,6 +364,13 @@
 </script>
 
 <style>
+.exchange{
+	height: 50upx;
+	width: 120upx;
+	line-height: 50upx;
+	margin: 0 5upx 15upx;
+	font-size: 22upx;padding: 0;
+}
 .cu-btn{
 	color: #333333; 
 	width: 150rpx; 

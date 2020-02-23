@@ -4,48 +4,40 @@
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		<view class="box top">
-			<!-- <view class="cu-bar bg-gray">
-				<view class="action">
-					<text class="cuIcon-close"></text> 龙井人家-龙井之窗
-				</view>
-				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
-					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
-				</view>
-			</view> -->
 			<view class="cu-bar bg-white search" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index_longjing/index_longjing')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red">
 					工作动态
 				</view>
 				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/search.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
 		<view class="flex bg-white solid-top">
 			<view class="bg-gray mall_change img-align" >
-				<image src="../../../static/input/形状559.png" mode="" style="width: 30upx;height: 30upx; padding: 0; margin-right: 12upx;"></image>
+				<image src="../../../static/input/形状559.png" mode="" style="width: 30upx;height: 30upx; padding: 0; margin-right: 8upx;"></image>
 				<view>请选择分类</view>
 			</view>
-			<view class="mall_change img-align" >
+			<view class="mall_change img-align" style="padding-top: 15upx;">
 				先选择街道
 			</view>
 			<view class="" style="margin: 16upx 16upx;">
 				<picker @change="PickerChange" :value="index_Street" :range="picker1">
 					<view class="picker img-align">
-						<image src="../../../static/input/下.png" mode="" style="width: 31upx;height: 36upx;"></image>
+						<image src="../../../static/input/under.png" mode="" style="width: 31upx;height: 36upx;"></image>
 					</view>
 				</picker>
 			</view>
-			<view class="mall_change img-align" >
+			<view class="mall_change img-align" style="padding-top: 15upx;">
 				再选择社区
 			</view>
 			<view class="" style="margin: 16upx 16upx;">
 				<picker @change="PickerChange" :value="index_Community" :range="picker2">
 					<view class="picker img-align">
-						<image src="../../../static/input/下.png" mode="" style="width: 31upx;height: 36upx;"></image>
+						<image src="../../../static/input/under.png" mode="" style="width: 31upx;height: 36upx;"></image>
 					</view>
 				</picker>
 			</view>
@@ -53,7 +45,7 @@
 		
 		<view class="cu-list menu-avatar bg-white solid-top">
 			<view class="Service_N">
-				<view class="" style="margin: 20upx; padding-bottom: 10upx; border-bottom: #DDDDDD 1upx solid;">
+				<view class="" @tap="goMore('/pages/index/index_longjing/work-detail')" style="margin: 20upx; padding-bottom: 10upx; border-bottom: #DDDDDD 1upx solid;">
 					<view class="content">
 						<view class="text-gray flex" style="padding: 15upx;">
 							<view><image src="../../../static/input/矩形10拷贝2.png" mode="" style="width: 45upx;height: 30upx; padding-right: 5upx;"></image></view>
@@ -69,12 +61,12 @@
 							<view class="text-gray text-df">2020</view>
 							<view class="action">
 								<text class="text-gray">2404</text>
-								<text class="text-gray"><image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></text>
+								<text class="text-gray"><image src="../../../static/input/view.png" mode="" class="count-logo"></image></text>
 							</view>
 						</view>
 					</view>
 				</view>
-				<view class="" style="margin: 20upx;padding-bottom: 10upx; border-bottom: #DDDDDD 1upx solid;">
+				<view class="" @tap="goMore('/pages/index/index_longjing/work-detail')"  style="margin: 20upx;padding-bottom: 10upx; border-bottom: #DDDDDD 1upx solid;">
 					<view class="content">
 						<view class="text-gray flex" style="padding: 15upx;">
 							<view><image src="../../../static/input/矩形10拷贝2.png" mode="" style="width: 45upx;height: 30upx; padding-right: 5upx;"></image></view>
@@ -90,7 +82,7 @@
 							<view class="text-gray text-df">2020</view>
 							<view class="action">
 								<text class="text-gray">2404</text>
-								<text class="text-gray"><image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></text>
+								<text class="text-gray"><image src="../../../static/input/view.png" mode="" class="count-logo"></image></text>
 							</view>
 						</view>
 					</view>
@@ -103,25 +95,25 @@
 						</view>
 						<view class="" style="padding-left: 35upx;">
 							<view class="" style="border-left: #f8404c 2upx solid;padding: 0 0 0 0; line-height: 60upx;">
-								<view class="flex justify-between" style="padding-left: 20upx;">
+								<view class="flex justify-between" @tap="goMore('/pages/index/index_longjing/work-detail')"  style="padding-left: 20upx;">
 									葡萄园社区进行清洁卫生整改
 									<view class="action">
 										<text class="text-gray">2404</text>
-										<text class="text-gray"><image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></text>
+										<text class="text-gray"><image src="../../../static/input/view.png" mode="" class="count-logo"></image></text>
 									</view>
 								</view>
-								<view class="flex justify-between" style="padding-left: 20upx;">
+								<view class="flex justify-between" @tap="goMore('/pages/index/index_longjing/work-detail')"  style="padding-left: 20upx;">
 									葡萄园社区进行清洁卫生整改
 									<view class="action">
 										<text class="text-gray">2404</text>
-										<text class="text-gray"><image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></text>
+										<text class="text-gray"><image src="../../../static/input/view.png" mode="" class="count-logo"></image></text>
 									</view>
 								</view>
-								<view class="flex justify-between" style="padding-left: 20upx;">
+								<view class="flex justify-between" @tap="goMore('/pages/index/index_longjing/work-detail')"  style="padding-left: 20upx;">
 									葡萄园社区进行清洁卫生整改
 									<view class="action">
 										<text class="text-gray">2404</text>
-										<text class="text-gray"><image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></text>
+										<text class="text-gray"><image src="../../../static/input/view.png" mode="" class="count-logo"></image></text>
 									</view>
 								</view>
 							</view>
@@ -194,7 +186,9 @@
 </script>
 
 <style>
-	
+page{
+	background-color: #FFFFFF;
+}	
 .box{
 	border-bottom: 1upx #DDDDDD solid;
 }

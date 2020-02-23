@@ -1,30 +1,22 @@
 <template>
 	<view>
 		<view class="box top">
-			<!-- <view class="cu-bar bg-gray">
-				<view class="action">
-					<text class="cuIcon-close"></text>我的-我的收藏
-				</view>
-				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
-					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
-				</view>
-			</view> -->
 			<view class="cu-bar bg-white search solid-bottom" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action"  @tap="goMore('/pages/index/Personal-center/Personal-center')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red">
 					我的收藏
 				</view>
 				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/search.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
 		 
 		 <view class="cu-list menu-avatar">
 		 	<view class="flex bg-white justify-between" style="padding: 10upx; border-bottom: #DDDDDD 1upx solid;">
-		 		<view class="flex" >
+		 		<view class="flex" @tap="goMore('/pages/index/index_longjing/com-style-detail')">
 		 			<view>
 		 				<image src="../../../static/input/益路有你_11.png" mode="" style="width: 200upx; height: 160upx;"></image>
 		 			</view>
@@ -41,7 +33,7 @@
 		 		
 		 	</view>
 		 	<view class="flex bg-white justify-between" style="padding: 10upx;border-bottom: #DDDDDD 1upx solid;">
-		 		<view class="flex" >
+		 		<view class="flex" @tap="goMore('/pages/index/index_longjing/com-style-detail')">
 		 			<view>
 		 				<image src="../../../static/input/益路有你_11.png" mode="" style="width: 200upx; height: 160upx;"></image>
 		 			</view>

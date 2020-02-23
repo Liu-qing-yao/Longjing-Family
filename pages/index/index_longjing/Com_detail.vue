@@ -5,23 +5,15 @@
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		
 		<view class="box top">
-			<!-- <view class="cu-bar bg-gray">
-				<view class="action">
-					<text class="cuIcon-close" ></text> 龙井之窗-社区概括
-				</view>
-				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
-					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
-				</view>
-			</view> -->
 			<view class="cu-bar bg-white search solid-bottom" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index_longjing/Com_overview')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red" >
 					详情
 				</view>
 				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/search.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
@@ -38,7 +30,7 @@
 							<view style="font-size: 27upx;">社区信息</view>
 							<view class="action">
 								<text class="">2404</text>
-								<text class=""><image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></text>
+								<text class=""><image src="../../../static/input/view.png" mode="" class="count-logo"></image></text>
 							</view>
 						</view>
 					</view>

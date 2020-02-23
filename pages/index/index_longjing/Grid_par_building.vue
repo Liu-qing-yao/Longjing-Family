@@ -5,23 +5,15 @@
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		
 		<view class="box top">
-			<!-- <view class="cu-bar bg-gray">
-				<view class="action">
-					<text class="cuIcon-close" ></text> 龙井之窗-党建联盟
-				</view>
-				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
-					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
-				</view>
-			</view> -->
 			<view class="cu-bar bg-white search solid-bottom" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index_longjing/index_Alliance')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red" >
 					网格党建
 				</view>
 				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/search.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
@@ -86,7 +78,7 @@
 				<view class="padding-lr txtmodle " >
 				 	<view class="flex justify-between bg-white" style="padding: 20upx 0;">
 				 		<view class="" >
-				 			<button class="cu-btn bg-white text-black" style="border: #797979 1upx solid;" @tap="goMore('/pages/index/index_longjing/Grid_com_details2')" data-target="gridModal">钟鼓楼区域</button>
+				 			<button class="cu-btn bg-white text-red" style="border: #797979 1upx solid;" @tap="goMore('/pages/index/index_longjing/Grid_com_details2')" data-target="gridModal">钟鼓楼区域</button>
 				 		</view>
 						<view class="">
 							<button class="cu-btn bg-white text-black"  style="border: #797979 1upx solid;" @tap="goMore('/pages/index/index_longjing/Grid_com_details')" data-target="gridModal">中山社区</button>
@@ -133,16 +125,16 @@
 		</view>
 		<view class="bg-white text-black" style="padding: 30upx 60upx 15upx; font-size: 32upx;">问卷调查</view>
 		<view class="bg-white flex justify-between" style="padding: 0 60upx 20upx;">
-			<view class="" >
-				<button class="bg-orange text-white" style="font-size: 22upx; padding: 0 10upx;" @tap="showModal" data-target="gridModal">
-					<view>我是居民</view>
-					<text>(点击进入需求问卷)</text>
+			<view class="" style="padding: 0;" >
+				<button class="bg-orange text-white" style="font-size: 22upx; padding: 0 10upx;" >
+					<view style="margin: 0; padding: 0; font-size: 28upx;">我是居民</view>
+					<text style="font-size: 22upx;">(点击进入需求问卷)</text>
 				</button>
 			</view>
-			<view class="" >
-				<button class="bg-orange text-white" style="font-size: 22upx; padding: 0 10upx;" @tap="showModal" data-target="gridModal">
-					<view>我是商户</view>
-					<text></text>(点击进入需求问卷)
+			<view class="" style="padding: 0;" >
+				<button class="bg-orange text-white" style="font-size: 22upx; padding: 0 10upx;">
+					<view style="margin: 0; padding: 0; font-size: 28upx;">我是商户</view>
+					<text style="font-size: 22upx;">(点击进入需求问卷)</text>
 				</button>
 			</view>
 		</view>

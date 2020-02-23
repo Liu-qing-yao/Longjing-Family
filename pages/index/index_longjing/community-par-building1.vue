@@ -5,23 +5,15 @@
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		
 		<view class="box top">
-			<!-- <view class="cu-bar bg-gray">
-				<view class="action">
-					<text class="cuIcon-close" ></text> 党建联盟-党组织简介
-				</view>
-				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
-					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
-				</view>
-			</view> -->
 			<view class="cu-bar bg-white search solid-bottom" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index_longjing/index_Alliance')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red" >
 					区域党建
 				</view>
 				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/search.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
@@ -35,16 +27,16 @@
 		</scroll-view>
 		<view class="flex bg-white solid-bottom" >
 			<view class="bg-gray mall_change img-align" >
-				<image src="../../../static/input/形状559.png" mode="" style="width: 30upx;height: 30upx; padding: 0; margin-right: 12upx;"></image>
+				<image src="../../../static/input/形状559.png" mode="" style="width: 30upx;height: 30upx; padding: 0; margin-right: 8upx;"></image>
 				<view>请选择分类</view>
 			</view>
-			<view class="mall_change img-align" >
+			<view class="mall_change" style="padding-top: 15upx;" >
 				先选择小区
 			</view>
 			<view class="" style="margin: 16upx 16upx;">
 				<picker @change="PickerChange" :value="index_Street" :range="picker1">
 					<view class="picker img-align">
-						<image src="../../../static/input/下.png" mode="" style="width: 31upx;height: 36upx;"></image>
+						<image src="../../../static/input/under.png" mode="" style="width: 31upx;height: 36upx;"></image>
 					</view>
 				</picker>
 			</view>
@@ -62,8 +54,9 @@
 						<text class=" text-red  margin-right-xs"></text>
 						2019-12-22  16:00
 					</view> 
+					<view style="font-size: 27upx;">党委会信息</view>
 					<view class="">
-						<view class="">2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
+						<view class="">2404 <image src="../../../static/input/view.png" mode="" class="count-logo"></image></view>
 					</view>
 				</view>
 			</view>
@@ -109,25 +102,25 @@
 				<view class="padding-lr padding-bottom-xl">
 				 	<view class="txtmodle bg-white party_cont">
 						<view class="flex" style="border-bottom: #DDDDDD 1upx dashed;">
-							<view class="text-red">合江门街道召开“不忘初心，牢记使命”主题教育</view>
+							<view class="text-red" @tap="goMore('/pages/index/index_longjing/par-build-detail')">合江门街道召开“不忘初心，牢记使命”主题教育</view>
 							<view class="text-xs " style="padding-left: 25upx; line-height: 45upx; font-size: 22upx;">
 								<text class="">2019-12-12</text><br>
 							</view>
 						</view>
 						<view class="flex" style="border-bottom: #DDDDDD 1upx dashed;">
-							<view class="text-red">合江门街道召开“不忘初心，牢记使命”主题教育</view>
+							<view class="text-red" @tap="goMore('/pages/index/index_longjing/par-build-detail')">合江门街道召开“不忘初心，牢记使命”主题教育</view>
 							<view class="text-xs " style="padding-left: 25upx; line-height: 45upx; font-size: 22upx;">
 								<text class="">2019-12-12</text><br>
 							</view>
 						</view>
 						<view class="flex" style="border-bottom: #DDDDDD 1upx dashed;">
-							<view class="text-red">合江门街道召开“不忘初心，牢记使命”主题教育</view>
+							<view class="text-red"  @tap="goMore('/pages/index/index_longjing/par-build-detail')">合江门街道召开“不忘初心，牢记使命”主题教育</view>
 							<view class="text-xs " style="padding-left: 25upx; line-height: 45upx; font-size: 22upx;">
 								<text class="">2019-12-12</text><br>
 							</view>
 						</view>
 						<view class="flex" style="border-bottom: #DDDDDD 1upx dashed;">
-							<view class="text-red">合江门街道召开“不忘初心，牢记使命”主题教育</view>
+							<view class="text-red"  @tap="goMore('/pages/index/index_longjing/par-build-detail')">合江门街道召开“不忘初心，牢记使命”主题教育</view>
 							<view class="text-xs " style="padding-left: 25upx; line-height: 45upx; font-size: 22upx;">
 								<text class="">2019-12-12</text><br>
 							</view>

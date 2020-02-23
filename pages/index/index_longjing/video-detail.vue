@@ -3,7 +3,7 @@
 		<view class="box top bg-white">
 			<view class="cu-bar bg-white search solid-bottom" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index_longjing/Party_bui_Video')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red" >
 					详情
@@ -12,7 +12,10 @@
 					<image src="../../../static/input/收藏.png" @click="togglePopup('top', 'popup')" style="width: 45rpx; height: 12rpx;"></image>
 					<uni-popup class="pup-windows " ref="showpopup" :type="type" @change="change">
 						<view class="popup-content">
-							<view class="img-align"  @tap="showModalS" data-target="Modal"><image src="../../../static/input/分享.png" mode="" style="width: 35upx;height: 28upx;margin-right: 5upx;"></image>分享</view>
+							<view class="img-align text-right"  @tap="showModalS" data-target="Modal">
+								<image src="../../../static/input/分享.png" mode="" style="width: 32upx;height: 25upx;margin: 0 5upx 0 10upx;"></image>
+								<text>分享</text>
+							</view>
 							<view class="" @tap="showModal" data-target="Modal">
 								<uni-fav :checked="checkList[3]" class="" style="margin-top: 10upx;" fg-color="#f06e72" fg-color-checked="#f06e72" bg-color-checked="none" bg-color="none" @click="favClick(3)" />
 							</view>
@@ -20,37 +23,7 @@
 					</uni-popup>
 				</view>
 			</view>
-			<view>
-				<view class="cu-modal" :class="modalNameS=='Modal'?'show':''">
-					<view class="cu-dialog solid">
-						<view class="cu-bar bg-white justify-start">
-							<view class="text-bold margin-lr" style="font-size: 34upx;">提示信息</view>
-						</view>
-						<view class="solid-bottom solid-top text-left" style="padding: 30upx;" >
-							分享成功！
-						</view>
-						<view class=""  @tap="hideModalS" style="margin: 20upx 0 15upx 550upx;">
-							<button style="width: 90upx;height: 50upx; line-height: 50upx; background-color: #fe9148;color: #FFFFFF;font-size: 28upx;padding: 0;">关闭</button>
-						</view>
-					</view>
-				</view>
-				<view class="cu-modal" :class="modalName=='Modal'?'show':''">
-					<view class="cu-dialog solid">
-						<view class="cu-bar bg-white justify-start">
-							<view class="text-bold margin-lr" style="font-size: 34upx;">提示信息</view>
-							<!-- <view class="action">
-								<text class="cuIcon-close text-red"></text>
-							</view> -->
-						</view>
-						<view class="solid-bottom solid-top text-left" style="padding: 30upx;" >
-							收藏成功！
-						</view>
-						<view class=""  @tap="hideModal" style="margin: 20upx 0 15upx 550upx;">
-							<button style="width: 90upx;height: 50upx; line-height: 50upx; background-color: #fe9148;color: #FFFFFF;font-size: 28upx;padding: 0;">关闭</button>
-						</view>
-					</view>
-				</view>
-			</view>
+			
 		</view>
 		<view class="bg-white solid-bottom ">
 			<view class="" style="margin: 0 20upx ; padding-bottom: 10upx;">
@@ -63,7 +36,7 @@
 						<view style="font-size: 27upx;">党建视频</view>
 						<view class="action">
 							<text class="">2404</text>
-							<text class=""><image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></text>
+							<text class=""><image src="../../../static/input/view.png" mode="" class="count-logo"></image></text>
 						</view>
 					</view>
 				</view>
@@ -88,7 +61,34 @@
 				下一篇：习近平会见韩国总统，推动双边关系
 			</view>
 		</view>
-		
+		<view>
+			<view class="cu-modal" :class="modalNameS=='Modal'?'show':''">
+				<view class="cu-dialog solid">
+					<view class="cu-bar bg-white justify-start">
+						<view class="text-bold margin-lr" style="font-size: 34upx;">提示信息</view>
+					</view>
+					<view class="solid-bottom solid-top text-left" style="padding: 30upx;" >
+						分享成功！
+					</view>
+					<view class=""  @tap="hideModalS" style="margin: 20upx 0 15upx 550upx;">
+						<button style="width: 90upx;height: 50upx; line-height: 50upx; background-color: #fe9148;color: #FFFFFF;font-size: 28upx;padding: 0;">关闭</button>
+					</view>
+				</view>
+			</view>
+			<view class="cu-modal" :class="modalName=='Modal'?'show':''">
+				<view class="cu-dialog solid">
+					<view class="cu-bar bg-white justify-start">
+						<view class="text-bold margin-lr" style="font-size: 34upx;">提示信息</view>
+					</view>
+					<view class="solid-bottom solid-top text-left" style="padding: 30upx;" >
+						收藏成功！
+					</view>
+					<view class=""  @tap="hideModal" style="margin: 20upx 0 15upx 550upx;">
+						<button style="width: 90upx;height: 50upx; line-height: 50upx; background-color: #fe9148;color: #FFFFFF;font-size: 28upx;padding: 0;">关闭</button>
+					</view>
+				</view>
+			</view>
+		</view>
 		<view style="height: 100upx;"></view>
 		<view class="cu-bar tabbar bg-white shadow foot solid-top">
 			<view class="action" @click="goMore('/pages/index/index')" data-cur="Home">
@@ -226,11 +226,11 @@
 .img-align *{
 	display: inline-block;
 	vertical-align: middle;
-	font-size: 28upx;
+	
 }
 .img-align{
-	margin: 10upx 0 0 10upx;
-	
+	margin: 10upx 0 0 0;
+	font-size: 30upx;
 }
 	/* 头条小程序组件内不能引入字体 */
 	/* #ifdef MP-TOUTIAO */

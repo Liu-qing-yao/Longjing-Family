@@ -1,28 +1,20 @@
 <template>
 	<view>
 		<view class="box top">
-			<!-- <view class="cu-bar bg-gray">
-				<view class="action">
-					<text class="cuIcon-close"></text>我的-我的消息
-				</view>
-				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
-					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
-				</view>
-			</view> -->
 			<view class="cu-bar bg-white search solid-bottom" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action"  @tap="goMore('/pages/index/Personal-center/Personal-center')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red">
 					我的消息
 				</view>
 				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/search.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
 		<view>
-			<view class="bg-white solid-bottom " >
+			<view class="bg-white solid-bottom " @tap="goMore('/pages/index/Personal-center/dynamic-detail')" >
 				<view v-for="(item, index) in listData1" :key="index" class="flex justify-between" :data-url="listData1[index]" style="padding: 15upx 10upx;">
 					<view class="flex justify-left">
 						<view class="face" ><image :id="'image' + index" mode="aspectFill" :src="item.images0" style="width: 120upx; height: 100upx;"/></view>
@@ -42,7 +34,7 @@
 					<view ><image :id="'image' + index" mode="aspectFill" :src="item.images3" style="width: 120upx;height: 80upx; margin: 10upx 10upx;"/></view>
 				</view>
 			</view>
-			<view class="bg-white solid-bottom " >
+			<view class="bg-white solid-bottom " @tap="goMore('/pages/index/Personal-center/dynamic-detail')">
 				<view v-for="(item, index) in listData2" :key="index" class="flex justify-between" :data-url="listData2[index]" style="padding: 15upx 10upx;">
 					<view class="flex justify-left">
 						<view class="face" ><image :id="'image' + index" mode="aspectFill" :src="item.images0" style="width: 120upx; height: 100upx;"/></view>
@@ -63,7 +55,7 @@
 				</view>
 			</view>
 			
-			<view class="bg-white solid-bottom " >
+			<view class="bg-white solid-bottom " @tap="goMore('/pages/index/Personal-center/dynamic-detail')">
 				<view v-for="(item, index) in listData3" :key="index" class="flex justify-between" :data-url="listData3[index]" style="padding: 15upx 10upx;">
 					<view class="flex justify-left">
 						<view class="face" ><image :id="'image' + index" mode="aspectFill" :src="item.images0" :data-index="index" style="width: 120upx; height: 100upx;"/></view>
@@ -82,7 +74,7 @@
 					<view ><image :id="'image' + index" mode="aspectFill" :src="item.images3" style="width: 120upx;height: 80upx; margin: 10upx 10upx;"/></view>
 				</view>
 			</view>
-			<view class="bg-white solid-bottom flex justify-between" style="padding: 15upx 10upx;">
+			<view class="bg-white solid-bottom flex justify-between" @tap="goMore('/pages/index/Personal-center/reminders-detail')" style="padding: 15upx 10upx;">
 				    <view class="flex justify-left">
 						<view class="face padding-lr" style=""><image src="../../../static/input/me1.png" mode="" style="width: 60upx; height: 50upx;"></image></view>
 						<view class="padding-left">
@@ -95,7 +87,7 @@
 						<text class="text-orange">您的报事未受理</text>
 					</view>
 			</view>
-			<view class="bg-white solid-top solid-bottom flex justify-between" style="padding: 15upx 10upx;">
+			<view class="bg-white solid-bottom flex justify-between" style="padding: 15upx 10upx;" @tap="goMore('/pages/index/Personal-center/reminders-detail')">
 				    <view class="flex justify-left">
 						<view class="face padding-lr" style=""><image src="../../../static/input/me1.png" mode="" style="width: 60upx; height: 50upx;"></image></view>
 						<view class="padding-left">
@@ -108,7 +100,7 @@
 						<text class="text-blue">正在办理</text>
 					</view>
 			</view>
-			<view class="bg-white solid-bottom flex justify-between" style="padding: 15upx 10upx;">
+			<view class="bg-white solid-bottom flex justify-between" @tap="goMore('/pages/index/Personal-center/reminders-detail')" style="padding: 15upx 10upx;">
 				    <view class="flex justify-left">
 						<view class="face padding-lr" style=""><image src="../../../static/input/me1.png" mode="" style="width: 60upx; height: 50upx;"></image></view>
 						<view class="padding-left">
@@ -169,11 +161,11 @@
 				PageCur: '我的',
 				listData1: [
 					{
-						images0: '../../../static/input/头像.png',
+						images0: '../../../static/input/person.png',
 						title: '张三（书记）',
 						images1: '../../../static/input/删除.png',
 						description1: '点赞',
-						images2: '../../../static/input/爱心.png',
+						images2: '../../../static/input/like.png',
 						description2: '2019-12-12 22：00',
 						images3: '../../../static/input/图层860.png',
 						
@@ -181,11 +173,11 @@
 				],
 				listData2: [
 					{
-						images0: '../../../static/input/头像.png',
+						images0: '../../../static/input/person.png',
 						title: '张三（书记）',
 						images1: '../../../static/input/删除.png',
 						description1: '点赞',
-						images2: '../../../static/input/爱心.png',
+						images2: '../../../static/input/like.png',
 						description2: '2019-12-12 22：00',
 						images3: '../../../static/input/图层860.png',
 						
@@ -193,7 +185,7 @@
 				],
 				listData3: [
 					{
-						images0: '../../../static/input/头像.png',
+						images0: '../../../static/input/person.png',
 						title: '张三（书记）',
 						images1: '../../../static/input/删除.png',
 						description1: '评论：新年快乐！',

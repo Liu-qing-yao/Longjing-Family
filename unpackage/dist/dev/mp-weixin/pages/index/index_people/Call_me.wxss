@@ -1,0 +1,39 @@
+
+.peo_content{
+	background-color: #fd7576;
+}
+.action1{
+	padding: 0 30rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.cu-btn{
+	color: #FFFFFF; 
+	width: 400rpx; 
+	background-color: #fe9148;
+}
+.intro-all {
+	padding: 30rpx 0;
+}
+.introduce{
+	border:5rpx dashed #f0ad79;
+	margin: 0 45rpx 0 45rpx;
+	padding: 10rpx 5rpx;
+	line-height: 48rpx;
+	color: #fdcc6a;
+}
+.Illustration1{
+	height: 400rpx;
+}
+.uni-input{
+	border-radius: 10rpx;
+	border: #DBDBDB 1rpx solid;
+	height: 300rpx;
+	width: 620rpx;
+	font-size: 28rpx;
+	padding: 10rpx;
+	margin: 0 auto;
+	background-color: #efedec;
+}
+

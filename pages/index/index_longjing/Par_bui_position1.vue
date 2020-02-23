@@ -6,13 +6,13 @@
 		<view class="box top">
 			<view class="cu-bar bg-white search" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action"  @tap="goMore('/pages/index/index_longjing/index_Alliance')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red">
 					党建地图
 				</view>
 				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/search.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
@@ -63,18 +63,18 @@
 						</view>
 					</view>
 					<view class="arrow-trans" style="position:fixed; top:600upx; right:-10upx;">
-						<image class="" src="../../../static/input/地图箭头.png" mode=""  
+						<image class="" src="../../../static/input/Map-arrow.png" mode=""  
 							@tap="showModal" data-target="DrawerModalR" style="width: 60upx; height: 120upx;"></image>
 					</view>
 		        </view>
 		 </view>
 		<view>
-			<view class="cu-modal drawer-modal justify-end " :class="modalName=='DrawerModalR'?'show':''" >
-				<view class="arrow-trans2" style="position:fixed; top:600upx; left: 256upx;">
-					<image class="" src="../../../static/input/地图箭头1.png" mode=""  
+			<view class="cu-modal drawer-modal justify-end " :class="modalName=='DrawerModalR'?'show':''" style="position: absolute; top: -20upx;">
+				<view class="arrow-trans2" style="position:fixed; top:500upx; left: 256upx;">
+					<image class="" src="../../../static/input/Map-arrow1.png" mode=""  
 						@tap="hideModal" data-target="DrawerModalR" style="width: 60upx; height: 120upx;"></image>
 				</view>
-				<view class="cu-dialog basis-lg " @tap.stop="" :style="[{top:CustomBar+'px',height:'calc(80vh - ' + CustomBar + 'px)'}]">
+				<view class="cu-dialog basis-lg " @tap.stop="" :style="[{top:CustomBar+'px',height:'calc(100vh - ' + CustomBar + 'px)'}]">
 					<view class="cu-list menu text-left ">
 						<view class="text-white bg-red text-center padding-tb-sm " style="font-size: 34upx;">党建阵地列表</view>
 						<uni-collapse accordion="true">
@@ -157,10 +157,9 @@
 		</view>
 		<view>
 			<view class="cu-modal drawer-modal" :class="modalNameL=='DrawerModalL'?'show':''" @tap="hideModalL" >
-				<image src="../../../static/input/介绍箭头1.png" mode="" style="width: 50upx; height: 126upx; position: fixed;left: -10upx; bottom: 101upx;"></image>
+				<image src="../../../static/input/intro-arrow11.png" mode="" style="width: 50upx; height: 135upx; position: absolute;left: -10upx; top: 1205upx;"></image>
 			</view>
 			<view class="cu-modal cu-modal1 drawer-modal flex justify-start" :class="modalNameL=='DrawerModalL'?'show':''">
-				
 				<view class="cu-dialog basis-lg cu-modal1" @tap.stop="" :style="[{top:CustomBar+'px',height:'calc(16vh - ' + CustomBar + 'px)'}]" style="overflow: auto;">
 					<view class="cu-list menu text-left" >
 						<view class="text-white solid-right" style="background-color: #fe9148; font-size: 24upx;">
@@ -174,7 +173,7 @@
 				</view>
 			</view>
 		</view>
-		<view style="height: 100upx;"></view>
+		<view style="height: 150upx;"></view>
 		<view class="cu-bar tabbar bg-white shadow foot">
 			<view class="action" @click="goMore('/pages/index/index')" data-cur="Home">
 				<view class='cuIcon-cu-image'>
@@ -502,12 +501,11 @@
 }
 
 .cu-modal1{
-	position: fixed;
-	top: 1020upx;
+	position: absolute;
+	top: 1100upx;
 	right: 0;
 	bottom: 0upx;
 	left: 21upx;
-	z-index: 1110; 
 	background: rgba(0, 0, 0, 0);
 } 
 

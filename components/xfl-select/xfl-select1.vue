@@ -14,7 +14,7 @@
 			@click="onUpperClick" 
 			class="right-arrow" 
 			:class="{isRotate: isRotate}" 
-			style="background-image: url(../../../static/input/下.png); background-position: 450upx 20upx;background-size:30upx 20upx;"
+			style="background-image: url(../../../static/input/under.png); background-position: 435upx 20upx;background-size:35upx 20upx;"
 		></span>
 		
 		<!-- 清除按钮图标 -->
@@ -762,8 +762,8 @@
 	@hover-color: #c0c4cc;       //边框的颜色
 	@active-color: #409eff;       //活动的颜色
 	@mouse-move-color: #f5f7fa;  //在列表项上按下时的列表项的背景色
-	@padding-left: 10%;           //两侧的边距
-	@arrowWidth: 14%;            //右边的小三角按钮区域的宽度
+	@padding-left: 10upx;           //两侧的边距
+	@arrowWidth: 35upx;            //右边的小三角按钮区域的宽度
 	.placeholder11{
 		color: red; top: 10px;
 	}
@@ -792,13 +792,13 @@
 		height: 3em;
 		line-height: inherit;
 		outline: none;
-		padding: 0 0 0 6px;
+		padding: 0 0 0 3px;
 		transition: border-color .2s cubic-bezier(.645,.045,.355,1);
-		width: 100%;
+		width: 230upx;
 		position: relative;
 		
 		.input{
-			width: 100%; height: 100%; 
+			width: 230upx; height: 65upx; 
 			display: flex; align-items: center; justify-content: flex-start;
 		}
 		.placeholder{
@@ -811,14 +811,14 @@
 				transform: rotate(180deg);
 			}
 			transition: transform .2s cubic-bezier(.645,.045,.355,0.5);
-			position: absolute; font-size: 1em; right: 4px; display: flex; 
-			top: 24upx;
-			align-items: center; color: @hover-color; height: 21upx;
+			position: absolute; font-size: 1em; right: 2px; display: flex; 
+			top: 22upx;
+			align-items: center; color: @hover-color; height: 19upx;
 			width: @arrowWidth; justify-content: center;
 		}
 		.clear{
 			color: #fff;  line-height: 1; 
-			background-color: @hover-color; border-radius: 50%;  padding: 2px 2px;
+			background-color: @hover-color; border-radius: 50%;  padding: 1px 5px;
 		}
 		
 		/****** 列表框部分样式 *****/
@@ -837,8 +837,8 @@
 				 border-style: solid;
 				 border-width: 6px;
 				 filter: drop-shadow(0 2px 12px rgba(0,0,0,.03));
-				 left: 100%;
-				 margin-right: 3px;
+				 left: 230upx;
+				 margin-right: 1px;
 				 border-top-width: 0;
 				 border-bottom-color: #dcdfe6;  
 				 top: -5px;

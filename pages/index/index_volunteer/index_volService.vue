@@ -4,23 +4,15 @@
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		<view class="box top">
-			<!-- <view class="cu-bar bg-gray">
-				<view class="action">
-					<text class="cuIcon-close"></text> 龙井人家-益路有你
-				</view>
-				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
-					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
-				</view>
-			</view> -->
 			<view class="cu-bar bg-white search" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index_volunteer/index_volunteer')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red">
 					志愿服务
 				</view>
 				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/search.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
@@ -47,7 +39,7 @@
 		<view class="cu-list menu-avatar bg-white">
 			<view class="Service_N">
 				<view class="" style="margin: 20upx; padding-bottom: 10upx; border-bottom: #DDDDDD 1upx solid;">
-					<view class="content">
+					<view class="content" @tap="goMore('/pages/index/index_volunteer/volunteer_news_detail')">
 						<view class="text-gray flex" style="padding: 15upx;">
 							<view><image src="../../../static/input/矩形10拷贝2.png" mode="" style="width: 45upx;height: 30upx; padding-right: 5upx;"></image></view>
 						    <view class="">12/18</view> 
@@ -64,13 +56,13 @@
 							<view class="text-gray text-df">2020</view>
 							<view class="action">
 								<text class="text-gray">2404</text>
-								<text class="text-gray"><image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></text>
+								<text class="text-gray"><image src="../../../static/input/view.png" mode="" class="count-logo"></image></text>
 							</view>
 						</view>
 					</view>
 				</view>
 				<view class="" style="margin: 20upx;padding-bottom: 10upx; border-bottom: #DDDDDD 1upx solid;">
-					<view class="content">
+					<view class="content" @tap="goMore('/pages/index/index_volunteer/volunteer_news_detail')" >
 						<view class="text-gray flex" style="padding: 15upx;">
 							<view><image src="../../../static/input/矩形10拷贝2.png" mode="" style="width: 45upx;height: 30upx; padding-right: 5upx;"></image></view>
 						    <view class="">12/18</view> 
@@ -87,7 +79,7 @@
 							<view class="text-gray text-df">2020</view>
 							<view class="action">
 								<text class="text-gray">2404</text>
-								<text class="text-gray"><image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></text>
+								<text class="text-gray"><image src="../../../static/input/view.png" mode="" class="count-logo"></image></text>
 							</view>
 						</view>
 					</view>
@@ -100,25 +92,25 @@
 						</view>
 						<view class="" style="padding-left: 35upx;">
 							<view class="" style="border-left: #f8404c 2upx solid;padding: 0 0 0 0; line-height: 60upx;">
-								<view class="flex justify-between" style="padding-left: 20upx;">
+								<view class="flex justify-between" @tap="goMore('/pages/index/index_volunteer/volunteer_news_detail')" style="padding-left: 20upx;">
 									振兴社区开展志愿者活动
 									<view class="action">
 										<text class="text-gray">2404</text>
-										<text class="text-gray"><image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></text>
+										<text class="text-gray"><image src="../../../static/input/view.png" mode="" class="count-logo"></image></text>
 									</view>
 								</view>
-								<view class="flex justify-between" style="padding-left: 20upx;">
+								<view class="flex justify-between"  @tap="goMore('/pages/index/index_volunteer/volunteer_news_detail')" style="padding-left: 20upx;">
 									快来了解这些文明小知识吧！
 									<view class="action">
 										<text class="text-gray">2404</text>
-										<text class="text-gray"><image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></text>
+										<text class="text-gray"><image src="../../../static/input/view.png" mode="" class="count-logo"></image></text>
 									</view>
 								</view>
-								<view class="flex justify-between" style="padding-left: 20upx;">
+								<view class="flex justify-between"  @tap="goMore('/pages/index/index_volunteer/volunteer_news_detail')" style="padding-left: 20upx;">
 									夜晚开展志愿入户宣传
 									<view class="action">
 										<text class="text-gray">2404</text>
-										<text class="text-gray"><image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></text>
+										<text class="text-gray"><image src="../../../static/input/view.png" mode="" class="count-logo"></image></text>
 									</view>
 								</view>
 							</view>
@@ -249,6 +241,7 @@
 		padding: 0;
 		text-align: center;
 		border: #DDDDDD 1upx solid;
+		line-height: 80upx;
 	}
 
 .cu-item{

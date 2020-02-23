@@ -1,0 +1,16 @@
+<view class="solid-bottom"><cu-custom class="solid-bottom" vue-id="1" bgColor="bg-gray " isBack="{{true}}" bind:__l="__l" vue-slots="{{['backText']}}"><view slot="backText">龙井人家</view></cu-custom><view class="cu-chat "><view class="cu-item "><view class="cu-avatar radius" style="background-image:url(../../static/input/形状4@3x.png);"></view><view class="main"><view class="content shadow" style="font-size:26rpx;"><text>终于等到你啦，感谢您关注龙井人家。
+					点击下方我的社区即可进入社区群聊哟~
+					回复【公积金】在线查询公积金个人账户
+					回复【落户】落户政策查询和办理
+					回复【水电】停水/电地区查询
+					回复【港澳】预约港澳通行证办理和续签
+					回复【地铁】地铁路线查询和收班时间
+					回复【社保】个人社保相关内容查询
+					回复【升学】中小学对口划片范围查询
+					回复【违章】违章查询和处理
+					回复【居住证】居住证办理和进度查询
+					回复【天气】最新天气预报
+					回复【公租房】查询公租房新规
+					回复【养犬】文明养犬规范和最新养犬政策
+					回复【低保】低保申请流程和条件
+					回复【退休】办理退休需要材料和流程</text></view></view></view></view><view class="cu-bar foot input" style="{{'bottom:'+(InputBottom+'px')+';'}}"><view class="solid-right" style="padding:0 15rpx 0 20rpx;" data-target="Modal" data-event-opts="{{[['longpress',[['showModal',['$event']]]],['tap',[['hideModal',['$event']]]]]}}" bindlongpress="__e" bindtap="__e"><image style="width:45rpx;height:45rpx;" src="../../static/input/键盘.png" mode></image></view><view class="{{['foot flex justify-left cu-modal',modalName=='Modal'?'show':'']}}" style="{{'bottom:'+(InputBottom+'px')+';'}}"><view class="action conmunity1"><text class="cuIcon-sound text-grey"></text></view><input class="solid-bottom conmunity1" adjust-position="{{false}}" focus="{{false}}" maxlength="300" cursor-spacing="10" data-event-opts="{{[['focus',[['InputFocus',['$event']]]],['blur',[['InputBlur',['$event']]]]]}}" bindfocus="__e" bindblur="__e"/><view class="action conmunity1"><text class="cuIcon-emojifill text-grey"></text></view><button class="cu-btn bg-red shadow conmunity1 margin-top-xs margin-right-xs">发送</button></view><view data-event-opts="{{[['tap',[['goMore',['/pages/index/index']]]]]}}" class="conmunity2" bindtap="__e"><button class="cu-btn bg-white text-black">我的社区</button></view></view></view>

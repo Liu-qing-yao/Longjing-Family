@@ -4,40 +4,32 @@
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		<view class="box top">
-			<!-- <view class="cu-bar bg-gray solid-bottom">
-				<view class="action" >
-					<text class="cuIcon-close"></text>龙井人家-龙井之窗
-				</view>
-				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
-					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
-				</view>
-			</view> -->
 			<view class="cu-bar bg-white search solid-bottom">
 				<view class="action" @tap="goMore('/pages/index/index_longjing/index_longjing')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red">
 					党建联盟
 				</view>
 				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/search.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
-		<view class="Illustration1">
+		<view class="">
 			<video id="video1" ref="video1" src="../../../static/input/2.mp4" 
 			style="width: 750rpx; height: 450rpx;" @error="videoErrorCallback" controls></video>
 		</view>
-		<view class="cu-bar bg-gray solid-bottom line-gray ">
-			<view class="action">
+		<view class="bg-gray solid-bottom flex justify-between" style="height: 70upx;line-height: 60upx;">
+			<view class="text-center">
 				<text class="margin-left" style="color: #333333; font-size: 35rpx; font-weight: 590;">党建视频</text> 
 			</view>
-			<view class="action">
-				<button class="cu-btn bg-orange shadow" @tap="goMore('/pages/index/index_longjing/Party_bui_Video')" data-target="gridModal" style="color: #333333;">更多</button>
+			<view class="">
+				<button class="cu-btn1" @tap="goMore('/pages/index/index_longjing/Party_bui_Video')">更 多</button>
 			</view>
 		</view>
 		
-		 <view class="cu-list grid" :class="['col-' + gridCol,gridBorder?'':'no-border']">
+		 <view class="cu-list grid bg-white solid-bottom" :class="['col-' + gridCol,gridBorder?'':'no-border']">
 			<view class="cu-item" v-for="(item,index) in cuIconList" :key="index" @tap="gotoUrl(item)" v-if="index<gridCol*2">
 				<view :class="['icon-' + item.cuIcon,'text-' + item.color]" >
 					 <view class="cu-tag badge" v-if="item.badge!=0" >
@@ -47,8 +39,7 @@
 				<text>{{item.name}}</text>
 			</view>
 		</view>
-		
-		<view class="bg-white text-red" style="border: #DDDDDD 1upx solid;padding: 15upx 0; text-align: center; font-size: 34upx;">
+		<view class="bg-white text-red solid-top solid-bottom" style=";padding: 15upx 0; text-align: center; font-size: 34upx;margin-top: 15upx;">
 			党组织分类
 		</view>
 		<view class="text-red" style="border-bottom: #DDDDDD 1upx solid;padding: 15upx 25upx;">
@@ -216,4 +207,8 @@
 		width: 150rpx; 
 		background-color: #f0ad79;
 	}
+	.Illustration1{
+		height: 400upx;
+	}
+	
 </style>

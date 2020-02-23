@@ -5,23 +5,15 @@
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		
 		<view class="box top">
-			<!-- <view class="cu-bar bg-gray">
-				<view class="action">
-					<text class="cuIcon-close" ></text> 龙井人家-社区商圈
-				</view>
-				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
-					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
-				</view>
-			</view> -->
 			<view class="cu-bar bg-white search" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index_shopping/index_shopping')"  >
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red" >
 					品牌商家
 				</view>
 				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/search.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
@@ -32,16 +24,16 @@
 		</view>
 		<view class="bg-white align-center flex justify-around solid-bottom" style="padding: 15upx;">
 			<view class=""  style=""> 
-				<view style="font-size: 30upx;">
+				<view style="font-size: 28upx;">
 				       <xfl-select 
 				           :list="list1"
 				           :clearable="false"
 				           :showItemNum="5" 
 				           :listShow="false"
 				           :isCanInput="true"  
-				           :style_Container="'height: 70upx; width:220upx;'"
+				           :style_Container="'height: 70upx; width:220upx;font-size: 28upx; '"
 				           :placeholder = "'placeholder'"
-				           :initValue="'全 部 分 类'"
+				           :initValue="'全部分类'"
 				           :selectHideType="'hideAll'"
 				       >
 				       </xfl-select>
@@ -49,14 +41,14 @@
 			</view>
 			
 			<view class="">
-				<view style="width: 220upx;font-size: 30upx;">
+				<view style="width: 220upx;font-size: 28upx;">
 				       <xfl-select 
 				           :list="list2"
 				           :clearable="false"
 				           :showItemNum="5" 
 				           :listShow="false"
 				           :isCanInput="true"  
-				           :style_Container="'height: 70upx; width:220upx;'"
+				           :style_Container="'height: 70upx; width:220upx;font-size: 28upx;'"
 				           :placeholder = "'placeholder'"
 				           :initValue="'街 道'"
 				           :selectHideType="'hideAll'"
@@ -64,9 +56,9 @@
 				       </xfl-select>
 				</view>
 			</view>
-			<view class="img-align solid" @tap="tabSelect" style="width: 220upx; height: 70upx; line-height: 70upx;border-radius: 20upx;padding: 0 0 0 15upx;">
-				<text class="" style="font-size: 31upx;padding: 0;">离 我 最 近</text>
-				<image src="../../../static/input/下.png" style="width: 33upx; height: 22upx; margin-left: 30upx;padding: 0; margin: 0 0 0 18upx;" mode=""></image>
+			<view class="img-align " @tap="tabSelect" style="border: #c0c4cd 2upx solid; width: 230upx; height: 70upx; line-height: 60upx;border-radius: 10upx;padding: 0 0 0 8upx;">
+				<text class="" style="font-size: 33upx;padding: 0;line-height:50upx ;">离我最近</text>
+				<image src="../../../static/input/under.png" style="width: 37upx; height: 22upx; padding: 0; margin: 0 0 0 48upx;" mode=""></image>
 			</view>
 		</view>
 		
@@ -78,20 +70,22 @@
 							<image src="../../../static/input/社区商圈改_08.png" mode="" style="width: 160upx; height: 120upx;"></image>
 						</view>
 						<view class="" style="line-height: 45upx; padding-left: 15upx;">
-							<view class="text-cut text-black" style="font-size: 34upx;">
-								<text class=" text-red"></text>
+							<view class="text-cut text-black" style="font-size: 30upx;">
 								绿源超市大观楼店
 							</view>
 							<view class="text-cut" style="font-size: 26upx;" >
-								<text class=" text-red"></text>
 								超市
 							</view>
 						</view>
 					</view>
-					<view class="flex" style="height: 40upx;">
-						<view class="bg-red margin-lr" style="padding: 0 8upx;">翠</view>
-						<view class="bg-orange margin-right" style="padding: 0 8upx;">超</view>
+					<view>
+						<view class="flex" style="height: 40upx;">
+							<view class="bg-red margin-lr" style="padding: 0 8upx;">翠</view>
+							<view class="bg-orange margin-right" style="padding: 0 8upx;">超</view>
+						</view>
+						<view class="text-right" style="margin: 40upx 30upx 0 0;">10.1km</view>
 					</view>
+					
 				</view>
 				<view class="flex bg-white justify-between" @tap="goMore('/pages/index/index_shopping/shop_details')"  style="border-bottom: #DDDDDD 1upx solid;padding: 10upx;">
 					<view class="mall_contents bg-white flex  justify-around">
@@ -99,20 +93,22 @@
 							<image src="../../../static/input/社区商圈改_141.png" mode="" style="width: 160upx; height: 120upx;"></image>
 						</view>
 						<view class="" style="line-height: 45upx; padding-left: 15upx;">
-							<view class="text-cut text-black" style="font-size: 34upx;">
-								<text class=" text-red"></text>
+							<view class="text-cut text-black" style="font-size: 30upx;">
 								江语晨小区服务
 							</view>
 							<view class="text-cut" style="font-size: 26upx;" >
-								<text class=" text-red"></text>
 								果蔬粮油居家生活用品
 							</view>
 						</view>
 					</view>
-					<view class="flex" style="height: 40upx;">
-						<view class="bg-red margin-lr" style="padding: 0 8upx;">翠</view>
-						<view class="bg-orange margin-right" style="padding: 0 8upx;">零</view>
+					<view>
+						<view class="flex" style="height: 40upx;">
+							<view class="bg-red margin-lr" style="padding: 0 8upx;">翠</view>
+							<view class="bg-orange margin-right" style="padding: 0 8upx;">零</view>
+						</view>
+						<view class="text-right" style="margin: 40upx 30upx 0 0;">13.1km</view>
 					</view>
+					
 				</view>
 				<view class="flex bg-white justify-between" @tap="goMore('/pages/index/index_shopping/shop_details')"  style="border-bottom: #DDDDDD 1upx solid;padding: 10upx;">
 					<view class="mall_contents bg-white flex  justify-around">
@@ -120,20 +116,22 @@
 							<image src="../../../static/input/社区商圈改_20.png" mode="" style="width: 160upx; height: 120upx;"></image>
 						</view>
 						<view class="" style="line-height: 45upx; padding-left: 15upx;">
-							<view class="text-cut text-black" style="font-size: 34upx;">
-								<text class=" text-red"></text>
+							<view class="text-cut text-black" style="font-size: 30upx;">
 								正和金帝庄园服务站
 							</view>
 							<view class="text-cut" style="font-size: 26upx;" >
-								<text class=" text-red"></text>
 								小区生活服务
 							</view>
 						</view>
 					</view>
-					<view class="flex" style="height: 40upx;">
-						<view class="bg-red margin-lr" style="padding: 0 8upx;">翠</view>
-						<view class="bg-orange margin-right" style="padding: 0 8upx;">餐</view>
+					<view>
+						<view class="flex" style="height: 40upx;">
+							<view class="bg-red margin-lr" style="padding: 0 8upx;">翠</view>
+							<view class="bg-orange margin-right" style="padding: 0 8upx;">餐</view>
+						</view>
+						<view class="text-right" style="margin: 40upx 30upx 0 0;">13.6km</view>
 					</view>
+					
 				</view>
 				<view class="flex bg-white justify-between" @tap="goMore('/pages/index/index_shopping/shop_details')"  style="border-bottom: #DDDDDD 1upx solid;padding: 10upx;">
 					<view class="mall_contents bg-white flex  justify-around" >
@@ -141,20 +139,22 @@
 							<image src="../../../static/input/社区商圈改_38.png" mode="" style="width: 160upx; height: 120upx;"></image>
 						</view>
 						<view class="" style="line-height: 45upx; padding-left: 15upx;">
-							<view class="text-cut text-black" style="font-size: 34upx;">
-								<text class=" text-red"></text>
+							<view class="text-cut text-black" style="font-size: 30upx;">
 								愿君连锁
 							</view>
 							<view class="text-cut" style="font-size: 26upx;" >
-								<text class=" text-red"></text>
 								家电用气、日用百货
 							</view>
 						</view>
 					</view>
-					<view class="flex" style="height: 40upx;">
-						<view class="bg-red margin-lr" style="padding: 0 8upx;">翠</view>
-						<view class="bg-orange margin-right" style="padding: 0 8upx;">服</view>
+					<view>
+						<view class="flex" style="height: 40upx;">
+							<view class="bg-red margin-lr" style="padding: 0 8upx;">翠</view>
+							<view class="bg-orange margin-right" style="padding: 0 8upx;">服</view>
+						</view>
+						<view class="text-right" style="margin: 40upx 30upx 0 0;">14.8km</view>
 					</view>
+					
 				</view>
 				<view class="flex bg-white justify-between" @tap="goMore('/pages/index/index_shopping/shop_details')"  style="border-bottom: #DDDDDD 1upx solid;padding: 10upx;">
 					<view class="mall_contents bg-white flex  justify-around" >
@@ -162,20 +162,22 @@
 							<image src="../../../static/input/社区商圈改_32.png" mode="" style="width: 160upx; height: 120upx;"></image>
 						</view>
 						<view class="" style="line-height: 45upx; padding-left: 15upx;">
-							<view class="text-cut">
-								<text class="text-cut text-black" style="font-size: 34upx;"></text>
+							<view class="text-cut text-black" style="font-size: 30upx;">
 								智慧水果
 							</view>
 							<view class="text-cut" style="font-size: 26upx;" >
-								<text class=" text-red"></text>
 								新鲜水果
 							</view>
 						</view>
 					</view>
-					<view class="flex" style="height: 40upx;">
-						<view class="bg-red margin-lr" style="padding: 0 8upx;">翠</view>
-						<view class="bg-orange margin-right" style="padding: 0 8upx;">鲜</view>
+					<view>
+						<view class="flex" style="height: 40upx;">
+							<view class="bg-red margin-lr" style="padding: 0 8upx;">翠</view>
+							<view class="bg-orange margin-right" style="padding: 0 8upx;">鲜</view>
+						</view>
+						<view class="text-right" style="margin: 40upx 30upx 0 0;">16.2km</view>
 					</view>
+					
 				</view>
 				<view class="flex bg-white justify-between" @tap="goMore('/pages/index/index_shopping/shop_details')"  style="border-bottom: #DDDDDD 1upx solid;padding: 10upx;">
 					<view class="mall_contents bg-white flex  justify-around" >
@@ -183,20 +185,23 @@
 							<image src="../../../static/input/社区商圈改_26.png" mode="" style="width: 160upx; height: 120upx;"></image>
 						</view>
 						<view class="" style="line-height: 45upx; padding-left: 15upx;">
-							<view class="text-cut">
-								<text class="text-cut text-black" style="font-size: 34upx;"></text>
-								廿四季线下连锁店
+							<view class="text-cut text-black" style="font-size: 30upx;">
+									廿四季线下连锁店
+								</text>
 							</view>
 							<view class="text-cut" style="font-size: 26upx;" >
-								<text class=" text-red"></text>
-								宜宾本地应季果蔬
+								<text class="">宜宾本地应季果蔬</text>
 							</view>
 						</view>
 					</view>
-					<view class="flex" style="height: 40upx;">
-						<view class="bg-red margin-lr" style="padding: 0 8upx;">翠</view>
-						<view class="bg-orange margin-right" style="padding: 0 8upx;">特</view>
+					<view>
+						<view class="flex" style="height: 40upx;">
+							<view class="bg-red margin-lr" style="padding: 0 8upx;">翠</view>
+							<view class="bg-orange margin-right" style="padding: 0 8upx;">特</view>
+						</view>
+						<view class="text-right" style="margin: 40upx 30upx 0 0;">17.1km</view>
 					</view>
+					
 				</view>
 				<view class="flex bg-white justify-between" @tap="goMore('/pages/index/index_shopping/shop_details')"  style="border-bottom: #DDDDDD 1upx solid;padding: 10upx;">
 					<view class="mall_contents bg-white flex  justify-around">
@@ -204,20 +209,22 @@
 							<image src="../../../static/input/社区商圈改_44.png" mode="" style="width: 160upx; height: 120upx;"></image>
 						</view>
 						<view class="" style="line-height: 45upx; padding-left: 15upx;">
-							<view class="text-cut text-black" style="font-size: 34upx;">
-								<text class=" text-red"></text>
+							<view class="text-cut text-black" style="font-size: 30upx;">
 								金文鞋城总店
 							</view>
 							<view class="text-cut" style="font-size: 26upx;" >
-								<text class=" text-red"></text>
 								放心、实惠
 							</view>
 						</view>
 					</view>
-					<view class="flex" style="height: 40upx;">
-						<view class="bg-red margin-lr" style="padding: 0 8upx;">翠</view>
-						<view class="bg-orange margin-right" style="padding: 0 8upx;">通</view>
+					<view>
+						<view class="flex" style="height: 40upx;">
+							<view class="bg-red margin-lr" style="padding: 0 8upx;">翠</view>
+							<view class="bg-orange margin-right" style="padding: 0 8upx;">通</view>
+						</view>
+						<view class="text-right" style="margin: 40upx 30upx 0 0;">17.5km</view>
 					</view>
+					
 				</view>
 				<view class="flex bg-white justify-between" @tap="goMore('/pages/index/index_shopping/shop_details')"  style="border-bottom: #DDDDDD 1upx solid;padding: 10upx;">
 					<view class="mall_contents bg-white flex  justify-around">
@@ -225,20 +232,22 @@
 							<image src="../../../static/input/社区商圈改_44.png" mode="" style="width: 160upx; height: 120upx;"></image>
 						</view>
 						<view class="" style="line-height: 45upx; padding-left: 15upx;">
-							<view class="text-cut text-black" style="font-size: 34upx;" >
-								<text class=" text-red"></text>
+							<view class="text-cut text-black" style="font-size: 30upx;" >
 								塞多电脑城
 							</view>
 							<view class="text-cut" style="font-size: 26upx;" >
-								<text class=" text-red"></text>
 								放心、实惠
 							</view>
 						</view>
 					</view>
-					<view class="flex" style="height: 40upx;">
-						<view class="bg-red margin-lr" style="padding: 0 8upx;">翠</view>
-						<view class="bg-orange margin-right" style="padding: 0 8upx;">服</view>
+					<view>
+						<view class="flex" style="height: 40upx;">
+							<view class="bg-red margin-lr" style="padding: 0 8upx;">翠</view>
+							<view class="bg-orange margin-right" style="padding: 0 8upx;">服</view>
+						</view>
+						<view class="text-right" style="margin: 40upx 30upx 0 0;">18.1km</view>
 					</view>
+					
 				</view>
 			</view>
 		</view>

@@ -1,0 +1,56 @@
+
+.box{
+	border-bottom: 1rpx #DDDDDD solid;
+}
+.navfirst{
+	border-bottom: 1rpx #DDDDDD solid;
+	padding: 0 10rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+}
+.navfirst_1{
+		/* background: #5ddad4; */
+		margin: 10rpx 5rpx;
+		border-radius: 15rpx;
+		font-size: 30rpx;
+		width: 235rpx;
+		height: 80rpx;
+		line-height: 80rpx;
+		text-align: center;
+		border: #DDDDDD 1rpx solid;
+}
+.cu-item{
+	 border-bottom: #DDDDDD solid 1rpx;
+}
+.logo-list{
+	width: 40rpx;
+	height: 30rpx;
+	margin: 10rpx;
+}
+.count-logo{
+	width: 45rpx;
+	height: 20rpx;
+	margin: 0 5rpx;
+}
+.text-grey{
+	position: absolute;
+	right: 25rpx;
+	bottom: 10rpx;
+}
+.zuo{
+	width: 700rpx;
+}
+.cu-list.menu-avatar>.pic-modle{
+	height: 210rpx;
+}
+.text-time{
+	color: #AAAAAA;
+}
+.text-title{
+	color: text-black;
+}
+

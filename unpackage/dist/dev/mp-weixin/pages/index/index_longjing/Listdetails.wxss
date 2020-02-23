@@ -1,0 +1,11 @@
+
+.box{
+	border-bottom: 1rpx #DDDDDD solid;
+}
+.count-logo{
+	width: 45rpx;
+	height: 20rpx;
+	margin: 0 5rpx;
+}
+
+

@@ -4,23 +4,15 @@
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		<view class="box top">
-			<!-- <view class="cu-bar bg-gray">
-				<view class="action">
-					<text class="cuIcon-close"></text> 益路有你-志愿服务
-				</view>
-				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
-					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
-				</view>
-			</view> -->
 			<view class="cu-bar bg-white search" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index_volunteer/index_volunteer')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red">
 					注册志愿者
 				</view>
 				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/search.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
@@ -38,82 +30,104 @@
 					<form  @submit="formSubmit">
 						<view class="" style="margin: 10upx 60upx;">
 							<view class="padding-top">
-								<view class="flex" style="height: 40upx;">
-									<text class="text-left">用户名</text>
-									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								<view class="flex" style="height: 50upx;">
+									<view class="text-left">
+										用户名
+									    <text class="text-left text-red" style="font-size: 40upx;">*</text>
+									</view>
 								</view>
 								<input class="uni-input" maxlength="8"  name="user" focus />
 							</view>
 							<view class="padding-top">
-								<view class="flex" style="height: 40upx;">
-									<text class="text-left">密码</text>
-									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								<view class="flex" style="height: 50upx;">
+									<view class="text-left">
+										密码
+									    <text class="text-left text-red" style="font-size: 40upx;">*</text>
+									</view>
 								</view>
 								<input class="uni-input" maxlength="50"  name="pass" focus password type="text"/>
 							</view>
 							<view class="padding-top">
-								<view class="flex" style="height: 40upx;">
-									<text class="text-left">确认密码</text>
-									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								<view class="flex" style="height: 50upx;">
+									<view class="text-left">
+										确认密码
+									    <text class="text-left text-red" style="font-size: 40upx;">*</text>
+									</view>
 								</view>
 								<input class="uni-input"  maxlength="50" name="passcheck" focus password type="text" />
 							</view>
 							<view class="padding-top">
-								<view class="flex" style="height: 40upx;">
-									<text class="text-left">电子邮箱</text>
-									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								<view class="flex" style="height: 50upx;">
+									<view class="text-left">
+										电子邮箱
+									    <text class="text-left text-red" style="font-size: 40upx;">*</text>
+									</view>
 								</view>
 								<input class="uni-input" maxlength="20" name="mail" focus/>
 							</view>
 							
 							<view class="padding-top">
-								<view class="flex" style="height: 40upx;">
-									<text class="text-left">真实姓名</text>
-									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								<view class="flex" style="height: 50upx;">
+									<view class="text-left">
+										真实姓名
+									    <text class="text-left text-red" style="font-size: 40upx;">*</text>
+									</view>
 								</view>
 								<input class="uni-input"  name="nickname" focus/>
 							</view>
 							<view class="padding-top" >
-								<view class="flex" style="height: 40upx;">
-									<text class="text-left">证件类型</text>
-									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								<view class="flex" style="height: 50upx;">
+									<view class="text-left">
+										证件类型
+									    <text class="text-left text-red" style="font-size: 40upx;">*</text>
+									</view>
 								</view>
 								<input class="uni-input"  name="idtype" focus/>
 							</view>
 							<view class="padding-top">
-								<view class="flex" style="height: 40upx;">
-									<text class="text-left">证件号码</text>
-									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								<view class="flex" style="height: 50upx;">
+									<view class="text-left">
+										证件号码
+									    <text class="text-left text-red" style="font-size: 40upx;">*</text>
+									</view>
 								</view>
 								<input class="uni-input" focus maxlength="18"  name="idnum" type="idcard"/>
 							</view>
 							<view class="padding-top">
-								<view class="flex" style="height: 40upx;">
-									<text class="text-left">手机号码</text>
-									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								<view class="flex" style="height: 50upx;">
+									<view class="text-left">
+										手机号码
+									    <text class="text-left text-red" style="font-size: 40upx;">*</text>
+									</view>
 								</view>
 								<input class="uni-input" focus  maxlength="11"  name="num" type="number"/>
 							</view>
 							<view class="padding-top">
-								<view class="flex" style="height: 40upx;">
-									<text class="text-left">详情地址</text>
-									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								<view class="flex" style="height: 50upx;">
+									<view class="text-left">
+										详情地址
+									    <text class="text-left text-red" style="font-size: 40upx;">*</text>
+									</view>
 								</view>
 								<input class="uni-input" focus  name="address" type="idcard"/>
 							</view>
 							<view class="padding-top">
-								<view class="flex" style="height: 40upx;">
-									<text class="text-left">出生日期</text>
-									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								<view class="flex" style="height: 50upx;">
+									<view class="text-left">
+										出生日期
+									    <text class="text-left text-red" style="font-size: 40upx;">*</text>
+									</view>
 								</view>
 								<picker mode="date" id="date" name="date" :value="date" :start="startDate" :end="endDate" @change="bindDateChange">
 									<view class="uni-input align-center" style="line-height: 60upx;">{{date}}</view>
 								</picker>
 							</view>
 							<view class="padding-top">
-								<view class="flex" style="height: 40upx;">
-									<text class="text-left">国家/地区</text>
-									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								<view class="flex" style="height: 50upx;">
+									<view class="text-left">
+										国家/地区
+									    <text class="text-left text-red" style="font-size: 40upx;">*</text>
+									</view>
 								</view>
 								<view class="input-lists" >
 								       <xfl-select name="country"
@@ -131,9 +145,11 @@
 								   </view>
 							</view>
 							<view class="padding-top">
-								<view class="flex" style="height: 40upx;">
-									<text class="text-left">政治面貌</text>
-									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								<view class="flex" style="height: 50upx;">
+									<view class="text-left">
+										政治面貌
+									    <text class="text-left text-red" style="font-size: 40upx;">*</text>
+									</view>
 								</view>
 								<view class="input-lists" name="political">
 								       <xfl-select 
@@ -151,9 +167,11 @@
 								   </view>
 							</view>
 							<view class="padding-top">
-								<view class="flex" style="height: 40upx;">
-									<text class="text-left">民族</text>
-									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								<view class="flex" style="height: 50upx;">
+									<view class="text-left">
+										民族
+									    <text class="text-left text-red" style="font-size: 40upx;">*</text>
+									</view>
 								</view>
 								<view class="input-lists" name="national">
 								       <xfl-select 
@@ -171,8 +189,11 @@
 								   </view>
 							</view>
 							<view class="padding-top">
-								<view class="flex" style="height: 40upx;">
-									<text class="text-left">籍贯</text>
+								<view class="flex" style="height: 50upx;">
+									<view class="text-left">
+										籍贯
+									    <text class="text-left text-red" style="font-size: 40upx;">*</text>
+									</view>
 								</view>
 								<view class="input-lists" >
 								       <xfl-select 
@@ -215,9 +236,11 @@
 								<input class="uni-input" focus  name="weibo" type="idcard"/>
 							</view>
 							<view class="padding-top">
-								<view class="flex" style="height: 40upx;">
-									<text class="text-left">居住区域</text>
-									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								<view class="flex" style="height: 50upx;">
+									<view class="text-left">
+										居住区域
+									    <text class="text-left text-red" style="font-size: 40upx;">*</text>
+									</view>
 								</view>
 								<view class="input-lists" name="live">
 								       <xfl-select 
@@ -236,9 +259,11 @@
 							</view>
 							
 							<view class="padding-top">
-								<view class="flex" style="height: 40upx;">
-									<text class="text-left">最高学历</text>
-									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								<view class="flex" style="height: 50upx;">
+									<view class="text-left">
+										最高学历
+									    <text class="text-left text-red" style="font-size: 40upx;">*</text>
+									</view>
 								</view>
 								<view class="input-lists" name="degree">
 								       <xfl-select 
@@ -256,9 +281,11 @@
 								   </view>
 							</view>
 							<view class="padding-top">
-								<view class="flex" style="height: 40upx;">
-									<text class="text-left">从业状况</text>
-									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								<view class="flex" style="height: 50upx;">
+									<view class="text-left">
+										从业状况
+									    <text class="text-left text-red" style="font-size: 40upx;">*</text>
+									</view>
 								</view>
 								<view class="input-lists" name="practitioner">
 								       <xfl-select 
@@ -276,9 +303,11 @@
 								   </view>
 							</view>
 							<view class="padding-top">
-								<view class="flex" style="height: 40upx;">
-									<text class="text-left">志愿服务区域</text>
-									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								<view class="flex" style="height: 50upx;">
+									<view class="text-left">
+										志愿服务区域
+									    <text class="text-left text-red" style="font-size: 40upx;">*</text>
+									</view>
 								</view>
 								<view class="input-lists" name="volunteer">
 								       <xfl-select 
@@ -296,9 +325,11 @@
 								   </view>
 							</view>
 							<view class="padding-top">
-								<view class="flex" style="height: 40upx;">
-									<text class="text-left">服务时间</text>
-									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								<view class="flex" style="height: 50upx;">
+									<view class="text-left">
+										服务时间
+									    <text class="text-left text-red" style="font-size: 40upx;">*</text>
+									</view>
 								</view>
 								<view class="input-lists"  name="time">
 								       <xfl-select 
@@ -323,9 +354,11 @@
 							</view>
 							
 							<view class="padding-top">
-								<view class="flex" style="height: 40upx;">
-									<text class="text-left">性别</text>
-									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								<view class="flex" style="height: 50upx;">
+									<view class="text-left">
+										性别
+									    <text class="text-left text-red" style="font-size: 40upx;">*</text>
+									</view>
 								</view>
 								<view>
 									<view class="uni-form-item uni-column">
@@ -342,9 +375,11 @@
 							</view>
 							<view class="bg-white">
 								<view class="padding-top flex justify-between" @tap="showModal" data-target="Modal">
-									<view class="flex" style="height: 40upx;">
-										<text class="text-left">上传头像</text>
-										<text class="text-left text-red" style="font-size: 60upx;">*</text>
+									<view class="flex" style="height: 50upx;">
+										<view class="text-left">
+											上传头像
+										    <text class="text-left text-red" style="font-size: 40upx;">*</text>
+										</view>
 									</view>			
 								</view>
 								<view class="cu-modal" :class="modalName=='Modal'?'show':''">
@@ -402,7 +437,9 @@
 							</view>
 							
 							<view >
-								<button form-type="submit" class="bg-orange margin" @tap="showModalS" data-target="Modal">注册</button>
+								<view>
+									<button class="" style="margin: 30upx 0; background-color: #fe934c;color: #FFFFFF;height: 70upx; line-height: 70upx; width: 500upx;" form-type="submit">注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;册</button>
+								</view>
 								<!-- <view class="cu-modal" :class="modalNameS=='Modal'?'show':''">
 									<view class="cu-dialog solid">
 										<view class="cu-bar bg-white justify-start">
@@ -734,7 +771,7 @@
    		min-width: calc(4em + 15px);
    	}
 .input-lists{
-	background:url(../../../static/input/三角.png) no-repeat 0 0;
+	background:url(../../../static/input/triangle.png) no-repeat 0 0;
 	background-position: 450upx 20upx;
 	line-height:20px;
 	background-size:30upx 20upx;

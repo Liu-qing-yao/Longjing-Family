@@ -1,0 +1,9 @@
+
+.par_nav_1{
+	width: 375rpx;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	color: #ffffff;
+}	
+

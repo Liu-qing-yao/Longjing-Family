@@ -14,20 +14,20 @@
 			</view> -->
 			<view class="cu-bar bg-white search solid-bottom" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index_people/Advice')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red">
 					建言献策
 				</view>
 				<view class="action" @tap="goMore('/pages/index/index_longjing/search')">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/search.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
 				</view>
 			</view>
 		</view>
 		
 		<view class="flex justify-between solid-bottom bg-white padding">
 			<view class="flex">
-				<image src="../../../static/input/背景拷贝.png" mode="" style="width: 60upx; height: 40upx; padding-right: 10upx;"></image>
+				<image src="../../../static/input/bg.png" mode="" style="width: 60upx; height: 40upx; padding-right: 10upx;"></image>
 				<view class="text-black text-xl">我的建言献策</view>
 			</view>
 		</view>
@@ -41,9 +41,9 @@
 					</view>
 					<view class="margin-top-sm flex justify-between">
 						<view class="text-gray text-xs" style="padding-left: 10upx;">2019-12-23 19:00</view>
-						<view class="action">
+						<view class="action text-gray" style="padding-right: 5upx;">
 							<text class="text-xs">2404</text>
-							<text class="text-gray"><image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></text>
+							<text class="text-gray"><image src="../../../static/input/view.png" mode="" class="count-logo"></image></text>
 						</view>
 					</view>
 				</view>
@@ -55,9 +55,9 @@
 					</view>
 					<view class="margin-top-sm flex justify-between">
 						<view class="text-gray text-xs" style="padding-left: 10upx;">2019-12-23 19:00</view>
-						<view class="action">
+						<view class="action text-gray" style="padding-right: 5upx;">
 							<text class="text-xs">2404</text>
-							<text class="text-gray"><image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></text>
+							<text class="text-gray"><image src="../../../static/input/view.png" mode="" class="count-logo"></image></text>
 						</view>
 					</view>
 				</view>

@@ -1,0 +1,9 @@
+
+.exchange{
+	height: 50rpx;
+	width: 120rpx;
+	line-height: 50rpx;
+	margin: 10rpx 0rpx;
+	font-size: 22rpx;padding: 0;
+}
+

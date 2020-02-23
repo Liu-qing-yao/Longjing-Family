@@ -4,25 +4,6 @@
 		<components v-if="PageCur=='component'"></components>
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		<view class="box top">
-			<!-- <view class="cu-bar bg-gray">
-				<view class="action">
-					<text class="cuIcon-close"></text> 我的
-				</view>
-				<view style="padding-right: 40upx;"  @tap="goMore('/pages/index/Personal-center/My-news')">
-					<image src="../../../static/input/new.png" mode="" style="width: 50upx; height: 40upx;"></image>
-				</view>
-			</view> -->
-			<!-- <view class="cu-bar bg-white search" style="border-top: #DDDDDD 1upx solid;">
-				<view class="action" @tap="goMore('/pages/index/index_volunteer/index_volunteer')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
-				</view>
-				<view class="content text-bold text-red">
-					注册志愿者
-				</view>
-				<view class="action">
-					<image src="../../../static/input/益路有你_34.png" mode="" style="width: 45rpx; height: 45rpx;"></image>
-				</view>
-			</view> -->
 		</view>
 		<view class="bg-white" style="height: 60upx;"></view>
 		<view class="bg-white">
@@ -38,16 +19,20 @@
 					<form  @submit="formSubmit">
 						<view class="" style="margin: 10upx 60upx;">
 							<view class="padding-top">
-								<view class="flex" style="height: 40upx;">
-									<text class="text-left">用户名</text>
-									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								<view class="flex" style="height: 45upx;">
+									<view class="text-left">
+										用户名
+										<text class="text-left text-red" style="font-size: 40upx;">*</text>
+									</view>
 								</view>
 								<input class="uni-input" name="user" focus />
 							</view>
 							<view class="padding-top">
-								<view class="flex" style="height: 40upx;">
-									<text class="text-left" style="padding-right: 10upx;">街道</text>
-									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								<view class="flex" style="height: 50upx;">
+									<view class="text-left">
+										街道
+									    <text class="text-left text-red" style="font-size: 40upx;">*</text>
+									</view>
 								</view>
 								<view class="input-lists" >
 								       <xfl-select name="country"
@@ -65,9 +50,11 @@
 								   </view>
 							</view>
 							<view class="padding-top">
-								<view class="flex" style="height: 40upx;">
-									<text class="text-left" style="padding-right: 10upx;">社区</text>
-									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								<view class="flex" style="height: 50upx;">
+									<view class="text-left">
+										社区
+									    <text class="text-left text-red" style="font-size: 40upx;">*</text>
+									</view>
 								</view>
 								<view class="input-lists" >
 								       <xfl-select name="country"
@@ -85,9 +72,11 @@
 								   </view>
 							</view>
 							<view class="padding-top">
-								<view class="flex" style="height: 40upx;">
-									<text class="text-left" style="padding-right: 10upx;">小区</text>
-									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								<view class="flex" style="height: 50upx;">
+									<view class="text-left">
+										小区
+									    <text class="text-left text-red" style="font-size: 40upx;">*</text>
+									</view>
 								</view>
 								<view class="input-lists" >
 								       <xfl-select name="country"
@@ -105,23 +94,29 @@
 								   </view>
 							</view>
 							<view class="padding-top">
-								<view class="flex" style="height: 40upx;">
-									<text class="text-left">真实姓名</text>
-									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								<view class="flex" style="height: 45upx;">
+									<view class="text-left">
+										真实姓名
+									    <text class="text-left text-red" style="font-size: 40upx;">*</text>
+									</view>
 								</view>
 								<input class="uni-input" name="nickname" focus />
 							</view>
 							<view class="padding-top">
-								<view class="flex" style="height: 40upx;">
-									<text class="text-left">电话号码</text>
-									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								<view class="flex" style="height: 45upx;">
+									<view class="text-left">
+										电话号码
+									    <text class="text-left text-red" style="font-size: 40upx;">*</text>
+									</view>
 								</view>
 								<input class="uni-input" focus name="num" placeholder="请输入手机号"/>
 							</view>
 							<view class="padding-top">
-								<view class="flex" style="height: 40upx;">
-									<text class="text-left">验证码</text>
-									<text class="text-left text-red" style="font-size: 60upx;">*</text>
+								<view class="flex" style="height: 45upx;">
+									<view class="text-left">
+										验证码
+									    <text class="text-left text-red" style="font-size: 40upx;">*</text>
+									</view>
 								</view>
 								<view class="solid flex justify-between" style="height: 55upx; border-radius: 20upx; width: 500upx;margin-top: 10upx;">
 									<input class="" placeholder="请输入验证码" name="input" style="text-align: left; text-indent: 55upx;">
@@ -131,7 +126,7 @@
 								</view>
 							</view>
 							<view class="padding-top">
-								<view class="flex" style="height: 40upx;">
+								<view class="flex" style="height: 35upx;">
 									<text class="text-left">电子邮箱</text>
 								</view>
 								<input class="uni-input" focus type="idcard"/>
@@ -148,7 +143,7 @@
 							</view>
 							
 							<view>
-								<button class="bg-orange margin" form-type="submit">注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;册</button>
+								<button class="" style="margin: 30upx 0; background-color: #fe934c;color: #FFFFFF;height: 70upx; line-height: 70upx; width: 500upx;" form-type="submit">注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;册</button>
 							</view>
 						</view>
 					</form>
@@ -200,7 +195,7 @@
 	export default {
 		data() {
 			return {
-				PageCur: 'Home',
+				PageCur: '我的',
 				TabCur: 0,
 				scrollLeft: 0,
 				imgList: [],
@@ -301,6 +296,9 @@
 			    var checkRes = graceChecker.check(formData, rule);
 			    if(checkRes){
 			        uni.showToast({title:"验证通过!", icon:"none"});
+					uni.navigateTo({
+						url: "/pages/index/Personal-center/Personal-center"
+					});
 			    }else{
 			        uni.showToast({ title: graceChecker.error, icon: "none" });
 			    }

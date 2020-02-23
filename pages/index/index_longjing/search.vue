@@ -6,7 +6,7 @@
 		<view class="box top">
 			<view class="cu-bar bg-white search solid-bottom" style="border-top: #DDDDDD 1upx solid;">
 				<view class="action" @tap="goMore('/pages/index/index')">
-					<image src="../../../static/input/健康驿站_06.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
+					<image src="../../../static/input/return.png" mode="" style="width: 46rpx; height: 45rpx;"></image>
 				</view>
 				<view class="content text-bold text-red">
 					搜索
@@ -27,79 +27,81 @@
 		</view>
         <view class="cu-list menu-avatar">
 			<view class="flex bg-white justify-between" style="padding: 10upx; border-bottom: #DDDDDD 1upx solid;">
-				<view class="flex" >
+				<view class="flex" @tap="goMore('/pages/index/index_longjing/video-detail')">
 					<view>
 						<image src="../../../static/input/图层1_1.png" mode="" style="width: 220upx; height: 160upx;"></image>
 					</view>
 					<view class="" style="margin-left: 15upx;">
-						<view class="text-black text-xs" style="width: 400upx;">习近平对“三农”工作做出指示</view>
-						<view class="text-gray text-sm flex">
+						<view class="text-black text-xs" style="width: 500upx;">习近平对“三农”工作做出指示</view>
+						<view class="text-gray text-sm flex justify-between">
 							<view class="text-cut" style="padding-top: 90upx;">
 								<text class=" text-red  margin-right-xs"></text>
 								2019-12-22  16:00
 							</view> 
+							<view class="" style="padding-top: 90upx;">
+								<view class="text-xs flex">2404 <image src="../../../static/input/view.png" mode="" class="count-logo"></image></view>
+							</view>
 						</view>
 					</view>
-				</view>
-				<view class="com_count">
-					<view class="text-xs flex">2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
 				</view>
 			</view>
 			<view class="flex bg-white justify-between" style="padding: 10upx; border-bottom: #DDDDDD 1upx solid;">
-				<view class="flex" >
+				<view class="flex" @tap="goMore('/pages/index/index_longjing/video-detail')">
 					<view>
 						<image src="../../../static/input/图层1_1.png" mode="" style="width: 220upx; height: 160upx;"></image>
 					</view>
 					<view class="" style="margin-left: 15upx;">
-						<view class="text-black text-xs" style="width: 400upx;">习近平对“三农”工作做出指示</view>
-						<view class="text-gray text-sm flex">
+						<view class="text-black text-xs" style="width: 500upx;">习近平对“三农”工作做出指示</view>
+						<view class="text-gray text-sm flex justify-between">
 							<view class="text-cut" style="padding-top: 90upx;">
 								<text class=" text-red  margin-right-xs"></text>
 								2019-12-22  16:00
 							</view> 
+							<view class="" style="padding-top: 90upx;">
+								<view class="text-xs flex">2404 <image src="../../../static/input/view.png" mode="" class="count-logo"></image></view>
+							</view>
 						</view>
 					</view>
 				</view>
-				<view class="com_count">
-					<view class="text-xs flex">2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
-				</view>
 			</view>
 			<view class="flex bg-white justify-between" style="padding: 10upx;border-bottom: #DDDDDD 1upx solid;">
-				<view class="flex" >
+				<view class="flex" @tap="goMore('/pages/index/index_longjing/video-detail')">
 					<view>
 						<image src="../../../static/input/图层2_1.png" mode="" style="width: 220upx; height: 160upx;"></image>
 					</view>
 					<view class="" style="margin-left: 15upx;">
-						<view class="text-black text-xs" style="width: 400upx;">习近平会见韩国总统，推动双边关系</view>
-						<view class="text-gray text-sm flex">
+						<view class="text-black text-xs" style="width: 500upx;">习近平会见韩国总统，推动双边关系</view>
+						<view class="text-gray text-sm flex justify-between">
 							<view class="text-cut" style="padding-top: 90upx;">
 								<text class=" text-red  margin-right-xs"></text>
 								2019-12-22  16:00
 							</view> 
+							<view class="" style="padding-top: 90upx;">
+								<view class="text-xs flex">2404 <image src="../../../static/input/view.png" mode="" class="count-logo"></image></view>
+							</view>
 						</view>
 					</view>
+					
 				</view>
-				<view class="com_count">
-					<view class="text-xs flex">2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
-				</view>
+				
 			</view>
 			<view class="flex bg-white justify-between" style="padding: 10upx;border-bottom: #DDDDDD 1upx solid;">
-				<view class="flex" >
+				<view class="flex" @tap="goMore('/pages/index/index_longjing/video-detail')">
 					<view>
 						<image src="../../../static/input/图层2_1.png" mode="" style="width: 220upx; height: 160upx;"></image>
 					</view>
 					<view class="" style="margin-left: 15upx;">
-						<view class="text-black text-xs" style="width: 400upx;">习近平会见韩国总统，推动双边关系</view>
-						<view class="text-gray text-sm flex">
+						<view class="text-black text-xs" style="width: 500upx;">习近平会见韩国总统，推动双边关系</view>
+						<view class="text-gray text-sm flex justify-between">
 							<view class="text-cut" style="padding-top: 90upx;">
 								<text class=" text-red  margin-right-xs"></text>
 								2019-12-22  16:00
 							</view> 
+							<view class="" style="padding-top: 90upx;">
+								<view class="text-xs flex">2404 <image src="../../../static/input/view.png" mode="" class="count-logo"></image></view>
+							</view>
 						</view>
 					</view>
-				</view>
-				<view class="com_count">
-					<view class="text-xs flex">2404 <image src="../../../static/input/椭圆8拷贝8.png" mode="" class="count-logo"></image></view>
 				</view>
 			</view>
 		</view>
