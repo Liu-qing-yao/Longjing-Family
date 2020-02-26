@@ -454,10 +454,6 @@
             "style" : {}
         }
         ,{
-            "path" : "pages/index/Personal-center/login2",
-            "style" : {}
-        }
-        ,{
             "path" : "pages/index/Personal-center/forget-password",
             "style" : {}
         }
@@ -467,6 +463,14 @@
         }
         ,{
             "path" : "pages/index/index_volunteer/mall_detail",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/index_shopping/try",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/index/Personal-center/two-login",
             "style" : {}
         }
     ],

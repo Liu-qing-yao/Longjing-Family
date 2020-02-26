@@ -22,7 +22,7 @@
 				<view class="" style="height: 80upx;background-color: #ff637a;padding: 15upx;  font-size: 29upx;">店 铺 列 表</view>
 			</view>
 		</view>
-		<view class="bg-white align-center flex justify-around solid-bottom" style="padding: 15upx;">
+		 <view class="bg-white align-center flex justify-around solid-bottom" style="padding: 15upx;">
 			<view class=""  style=""> 
 				<view style="font-size: 28upx;">
 				       <xfl-select 
@@ -31,9 +31,9 @@
 				           :showItemNum="5" 
 				           :listShow="false"
 				           :isCanInput="true"  
-				           :style_Container="'height: 70upx; width:220upx;font-size: 28upx;'"
-				           :placeholder = "'全部分类'"
-				           :initValue="''"
+				           :style_Container="'height: 70upx; width:220upx;font-size: 28upx; '"
+				           :placeholder = "'placeholder'"
+				           :initValue="'全部分类'"
 				           :selectHideType="'hideAll'"
 				       >
 				       </xfl-select>
@@ -49,28 +49,17 @@
 				           :listShow="false"
 				           :isCanInput="true"  
 				           :style_Container="'height: 70upx; width:220upx;font-size: 28upx;'"
-				           :placeholder = "'街    道'"
-				           :initValue="''"
+				           :placeholder = "'placeholder'"
+				           :initValue="'街 道'"
 				           :selectHideType="'hideAll'"
 				       >
 				       </xfl-select>
 				</view>
 			</view>
-			<view class="">
-				<view style="width: 220upx;font-size: 28upx;">
-				       <xfl-select 
-				           :listShow="false"
-				           :isCanInput="true"  
-				           :style_Container="'height: 70upx; width:220upx;font-size: 28upx;'"
-				           :placeholder = "'离我最近'"
-						    :selectHideType="'none'"
-				       >
-				       </xfl-select>
-				</view>
+			<view class="img-align " @tap="tabSelect" style="border: #c0c4cd 2upx solid; width: 230upx; height: 70upx; line-height: 60upx;border-radius: 10upx;padding: 0 0 0 8upx;">
+				<text class="" style="font-size: 33upx;padding: 0;line-height:50upx ;">离我最近</text>
+				<image src="../../../static/input/under.png" style="width: 37upx; height: 22upx; padding: 0; margin: 0 0 0 48upx;" mode=""></image>
 			</view>
-			<!-- <view class="img-align icon-ebae" @tap="tabSelect" style="border: #c0c4cd 2upx solid; width: 230upx; height: 70upx; line-height: 60upx;border-radius: 10upx;padding: 0 0 0 8upx;">
-				<input class="input " :placeholder = "'离我最近'" placeholder-style="color: #000;" type="text" >
-			</view> -->
 		</view>
 		
 		<view class="cu-list menu-avatar">

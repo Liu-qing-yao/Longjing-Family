@@ -499,7 +499,7 @@
 </template>
 
 <script>
-	import xflSelect from '../../../components/xfl-select/xfl-select.vue'
+	import xflSelect from '../../../components/xfl-select/xfl-select-vol.vue'
 	var  graceChecker = require("../../../common/graceChecker.js");
 	export default {
 		data() {

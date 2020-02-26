@@ -132,9 +132,7 @@
 					 		</view>
 					 		<view class="padding-top flex justify-between">
 					 			<view class="text-black padding-bottom-xs text-xl padding-left">上传照片</view>
-					 			<view class="action text-xl">
-					 			   {{imgList.length}}/4
-					 		    </view>				
+					 			<view class="action text-xl">{{imgList.length}}/4</view>				
 					 		</view>
 					 		<view class="cu-form-group" style="height: 250upx;">
 					 			<view class="grid col-4 grid-square flex-sub padding-left">
@@ -144,19 +142,12 @@
 					 					     <text class='cuIcon-close'></text>
 					 				    </view>
 					 				</view>
-					 				<view class="solids" @tap="ChooseImage" v-if="imgList.length<4">
+					 				<view class="solids" @tap="chooseImage" v-if="imgList.length<4">
 					 					<text class='cuIcon-cameraadd'></text>
 					 				</view>
 					 			</view>
 					 		</view>
-					 		<view >
-					 			<view  class="cu-form-group" style="height: 250upx;">
-					 				<view class="grid col-4 grid-square flex-sub padding-left">
-					 				    <view class="bg-img">
-					 					    <image class="image" :src="path"></image>
-					 				    </view>
-					 				</view>
-					 			</view>
+					 		<view class="uni-uploader-body">
 					 			<kps-image-cutter @ok="onok" @cancel="oncancle" :url="url" :fixed="true" :width="200" :height="300"></kps-image-cutter>
 					 		</view>
 					 		<view>（每张照片大小不能超过1M）</view>
@@ -167,12 +158,11 @@
 					 		</view>
 					 	</view>
 					 </view>
-					
 				</view>
 			</view>
 		</view>
 		
-		<view class="" style="height: 650upx; background-color: #fd7576;"></view>
+		<view class="" style="height: 350upx; background-color: #fd7576;"></view>
 		<view class="cu-bar tabbar bg-white shadow foot">
 			<view class="action" @click="goMore('/pages/index/index')" data-cur="Home">
 				<view class='cuIcon-cu-image'>
@@ -210,6 +200,9 @@
 
 <script>
 	import kpsImageCutter from "@/components/ksp-image-cutter/ksp-image-cutter.vue"
+	
+	var sourceType = [['camera'], ['album'], ['camera', 'album']];
+	var sizeType = [['compressed'], ['original'], ['compressed', 'original']];
 	export default {
 		components: {
 			kpsImageCutter
@@ -218,6 +211,9 @@
 			return {
 				url: "",
 				path: "",
+				uploadFiles: [],
+				shareTitle: '',
+				shareImage: '',
 				PageCur: '报事',
 				imgList: [],
 				modalName: null,
@@ -302,56 +298,6 @@
 					url: url
 				});
 			},
-			chooseImage() {
-			                uni.chooseImage({
-			                    success: (res) => {
-			                        // 设置url的值，显示控件
-			                        this.url = res.tempFilePaths[0];
-			                    }
-			                });
-			            },
-			 onok(ev) {
-			                this.path = ev.path;
-			                this.url = "";
-			            },
-			oncancle() {
-			                // url设置为空，隐藏控件
-			                this.url = "";
-			            },
-			ChooseImage() {
-				uni.chooseImage({
-					count: 4, //默认9
-					sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
-					sourceType: ['album'], //从相册选择
-					success: (res) => {
-						this.url = res.tempFilePaths[0];
-						if (this.imgList.length != 0) {
-							this.imgList = this.imgList.concat(res.tempFilePaths)
-						} else {
-							this.imgList = res.tempFilePaths
-						}
-					}
-				});
-			},
-			ViewImage(e) {
-				uni.previewImage({
-					urls: this.imgList,
-					current: e.currentTarget.dataset.url
-				});
-			},
-			DelImg(e) {
-				uni.showModal({
-					title: '照片',
-					content: '确定要删除该照片吗？',
-					cancelText: '取消',
-					confirmText: '删除',
-					success: res => {
-						if (res.confirm) {
-							this.imgList.splice(e.currentTarget.dataset.index, 1)
-						}
-					}
-				})
-			},
 			showModal1(e) {
 				this.modalName = e.currentTarget.dataset.target
 			},
@@ -391,6 +337,115 @@
 			RadioChange4(e) {
 				this.radio = e.detail.value
 			},
+			ViewImage(e) {
+				uni.previewImage({
+					urls: this.imgList,
+					current: e.currentTarget.dataset.url
+				});
+			},
+			DelImg(e) {
+				uni.showModal({
+					title: '照片',
+					content: '确定要删除该照片吗？',
+					cancelText: '取消',
+					confirmText: '删除',
+					success: res => {
+						if (res.confirm) {
+							this.imgList.splice(e.currentTarget.dataset.index, 1)
+						}
+					}
+				})
+			},
+			Choose() {
+				uni.chooseImage({
+					success: res => {
+						// 设置url的值，显示控件
+						this.url = res.tempFilePaths[0];
+					}
+				});
+			},
+			onok(ev) {
+				this.url = '';
+				this.uploadFile(ev.path);
+			},
+			oncancle() {
+				// url设置为空，隐藏控件
+				this.url = '';
+			},
+						
+			chooseImage: async function() {
+							if (this.imgList.length === 4) {
+								let isContinue = await this.isFullImg();
+								console.log('是否继续?', isContinue);
+								if (!isContinue) {
+									return;
+								}
+							}
+						
+							uni.chooseImage({
+								sourceType: sourceType[this.sourceTypeIndex],
+								sizeType: sizeType[this.sizeTypeIndex],
+								count: 1,
+								success: res => {
+									this.url = res.tempFilePaths[0];
+								}
+							});
+						},
+			ChooseImage() {
+				uni.chooseImage({
+					count: 4, //默认9
+					sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
+					sourceType: ['album'], //从相册选择
+					success: (res) => {
+						this.url = res.tempFilePaths[0];
+						if (this.imgList.length != 0) {
+							this.imgList = this.imgList.concat(res.tempFilePaths)
+						} else {
+							this.imgList = res.tempFilePaths
+						}
+					}
+				});
+			},
+			
+			/**
+			 * 文件上传，uni.uploadFile
+			 * @param {Object} path 需要上传的文件的本地地址
+			 */
+			uploadFile(path) {
+				let url = 'http://test.upload.zgllh.site/upload/';
+				let that = this;
+				let uploadTask;
+				// that._showLoadding('图片上传中');
+			
+				uploadTask = uni.uploadFile({
+					url: url,
+					filePath: path,
+					name: 'file',
+					formData: {},
+					success: res => {
+						res = JSON.parse(res.data);
+						console.log(res);
+						if (res.code == 0) {
+							that.imgList = that.imgList.concat([res.data.url]);
+						} else {
+							console.log(res.msg);
+						}
+					},
+					fail: res => {
+						console.log('请求文件上传接口失败了！');
+					},
+					complete: res => {
+						// that._hideMsg();
+					}
+				});
+			
+				uploadTask.onProgressUpdate(res => {
+					console.log('上传进度' + res.progress);
+					console.log('已经上传的数据长度' + res.totalBytesSent);
+					console.log('预期需要上传的数据总长度' + res.totalBytesExpectedToSend);
+				});
+			},
+		
 		}
 		
 	}

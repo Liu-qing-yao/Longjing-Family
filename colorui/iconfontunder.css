@@ -1,0 +1,35 @@
+[class*="icon-"] {
+	font-family: iconfont;
+	font-size: inherit;
+	font-style: normal;
+}
+
+@font-face {font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_1566703_ns9bx4b9m8i.eot?t=1582619254326'); /* IE9 */
+  src: url('//at.alicdn.com/t/font_1566703_ns9bx4b9m8i.eot?t=1582619254326#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAMEAAsAAAAABtwAAAK4AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqBIIExATYCJAMMCwgABCAFhREHNxscBsgekiSCEAGFoqB6AMBRPHztx/7c3X0PlciQ8EQnmSfxBIlUSIREKzSieCJ5JvFlXrv6HMAqR2KQzGb8sjnrS51YNBKL5lcX+/9zTb3EowP+dgCwbItKiqYR7flAIsoHMsBITCCbwfLKr0bf6NUEmg1IZDNT3dgJnBVOp0CcEokDziW7oqhQo1CDkeUi9nHQmM7SC5zHl49vk+FMUmXOWhsnVSIofWt5s+TF/4sG8y6Ly2mhxpExASjEIfRvsxOKttMste+OrRUhLeX6/5+Ya+T1Qf94iag5ya1ghAYSby0+Q/BmGSOBDOpycBiwxMjenUJ0B4x87Nr5+DHgc8+RD52v//iHj0rC4AM4oPvPPY+fw21Eu+8PnQ8fdl8qGyUHHvr1z69dOFVWFHNag7UH3sQfiQZVy4GXpmoD/cvAUZfxrVAe1F7eebZSnq5FXFzcFMl0DBaR43buA6zazWWF9cEogP8r1dO8Mw7uyv/zrj/6Gj9tP9CRV+G2c0sBL9O/45Q7PLgL0Hg+Q/D/cqovUF1pgePLBR3yMtQp6xvgTWh2zfxn5m6/psv7TDWhZYKxwWAOWYthtJCTaEVOoTW5AM3GdYxv0WOenShNGLOfQOh3HZJ215D1+40WchupqHBDazIMmm1GzowthmJ3cwVFHEMi5KcgEQwdexrmGjw5gjmNqFPtSBpTOVrLz47tRtRKDB2mJaeCUA3SEV2uj3VcSmcMQ0wNDVb3WA+pqgFNashIYMkWxsz8lBSMVMkC3QNwNY1COAwignhTIEJg0OHQzLim6Miv4WgI1ZR2iGSMikO7ywCp3RDKinTUBkqTLHUYWiPVhxY94jxW4yTpGAaDMEqCGqh6kWaISmWATNxMhgiYZJYJXlO+FLcSHipNvrxc++NitAynR44UOYrqWOSwEMbwHEoDAA==') format('woff2'),
+  url('//at.alicdn.com/t/font_1566703_ns9bx4b9m8i.woff?t=1582619254326') format('woff'),
+  url('//at.alicdn.com/t/font_1566703_ns9bx4b9m8i.ttf?t=1582619254326') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('//at.alicdn.com/t/font_1566703_ns9bx4b9m8i.svg?t=1582529938170#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-edafc:before {
+  content: "\e64f";
+  color: #ff8c40;
+  font-size: 24upx;
+}
+
+.icon-ebae1:before {
+  content: "\e668";
+  font-size: 28upx;
+  color: #ff7281;
+}

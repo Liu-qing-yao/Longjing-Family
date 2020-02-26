@@ -12,7 +12,7 @@
 			</view>
 			<view class="flex justify-end" >
 				<button class="bg-orange log-bnt" @tap="goMore('/pages/index/Personal-center/login')" style="margin-right: 15upx;">注 册</button>
-			    <button class="bg-orange log-bnt" @tap="goMore('/pages/index/Personal-center/login2')" >登 录</button>
+			    <button class="bg-orange log-bnt" @tap="goMore('/pages/index/Personal-center/two-login')" >登 录</button>
 				</view>
 		</view> 
 		<view class="margin-top-sm">

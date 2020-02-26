@@ -11,16 +11,16 @@
 				<view class="action">
 					<image src="../../../static/input/收藏.png" @click="togglePopup('top', 'popup')" style="width: 45rpx; height: 12rpx;"></image>
 					<uni-popup class="pup-windows " ref="showpopup" :type="type" @change="change">
-						<view class="popup-content">
-							<view class="img-align text-right"  @tap="showModalS" data-target="Modal">
-								<image src="../../../static/input/分享.png" mode="" style="width: 32upx;height: 25upx;margin: 0 5upx 0 10upx;"></image>
+						<view class="popup-content text-center">
+							<view class="img-align solid-bottom " style="width: 110upx;line-height: 50upx;" @tap="showModalS" data-target="Modal">
+								<image src="../../../static/input/分享.png" mode="" style="width: 32upx;height: 25upx;margin: 0 7upx;"></image>
 								<text>分享</text>
 							</view>
-							<view class="" @tap="showModal" data-target="Modal">
-								<uni-fav :checked="checkList[3]" class="" style="margin-top: 10upx;" fg-color="#f06e72" fg-color-checked="#f06e72" bg-color-checked="none" bg-color="none" @click="favClick(3)" />
+							<view class="" style="padding: 0;"  @tap="showModal" data-target="Modal">
+								<uni-fav :checked="checkList[3]" class="" style="padding: 0;margin-bottom: 5upx;text-align: center;" fg-color="#f06e72" fg-color-checked="#f06e72" bg-color-checked="none" bg-color="none" @click="favClick(3)" />
 							</view>
 						</view>
-					</uni-popup>
+					</uni-popup>   
 				</view>
 			</view>
 			
@@ -229,8 +229,8 @@
 	
 }
 .img-align{
-	margin: 10upx 0 0 0;
-	font-size: 30upx;
+	margin: 0 0;
+	padding: 0; 
 }
 	/* 头条小程序组件内不能引入字体 */
 	/* #ifdef MP-TOUTIAO */
@@ -256,14 +256,14 @@
 		background-color: #fff;
 		padding: 5upx;
 		width: 120upx;
-		height: 120upx;
+		height: 110upx;
 		position: fixed;
 		top: 70upx;
 		right: 10upx;
 		border: #CCCCCC 2upx solid;
 		border-radius: 15upx;
 		color: #f06e72;
-		font-size: 29upx;
+		font-size: 26upx;
 	}
 	.example {
 		padding: 0 15px 15px;

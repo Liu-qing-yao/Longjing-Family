@@ -155,12 +155,12 @@
 				</view>
 			</view>
 		</view>
-		<view>
+		<view style="height: 135upx; ">
 			<view class="cu-modal drawer-modal" :class="modalNameL=='DrawerModalL'?'show':''" @tap="hideModalL" >
 				<image src="../../../static/input/intro-arrow11.png" mode="" style="width: 50upx; height: 135upx; position: absolute;left: -10upx; top: 1205upx;"></image>
 			</view>
 			<view class="cu-modal cu-modal1 drawer-modal flex justify-start" :class="modalNameL=='DrawerModalL'?'show':''">
-				<view class="cu-dialog basis-lg cu-modal1" @tap.stop="" :style="[{top:CustomBar+'px',height:'calc(16vh - ' + CustomBar + 'px)'}]" style="overflow: auto;">
+				<view class="cu-dialog basis-lg cu-modal1" @tap.stop="" :style="[{top:CustomBar+'px',height:'calc(185upx - ' + CustomBar + 'upx)'}]" style="overflow: auto;">
 					<view class="cu-list menu text-left" >
 						<view class="text-white solid-right" style="background-color: #fe9148; font-size: 24upx;">
 							<text>

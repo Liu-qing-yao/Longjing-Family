@@ -12,7 +12,7 @@
 						<image src="../../../static/input/圆角矩形11拷贝2.png" mode="" class="img_2" style="width: 50upx; height: 80upx;"></image>
 					</view>
 					<view class="text-center margin-top">
-						<text class="text-xl text-black ">忘记密码</text>
+						<text class="text-xl text-black ">登录</text>
 					</view>
 					<form  @submit="formSubmit">
 						<view class="" style="margin: 10upx 60upx;">
@@ -20,27 +20,28 @@
 								<input class="uni-input" placeholder="请输入用户名" name="user" focus />
 							</view>
 							<view class="padding-top">
-								<input class="uni-input" placeholder="请输入电话号码" name="user" focus />
+								<input class="uni-input" maxlength="50" placeholder="请输入密码"  name="pass" focus password type="text"/>
 							</view>
+
 							<view class="padding-top">
 								<view class="flex justify-between" style="border: #b5b1b1 1upx solid; height: 55upx; border-radius: 10upx; width: 500upx;margin-top: 10upx;">
 									<input class="" placeholder="请输入验证码" name="input" style="text-align: left; text-indent: 55upx;">
-									<button class='cu-btn bg-white text-red' style="margin-right: 5upx;">获取验证码</button>
+									<image src="../../../static/input/图片验证码.png" class="solid-left" mode="" style="width: 120upx; height: 50upx;margin-right: 8upx;"></image>
 									</input>
 								</view>
 							</view>
-							<view class="padding-top">
-								<input class="uni-input" maxlength="50" placeholder="新密码"  name="pass" focus password type="text"/>
-							</view>
-							<view class="padding-top">
-								<input class="uni-input" maxlength="50" placeholder="确认密码"  name="pass" focus password type="text"/>
-							</view>
+
 							<view>
-								<button class="" style="margin: 45upx 0; background-color: #fe934c;color: #FFFFFF;height: 70upx; line-height: 70upx; width: 500upx;" form-type="submit">提&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交</button>
+								<button class="" style="margin: 45upx 0; background-color: #fe934c;color: #FFFFFF;height: 70upx; line-height: 70upx; width: 500upx;" form-type="submit">登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录</button>
 							</view>
-							<view @tap="goMore('/pages/index/Personal-center/two-login')"></view>
+							<view class="flex justify-between" style="font-size: 26upx;">
+								<view @tap="goMore('/pages/index/Personal-center/login')">注册新账号</view>
+								<view @tap="goMore('/pages/index/Personal-center/forget-password')">忘记密码</view>
+							</view>
 						</view>
 					</form>
+					
+					
 					<view style="height: 40upx;"></view>
 				</view>
 			</view>
@@ -82,6 +83,7 @@
 </template>
 
 <script>
+	import xflSelect from '../../../components/xfl-select/xfl-select-vol.vue'
 	var  graceChecker = require("../../../common/graceChecker.js");
 	export default {
 		data() {
@@ -167,7 +169,7 @@
 					    icon:"none",
 					});
 					uni.navigateTo({
-						url: "/pages/index/Personal-center/two-login"
+						url: "/pages/index/Personal-center/Personal-center"
 					});
 			    }else{
 			        uni.showToast({ title: graceChecker.error, icon: "none" });

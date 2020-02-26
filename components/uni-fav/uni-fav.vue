@@ -2,15 +2,15 @@
 	<view :class="[circle === true || circle === 'true' ? 'uni-fav--circle' : '']" :style="[{ backgroundColor: checked ? bgColorChecked : bgColor }]"
 	 @click="onClick" class="uni-fav">
 		<!-- #ifdef MP-ALIPAY -->
-		<view class="uni-fav-star" v-if="!checked && (star === true || star === 'true')">
-			<uni-icons :color="fgColor" :style="{color: checked ? fgColorChecked : fgColor}" size="14" type="star-filled" />
+		<view class="uni-fav-star align-center" v-if="!checked && (star === true || star === 'true')">
+			<uni-icons :color="fgColor" :style="{color: checked ? fgColorChecked : fgColor}" size="16" type="star-filled" />
 		</view>
 		<!-- #endif -->
 		<!-- #ifndef MP-ALIPAY -->
-		<uni-icons :color="fgColor" :style="{color: checked ? fgColorChecked : fgColor}" class="uni-fav-star" size="14" type="star-filled"
+		<uni-icons :color="fgColor" :style="{color: checked ? fgColorChecked : fgColor}" class="uni-fav-star" size="16" type="star-filled"
 		 v-if="!checked && (star === true || star === 'true')" />
 		<!-- #endif -->
-		<text :style="{color: checked ? fgColorChecked : fgColor}" class="uni-fav-text">{{ checked ? contentText.contentFav : contentText.contentDefault }}</text>
+		<text :style="{color: checked ? fgColorChecked : fgColor}" class="uni-fav-text  margin-left">{{ checked ? contentText.contentFav : contentText.contentDefault }}</text>
 	</view>
 </template>
 
@@ -55,7 +55,7 @@
 				default () {
 					return {
 						contentDefault: "收藏",
-						contentFav: "已收藏"
+						contentFav: "已收藏",
 					};
 				}
 			}
@@ -85,15 +85,15 @@
 	.uni-fav {
 		/* #ifndef APP-NVUE */
 		display: flex;
-		/* #endif */
-		flex-direction: row;
-		align-items: center;
 		justify-content: center;
-		width: 60px;
+		/* #endif */
+	/* 	flex-direction: row; */
+		width: 110upx;
 		height: $fav-height;
 		line-height: $fav-height;
-		text-align: center;
 		border-radius: 3px;
+		margin: 0;
+		padding: 0;
 	}
 
 	.uni-fav--circle {
@@ -105,10 +105,11 @@
 		display: flex;
 		/* #endif */
 		height: $fav-height;
-		line-height: 24px;
-		margin-right: 3px;
-		align-items: center;
-		justify-content: center;
+		/* line-height: 24px; */
+		/* margin-right: 3px; */
+		margin: 0 7upx;
+
+
 	}
 
 	.uni-fav-text {
@@ -116,9 +117,9 @@
 		display: flex;
 		/* #endif */
 		height: $fav-height;
-		line-height: $fav-height;
-		align-items: center;
-		justify-content: center;
-		font-size: $uni-font-size-base;
+		/* line-height: $fav-height; */
+		font-size: 26upx;
+		margin: 0;
+		padding: 0;
 	}
 </style>
