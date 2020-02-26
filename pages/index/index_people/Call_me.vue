@@ -30,21 +30,7 @@
 								</image>
 							</view>
 						</view>			
-						<view class="cu-modal" :class="modalName=='RadioModal1'?'show':''" @tap="hideModal1">
-							<view class="cu-dialog" @tap.stop="">
-								<radio-group class="block" @change="RadioChange1">
-									<view class="cu-list menu text-left">
-										<view class="cu-item" v-for="(item,index) in List1" :key="index">
-											<label class="flex justify-between align-center flex-sub">
-												<view class="flex-sub">{{item.name}}</view>
-												<radio class="round" :class="radio=='radio' + index?'checked':''" :checked="radio=='radio' + index?true:false"
-													:value="'radio' + index"></radio>
-											</label>
-										</view>
-									</view>
-								</radio-group>
-							</view>
-						</view>
+						
 					</view>
 					<view  class="sec">
 						<view class="bg-white ">
@@ -54,21 +40,7 @@
 								    @tap="showModal2" data-target="RadioModal2" style="width: 80upx; height: 70upx;"></image>
 							</view>
 						</view>
-						<view class="cu-modal" :class="modalName=='RadioModal2'?'show':''" @tap="hideModal2">
-							<view class="cu-dialog" @tap.stop="">
-								<radio-group class="block" @change="RadioChange2">
-									<view class="cu-list menu text-left">
-										<view class="cu-item" v-for="(item,index) in List2" :key="index">
-											<label class="flex justify-between align-center flex-sub">
-												<view class="flex-sub">{{item.name}}</view>
-												<radio class="round" :class="radio=='radio' + index?'checked':''" :checked="radio=='radio' + index?true:false"
-													:value="'radio' + index"></radio>
-											</label>
-										</view>
-									</view>
-								</radio-group>
-							</view>
-						</view>
+						
 					</view>	
 						<view  class="three">
 							<view class="bg-white ">
@@ -78,21 +50,7 @@
 									    @tap="showModal4" data-target="RadioModal4" style="width: 80upx; height: 70upx;"></image>
 								</view>
 							</view>
-							<view class="cu-modal" :class="modalName=='RadioModal4'?'show':''" @tap="hideModal4">
-								<view class="cu-dialog" @tap.stop="">
-									<radio-group class="block" @change="RadioChange4">
-										<view class="cu-list menu text-left">
-											<view class="cu-item" v-for="(item,index) in List4" :key="index">
-												<label class="flex justify-between align-center flex-sub">
-													<view class="flex-sub">{{item.name}}</view>
-													<radio class="round" :class="radio=='radio' + index?'checked':''" :checked="radio=='radio' + index?true:false"
-														:value="'radio' + index"></radio>
-												</label>
-											</view>
-										</view>
-									</radio-group>
-								</view>
-							</view>
+							
 						</view>
 					<view>
 						<view class="bg-white padding-bottom-xs margin-bottom-sm">
@@ -108,21 +66,7 @@
 								</view>
 							</view>
 						</view>
-						<view class="cu-modal" :class="modalName=='RadioModal3'?'show':''" @tap="hideModal3">
-							<view class="cu-dialog" @tap.stop="">
-								<radio-group class="block" @change="RadioChange3">
-									<view class="cu-list menu text-left">
-										<view class="cu-item" v-for="(item,index) in List3" :key="index">
-											<label class="flex justify-between align-center flex-sub">
-												<view class="flex-sub">{{item.name}}</view>
-												<radio class="round" :class="radio=='radio' + index?'checked':''" :checked="radio=='radio' + index?true:false"
-													:value="'radio' + index"></radio>
-											</label>
-										</view>
-									</view>
-								</radio-group>
-							</view>
-						</view>
+						
 					</view>
 					<view>
 					 	<view class="bg-white padding">
@@ -161,7 +105,67 @@
 				</view>
 			</view>
 		</view>
-		
+		<!-- 弹窗 -->
+		<view class="cu-modal" :class="modalName=='RadioModal1'?'show':''" @tap="hideModal1">
+			<view class="cu-dialog" @tap.stop="">
+				<radio-group class="block" @change="RadioChange1">
+					<view class="cu-list menu text-left">
+						<view class="cu-item" v-for="(item,index) in List1" :key="index">
+							<label class="flex justify-between align-center flex-sub">
+								<view class="flex-sub">{{item.name}}</view>
+								<radio class="round" :class="radio=='radio' + index?'checked':''" :checked="radio=='radio' + index?true:false"
+									:value="'radio' + index"></radio>
+							</label>
+						</view>
+					</view>
+				</radio-group>
+			</view>
+		</view>
+		<view class="cu-modal" :class="modalName=='RadioModal2'?'show':''" @tap="hideModal2">
+			<view class="cu-dialog" @tap.stop="">
+				<radio-group class="block" @change="RadioChange2">
+					<view class="cu-list menu text-left">
+						<view class="cu-item" v-for="(item,index) in List2" :key="index">
+							<label class="flex justify-between align-center flex-sub">
+								<view class="flex-sub">{{item.name}}</view>
+								<radio class="round" :class="radio=='radio' + index?'checked':''" :checked="radio=='radio' + index?true:false"
+									:value="'radio' + index"></radio>
+							</label>
+						</view>
+					</view>
+				</radio-group>
+			</view>
+		</view>
+		<view class="cu-modal" :class="modalName=='RadioModal4'?'show':''" @tap="hideModal4">
+			<view class="cu-dialog" @tap.stop="">
+				<radio-group class="block" @change="RadioChange4">
+					<view class="cu-list menu text-left">
+						<view class="cu-item" v-for="(item,index) in List4" :key="index">
+							<label class="flex justify-between align-center flex-sub">
+								<view class="flex-sub">{{item.name}}</view>
+								<radio class="round" :class="radio=='radio' + index?'checked':''" :checked="radio=='radio' + index?true:false"
+									:value="'radio' + index"></radio>
+							</label>
+						</view>
+					</view>
+				</radio-group>
+			</view>
+		</view>
+		<view class="cu-modal" :class="modalName=='RadioModal3'?'show':''" @tap="hideModal3">
+			<view class="cu-dialog" @tap.stop="">
+				<radio-group class="block" @change="RadioChange3">
+					<view class="cu-list menu text-left">
+						<view class="cu-item" v-for="(item,index) in List3" :key="index">
+							<label class="flex justify-between align-center flex-sub">
+								<view class="flex-sub">{{item.name}}</view>
+								<radio class="round" :class="radio=='radio' + index?'checked':''" :checked="radio=='radio' + index?true:false"
+									:value="'radio' + index"></radio>
+							</label>
+						</view>
+					</view>
+				</radio-group>
+			</view>
+		</view>
 		<view class="" style="height: 350upx; background-color: #fd7576;"></view>
 		<view class="cu-bar tabbar bg-white shadow foot">
 			<view class="action" @click="goMore('/pages/index/index')" data-cur="Home">
